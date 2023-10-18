@@ -1,7 +1,7 @@
 import { Navigate } from "react-router-dom";
 import { useAppSelector } from "../hooks/store";
 
-export function ProtectedRoute({ children }) {
+export function ProtectedRoute({ children }: { children: JSX.Element }) {
   const user = useAppSelector((state) => state.user);
 
   switch (window.location.pathname) {
@@ -13,20 +13,20 @@ export function ProtectedRoute({ children }) {
     }
 
     case "/login": {
-      if (user.document != undefined) {
+      if (user.rol != undefined) {
         return <Navigate to="/" />;
       }
       break;
     }
 
     case "/register": {
-      if (user.role !== "empresa") {
+      if (user.rol !== 2) {
         return <Navigate to="/" />;
       }
       break;
     }
 
-    default: 
+    default:
       break;
   }
 
