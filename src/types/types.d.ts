@@ -14,3 +14,11 @@ export type User = {
   correoEmpresarial: string;
   urlImg: string;
 };
+
+export type customEvent = {
+  title: string;
+  notes: string;
+  start: Date;
+  end: Date;
+  bgcolor: string;
+};
