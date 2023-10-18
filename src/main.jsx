@@ -5,12 +5,14 @@ import { Provider } from "react-redux";
 
 import { App } from "./App";
 import { store } from "./store";
+import Footer from "./components/Footer";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
         <App />
+        <Footer/>
       </BrowserRouter>
     </Provider>
   </React.StrictMode>
