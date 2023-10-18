@@ -1,4 +1,4 @@
-export default function Profile_emp() {
+export default function ProfileEmp() {
     return (
     <div className="container">
         <div className="row">
