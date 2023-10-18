@@ -249,7 +249,17 @@ body {
   .footer .row > div:not(.col-xs-12.col-sm-12.col-md-2.col-lg-2.block) {
     display: none;
   }
+
+
+  .carusel{
+    margin-top: 2rem;
+  }
+  
+  
+  
+
   .contenido-alternativa {
     display: block; /* Mostrar la imagen alternativa en pantallas pequeñas */
   }
 }
+
