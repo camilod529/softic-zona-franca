@@ -5,6 +5,8 @@ body {
 * {
   box-sizing: border-box;
 }
+
+
 .profile {
   margin-top: 5%;
 }
@@ -12,6 +14,11 @@ body {
   padding-top: 4%;
   padding-bottom: 2%;
 }
+
+/* ======================= */
+/* ======= Footer ========= */
+/* ======================= */
+
 .footer {
   background: #1f1e21;
   margin-top: 50px;
@@ -49,6 +56,11 @@ body {
   margin: 0px;
   color: #a09f34;
 }
+
+/* ============================ */
+/* ======= Accordions ========= */
+/* ============================ */
+
 .accordion {
   --bs-accordion-btn-bg: #d1d071;
   --bs-accordion-active-bg: #a09f34;
@@ -59,7 +71,9 @@ body {
   cursor: pointer;
 }
 
+/* ======================= */
 /* ======= Login ========= */
+/* ======================= */
 
 /* Card styles */
 .card {

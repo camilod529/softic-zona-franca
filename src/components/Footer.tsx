@@ -8,7 +8,9 @@ export default function Footer() {
           <div className="col-xs-12 col-sm-12 col-md-5 col-lg-5 data block">
             <div>Kilómetro 4 Anillo Vial Río Frío, Edificio Suza Vita</div>
             <div>Floridablanca, Colombia</div>
-            <div className="phone">(57) (7) 6 79 80 80 - (57) 316 742 81 09</div>
+            <div className="phone">
+              (57) (7) 6 79 80 80 - (57) 316 742 81 09
+            </div>
             <div>comunicaciones@zonafrancasantander.com</div>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-2 col-lg-2 social p-0 block">
@@ -18,7 +20,6 @@ export default function Footer() {
                 target="_blank"
                 to="http://www.facebook.com/zfsantander"
                 title="Síguenos en Facebook"
-                
               >
                 <img
                   src="https://www.zonafrancasantander.com/template/images/icon-facebook.png"
@@ -37,7 +38,9 @@ export default function Footer() {
               </Link>
             </div>
             <div className="icon">
+
               <Link target="_blank" to="https://www.linkedin.com/company/zonafrancasantander">
+
                 <img
                   src="https://www.zonafrancasantander.com/template/images/icon-linkedin.png"
                   className="img-responsive center-block"
@@ -46,7 +49,9 @@ export default function Footer() {
               </Link>
             </div>
             <div className="icon">
+                  
               <Link target="_blank" to="https://www.instagram.com/zonafranca.santander/">
+
                 <img
                   src="https://www.zonafrancasantander.com/template/images/icon-instagram.png"
                   className="img-responsive center-block"

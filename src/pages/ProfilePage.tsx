@@ -22,14 +22,14 @@ export const ProfilePage = () => {
           {user.rol === 3 ? (
             <>
               <div className="col-4">
-                <img src={user.urlImg} className="img-thumbnail" alt="..." />
+                <img src={user.foto} className="img-thumbnail" alt="..." />
               </div>
               <div className="col-6">
                 <div className="row, profile">
                   <div className="col-8 col-sm-6">
                     <h3> Nombre: </h3>
                   </div>
-                  <div className="col-4 col-sm-6">{user.nombre}</div>
+                  <div className="col-4 col-sm-6">{user.nombre_1}</div>
                 </div>
                 <div className="row, profile">
                   <div className="col-8 col-sm-6">
@@ -39,21 +39,15 @@ export const ProfilePage = () => {
                 </div>
                 <div className="row, profile">
                   <div className="col-8 col-sm-6">
-                    <h3> Numero de contacto: </h3>
-                  </div>
-                  <div className="col-4 col-sm-6">{user.numeroContacto}</div>
-                </div>
-                <div className="row, profile">
-                  <div className="col-8 col-sm-6">
                     <h3> Correo: </h3>
                   </div>
-                  <div className="col-4 col-sm-6">{user.correo}</div>
+                  <div className="col-4 col-sm-6">{user.correo_personal}</div>
                 </div>
                 <div className="row, profile">
                   <div className="col-8 col-sm-6">
                     <h3> Empresa: </h3>
                   </div>
-                  <div className="col-4 col-sm-6">{user.empresa}</div>
+                  <div className="col-4 col-sm-6">{user.empresa_colaborador}</div>
                 </div>
                 <div className="row, profile">
                   <div className="col-8 col-sm-6">
@@ -66,9 +60,11 @@ export const ProfilePage = () => {
                     <h3> Gustos: </h3>
                   </div>
                   <div className="col-4 col-sm-6">
-                    {user.gustos.map((gusto) => {
-                      return gusto + " ";
-                    })}
+                    {user.gustos
+                      ? user.gustos.map((gusto) => {
+                          return gusto + " ";
+                        })
+                      : ""}
                   </div>
                 </div>
               </div>
@@ -83,7 +79,7 @@ export const ProfilePage = () => {
                   <div className="col-8 col-sm-6">
                     <h3> Nombre: </h3>
                   </div>
-                  <div className="col-4 col-sm-6">{user.nombre}</div>
+                  <div className="col-4 col-sm-6">{user.nombre_empresa}</div>
                 </div>
                 <div className="row profile">
                   <div className="col-8 col-sm-6">
