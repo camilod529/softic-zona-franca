@@ -253,6 +253,10 @@ margin-bottom: 2rem;
       display: block; /* Mostrar la imagen alternativa en pantallas pequeñas */
     }
   }
+
+  .carusel{
+    margin-top: 2rem;
+  }
   
   
   
