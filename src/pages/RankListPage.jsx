@@ -1,4 +1,5 @@
 import { RankListItem } from "../components";
+
 export const RankList = () => {
   return (
     <>
@@ -20,23 +21,35 @@ export const RankList = () => {
               <div className="accordion-item">
                 <h2 className="accordion-header">
                   <button
-                    className="accordion-button"
+                    className="accordion-button txt"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapseOne"
                     aria-expanded="true"
                     aria-controls="panelsStayOpen-collapseOne"
                   >
-                    Proximos eventos
+                    <strong>Empresas</strong>
                   </button>
                 </h2>
-                <div id="panelsStayOpen-collapseOne" className="accordion-collapse collapse show">
-                  <div className="accordion-body">
-                    <RankListItem />
-                    <RankListItem />
-                    <RankListItem />
-                    <RankListItem />
+                <div
+                  id="panelsStayOpen-collapseOne"
+                  className="accordion-collapse collapse show"
+                >
+                  <div class="container text-center mt-2 mb-3">
+                    <div class="row">
+                      <div class="col">
+                        <strong>Rank</strong>
+                      </div>
+                      <div class="col-6">
+                        <strong>Nombre</strong>
+                      </div>
+                      <div class="col">
+                        <strong>ZF-Coins</strong>
+                      </div>
+                    </div>
                   </div>
+
+                  <RankListItem />
                 </div>
               </div>
               <div className="accordion-item">
@@ -49,10 +62,26 @@ export const RankList = () => {
                     aria-expanded="false"
                     aria-controls="panelsStayOpen-collapseTwo"
                   >
-                    Eventos pasados
+                    <strong>Colaboradores</strong>
                   </button>
                 </h2>
-                <div id="panelsStayOpen-collapseTwo" className="accordion-collapse collapse">
+                <div
+                  id="panelsStayOpen-collapseTwo"
+                  className="accordion-collapse collapse"
+                >
+                  <div class="container text-center mt-2 mb-3">
+                    <div class="row">
+                      <div class="col">
+                        <strong>Rank</strong>
+                      </div>
+                      <div class="col-6">
+                        <strong>Nombre</strong>
+                      </div>
+                      <div class="col">
+                        <strong>ZF-Coins</strong>
+                      </div>
+                    </div>
+                  </div>
                   <RankListItem />
                   <RankListItem />
                   <RankListItem />
