@@ -1,5 +1,6 @@
-export default function Profile() {
+export const Profile =()=> {
     return (
+        <>
         <div class="container">
         <div class="row">
           <div class="col-9"><h1>Informacion De Perfil</h1></div>
@@ -64,5 +65,6 @@ export default function Profile() {
          </div>
         </div>
         </div>
-    )
-  }
+        </>
+    );
+  };
