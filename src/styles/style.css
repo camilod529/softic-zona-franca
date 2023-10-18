@@ -251,9 +251,7 @@ body {
   }
 
 
-  .carusel{
-    margin-top: 2rem;
-  }
+  
   
   
   
@@ -261,5 +259,10 @@ body {
   .contenido-alternativa {
     display: block; /* Mostrar la imagen alternativa en pantallas pequeñas */
   }
+}
+
+.imgnav {
+    position: absolute;
+    left: 4rem
 }
 
