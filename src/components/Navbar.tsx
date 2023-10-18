@@ -115,7 +115,7 @@ export const Navbar = () => {
               </li>
             </ul>
             {user.rol === 2 || user.rol === 3 ? (
-              <span className="navbar-text">Puntos: 1000</span>
+              <span className="navbar-text puntos">Puntos: 1000</span>
             ) : (
               ""
             )}
