@@ -28,8 +28,8 @@ export const Navbar = () => {
   };
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary ">
-        <div className="container-fluid d-flex justify-content-between">
+      <nav className="navbar navbar-expand-lg color-nav-bar">
+        <div className="container-fluid d-flex justify-content-between ">
           <Link className="navbar-brand" to={user.rol === 2 || user.rol === 3 ? "/profile" : ""}>
             {user.rol === 1 ? "Inicio" : "Perfil"}
             {/* IMG avatar y nombre del usuario */}

@@ -1,4 +1,5 @@
 import { Navbar } from "../components";
+import Footer from "../components/Footer";
 import { useAppSelector } from "../hooks/store";
 
 export const ProfilePage = () => {
@@ -8,9 +9,13 @@ export const ProfilePage = () => {
     <>
       {user.rol === 1 ? <>No deberia estar aca</> : ""}
       <Navbar />
-
-      <div className="container">
-        <div className="row">
+      <img src="https://www.zonafrancasantander.com/imagenes/vdo_cabezotes/cabe_93d666c2e538322a27e6562c19bc5597a2066bd6.jpg" className="contenido img-fluid"/>
+    <img
+          src="https://i.imgur.com/9PDGhjx.jpg"
+          className="contenido-alternativa img-fluid contenido "
+        />
+      <div className="container perfil-contenido">
+        <div className="row color-perfil">
           <div className="col-9">
             <h1>Informacion De Perfil</h1>
           </div>
@@ -93,6 +98,7 @@ export const ProfilePage = () => {
           )}
         </div>
       </div>
+      <Footer/>
     </>
   );
 };
