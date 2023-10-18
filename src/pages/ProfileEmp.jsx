@@ -1,5 +1,6 @@
-export default function ProfileEmp() {
+export const ProfileEmp =() => {
     return (
+        <>
     <div className="container">
         <div className="row">
           <div className="col-9"><h1>Informacion De Perfil</h1></div>
@@ -51,5 +52,6 @@ export default function ProfileEmp() {
          </div>
         </div>
         </div>
-    )
-  }
+        </>
+    );
+  };

@@ -1,4 +1,4 @@
-import { CompCard } from "./CompCard";
+import { CompCard } from "../components/CompCard";
 
 export const AdmEmp =() =>{
     return(
