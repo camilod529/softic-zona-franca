@@ -1,5 +1,5 @@
 body{
-    background-color: #f2f2dc;
+    background-color: #f2f2dc00;
 }
 
 * {
@@ -27,3 +27,62 @@ body{
     --bs-accordion-active-color: white;
     --bs-accordion-bg: #f7f7e9;
 }
+.contenido {
+    position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  object-fit: cover;
+  }
+
+.home {
+    background-color: rgba(255, 255, 255, 0.308);    
+}
+
+.botpage {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  .container-fluid {
+    max-width: 100%; /* Establece el ancho máximo del contenedor al 100% del ancho de la pantalla */
+    overflow-x: hidden; /* Oculta cualquier desbordamiento horizontal */
+  }
+.side{
+    padding-right:2%;
+    padding-left: 2rem;
+}
+/* En tu archivo CSS (por ejemplo, estilos.css) */
+
+  
+  .login-text {
+    margin-right: 10%;
+margin-top: 2rem;
+margin-bottom: 2rem;
+    font-size: large;
+  }
+.topside{
+    background-color: rgba(255, 255, 255, 0.308);    
+
+}
+.contenido-alternativa {
+    display: none; /* Ocultar la imagen alternativa en pantallas grandes */
+  }
+  
+  /* Estilos para pantallas pequeñas (menos de 768px de ancho) */
+  @media (max-width: 767px) {
+    .contenido {
+      display: none; /* Ocultar la imagen en pantallas pequeñas */
+    }
+    .footer .row > div:not(.col-xs-12.col-sm-12.col-md-2.col-lg-2.block) {
+        display: none;
+    }
+    .contenido-alternativa {
+      display: block; /* Mostrar la imagen alternativa en pantallas pequeñas */
+    }
+  }
+  
+  
+  
