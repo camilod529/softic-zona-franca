@@ -13,7 +13,7 @@ export function ProtectedRoute({ children }: { children: JSX.Element }) {
     }
 
     case "/login": {
-      if (user.rol != undefined) {
+      if (user.rol != 0) {
         return <Navigate to="/" />;
       }
       break;
@@ -26,14 +26,40 @@ export function ProtectedRoute({ children }: { children: JSX.Element }) {
       break;
     }
     case "/profile":
-      {
-        if (user.rol === 0) {
-          console.log("aaaa");
-          return <Navigate to="/login" />;
-        }
+      if (user.rol === 0) {
+        return <Navigate to="/login" />;
       }
       break;
-
+    case "adminEmpresa":
+      if (user.rol !== 1) {
+        return <Navigate to="/" />;
+      }
+      break;
+    case "admEventos":
+      if (user.rol !== 1) {
+        return <Navigate to="/" />;
+      }
+      break;
+    case "admColaboradores":
+      if (user.rol !== 2) {
+        return <Navigate to="/" />;
+      }
+      break;
+    case "events":
+      if (user.rol === 1) {
+        return <Navigate to="/" />;
+      }
+      break;
+    case "miEmpresa":
+      if (user.rol === 0) {
+        return <Navigate to="/" />;
+      }
+      break;
+    case "rank":
+      if (user.rol === 0) {
+        return <Navigate to="/" />;
+      }
+      break;
     default:
       break;
   }

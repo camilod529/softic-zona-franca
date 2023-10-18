@@ -1,33 +1,62 @@
-body{
-    background-color: #f2f2dc;
+body {
+  background-color: #f2f2dc;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-.profile{
-    margin-top: 5%;
+.profile {
+  margin-top: 5%;
 }
 .top {
-    padding-top: 4%;
-    padding-bottom: 2%;
+  padding-top: 4%;
+  padding-bottom: 2%;
 }
-.footer{ background: #1F1E21; margin-top: 50px; padding: 30px 0px; color: #FFF; }
-.footer .block{ vertical-align: middle; }
-.footer .data div{ padding-left: 5px; font-size: 12px; }
-.footer .phone{ background: #888986; display: inline-block; padding: 0px 5px; }
-.footer .social .icon{ display: inline-block; margin: 5px 7px 0px 0px; }
-.footer .credits{ color: #343334; margin-left: 5px; font-weight: bold; }
-.footer .links{ padding: 0px; line-height: 12px; }
-.footer .links a{ font-size: 12px; line-height: 13px; margin: 0px; color: #A09F34; }
-
-/* ======= RankList / EventList========= */
-
-.accordion{
-    --bs-accordion-btn-bg: #d1d071;
-    --bs-accordion-active-bg: #A09F34;
-    --bs-accordion-active-color: white;
-    --bs-accordion-bg: #f7f7e9;
+.footer {
+  background: #1f1e21;
+  margin-top: 50px;
+  padding: 30px 0px;
+  color: #fff;
+}
+.footer .block {
+  vertical-align: middle;
+}
+.footer .data div {
+  padding-left: 5px;
+  font-size: 12px;
+}
+.footer .phone {
+  background: #888986;
+  display: inline-block;
+  padding: 0px 5px;
+}
+.footer .social .icon {
+  display: inline-block;
+  margin: 5px 7px 0px 0px;
+}
+.footer .credits {
+  color: #343334;
+  margin-left: 5px;
+  font-weight: bold;
+}
+.footer .links {
+  padding: 0px;
+  line-height: 12px;
+}
+.footer .links a {
+  font-size: 12px;
+  line-height: 13px;
+  margin: 0px;
+  color: #a09f34;
+}
+.accordion {
+  --bs-accordion-btn-bg: #d1d071;
+  --bs-accordion-active-bg: #a09f34;
+  --bs-accordion-active-color: white;
+  --bs-accordion-bg: #f7f7e9;
+}
+.logout-button:hover {
+  cursor: pointer;
 }
 
 /* ======= Login ========= */

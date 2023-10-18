@@ -17,7 +17,7 @@ export function Login() {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    await login({ email: data.nick, password: data.contrasena })
+    await login({ email: parseInt(data.nick), password: data.contrasena })
       .then((res) => {
         navigate("/profile");
         setUser(res.data);
