@@ -17,9 +17,6 @@ export const Navbar = () => {
             />
           </a>
           <div className="navbar-text">puntos</div>
-          <button className="navbar-toggler">
-            <span className="navbar-toggler-icon"></span>
-          </button>
         </div>
       </nav>
     </>

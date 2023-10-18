@@ -6,13 +6,12 @@ import { Navbar, AdmEmp } from "./components";
 import { App } from "./App";
 import { store } from "./store";
 import Footer from "./components/Footer";
+import "./styles/style.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
-        <Navbar/>
-        <AdmEmp/>
         <App/>
         <Footer/>
       </BrowserRouter>

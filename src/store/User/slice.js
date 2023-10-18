@@ -1,12 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    username: "AMV1909",
-    email: "",
-    firstName: "",
-    lastName: "",
-    token: "",
-    isLoggedIn: false,
+  username: "AMV1909",
+  email: "",
+  firstName: "",
+  lastName: "",
+  token: "",
+  isLoggedIn: false,
+  role: "", // Administrador, Colaborador, Empresa
 };
 
 export const userSlice = createSlice({
