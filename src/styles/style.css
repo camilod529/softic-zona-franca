@@ -60,20 +60,6 @@ body {
 }
 
 /* ======= Login ========= */
-/* Reset some default styles */
-body, html {
-    margin: 0;
-    padding: 0;
-}
-
-/* Full-page background color */
-body {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
 
 /* Card styles */
 .card {
