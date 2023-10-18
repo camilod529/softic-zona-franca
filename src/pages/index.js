@@ -1,9 +1,8 @@
-export { Login } from "./Login";
+export { Login } from "./LoginPage";
 export { HomePage } from "./HomePage";
-export { Register } from "./Register";
-export {EventList} from "./EventList";
-export {AdmEmp} from "./AdmEmp";
-export {ProfileEmp} from "./ProfileEmp";
-export {AdmEventPage} from "./AdmEventPage";
+export { Register } from "./RegisterPage";
+export { EventList } from "./EventListPage";
+export { AdmEmp } from "./AdmEmpPage";
+export { ProfileEmp } from "./ProfileEmpPage";
+export { RankList } from "./RankListPage";
 //export * from "./Profile";
-

@@ -1,4 +1,3 @@
-
 import { Navbar } from "../components";
 import { AdmEventPage } from "./AdmEventPage";
 
@@ -10,4 +9,3 @@ export const HomePage = () => {
       <AdmEventPage/>
     </>
   );
-};
