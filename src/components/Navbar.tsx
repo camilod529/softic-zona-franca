@@ -92,6 +92,10 @@ export const Navbar = () => {
             ) : (
               ""
             )}
+            <span className="nav-item">
+              <i className="fa-solid fa-arrow-right-from-bracket"></i>
+              &nbsp;Cerrar sesion
+            </span>
           </div>
         </div>
       </nav>
