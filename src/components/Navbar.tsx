@@ -30,19 +30,23 @@ export const Navbar = () => {
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary ">
         <div className="container-fluid d-flex justify-content-between">
-          <a className="navbar-brand" href="#">
-            Softic
+          <Link className="navbar-brand" to={user.rol === 2 || user.rol === 3 ? "/profile" : ""}>
+            {user.rol === 1 ? "Inicio" : "Perfil"}
             {/* IMG avatar y nombre del usuario */}
-            <img
-              className="ms-2"
-              src="https://img.freepik.com/free-psd/3d-render-avatar-character_23-2150611731.jpg?w=740&t=st=1697585995~exp=1697586595~hmac=df734503a938305cb6ac289c263bbcc1bbdfba962222f45162cf58ae097e71f9"
-              alt=""
-              style={{
-                width: "3rem",
-                borderRadius: "100%",
-              }}
-            />
-          </a>
+            {user.rol === 3 ? (
+              <img
+                className="ms-2"
+                src="https://img.freepik.com/free-psd/3d-render-avatar-character_23-2150611731.jpg?w=740&t=st=1697585995~exp=1697586595~hmac=df734503a938305cb6ac289c263bbcc1bbdfba962222f45162cf58ae097e71f9"
+                alt=""
+                style={{
+                  width: "3rem",
+                  borderRadius: "100%",
+                }}
+              />
+            ) : (
+              ""
+            )}
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -59,12 +63,12 @@ export const Navbar = () => {
               {user.rol === 1 ? (
                 <>
                   <li className="nav-item">
-                    <Link className="nav-link" to={""}>
+                    <Link className="nav-link" to={"/adminEmpresa"}>
                       Administrar empresa
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to={""}>
+                    <Link className="nav-link" to={"/admEventos"}>
                       Administrar eventos
                     </Link>
                   </li>
@@ -75,12 +79,12 @@ export const Navbar = () => {
               {user.rol === 2 ? (
                 <>
                   <li className="nav-item">
-                    <Link className="nav-link" to={""}>
+                    <Link className="nav-link" to={"/admColaboradores"}>
                       Administrar colaboradores
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to={""}>
+                    <Link className="nav-link" to={"/events"}>
                       Eventos
                     </Link>
                   </li>
@@ -91,12 +95,12 @@ export const Navbar = () => {
               {user.rol === 3 ? (
                 <>
                   <li className="nav-item">
-                    <Link className="nav-link" to={""}>
+                    <Link className="nav-link" to={"/events"}>
                       Eventos
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to={""}>
+                    <Link className="nav-link" to={"/miEmpresa"}>
                       Mi empresa
                     </Link>
                   </li>
@@ -105,7 +109,7 @@ export const Navbar = () => {
                 ""
               )}
               <li className="nav-item">
-                <Link className="nav-link" to={""}>
+                <Link className="nav-link" to={"/rank"}>
                   Tabla puntajes
                 </Link>
               </li>
