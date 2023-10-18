@@ -1,4 +1,4 @@
-export default function event_card() {
+export default function EventCard() {
     return (
         <div class="card mb-3">
   <img src="..." class="card-img-top" alt="..."/>
