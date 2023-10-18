@@ -33,47 +33,61 @@ export const Navbar = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              {user.role === "Administrador" ? (
+              {user.rol === 1 ? (
                 <>
                   <li className="nav-item">
-                    <Link className="nav-link">Administrar empresa</Link>
+                    <Link className="nav-link" to={""}>
+                      Administrar empresa
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link">Administrar eventos</Link>
+                    <Link className="nav-link" to={""}>
+                      Administrar eventos
+                    </Link>
                   </li>
                 </>
               ) : (
                 ""
               )}
-              {user.role === "Empresa" ? (
+              {user.rol === 2 ? (
                 <>
                   <li className="nav-item">
-                    <Link className="nav-link">Administrar colaboradores</Link>
+                    <Link className="nav-link" to={""}>
+                      Administrar colaboradores
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link">Eventos</Link>
+                    <Link className="nav-link" to={""}>
+                      Eventos
+                    </Link>
                   </li>
                 </>
               ) : (
                 ""
               )}
-              {user.role === "Colaborador" ? (
+              {user.rol === 3 ? (
                 <>
                   <li className="nav-item">
-                    <Link className="nav-link">Eventos</Link>
+                    <Link className="nav-link" to={""}>
+                      Eventos
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link">Mi empresa</Link>
+                    <Link className="nav-link" to={""}>
+                      Mi empresa
+                    </Link>
                   </li>
                 </>
               ) : (
                 ""
               )}
               <li className="nav-item">
-                <Link className="nav-link">Tabla puntajes</Link>
+                <Link className="nav-link" to={""}>
+                  Tabla puntajes
+                </Link>
               </li>
             </ul>
-            {user.role === "Empresa" || user.role === "Colaborador" ? (
+            {user.rol === 2 || user.rol === 3 ? (
               <span className="navbar-text">Puntos: 1000</span>
             ) : (
               ""
