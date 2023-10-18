@@ -7,7 +7,7 @@ const initialState = {
   lastName: "",
   token: "",
   isLoggedIn: false,
-  role: "", // Administrador, Colaborador, Empresa
+  role: 0, // Administrador = 1, Colaborador = 3, Empresa = 2
 };
 
 export const userSlice = createSlice({
