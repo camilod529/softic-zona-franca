@@ -2,25 +2,25 @@ import EventCard from "./EventCard";
 export const EventList = () => {
   return (
     <>
-      <div class="container text-center top">
-        <div class="row">
-          <div class="col-1"></div>
-          <div class="col-10">
+      <div className="container text-center top">
+        <div className="row">
+          <div className="col-1"></div>
+          <div className="col-10">
             <h1>Lista de eventos</h1>
           </div>
-          <div class="col-1"></div>
+          <div className="col-1"></div>
         </div>
       </div>
 
-      <div class="container text-center list">
-        <div class="row justify-content-md-center">
-          <div class="col-1"></div>
-          <div class="col-10">
-            <div class="accordion" id="accordionPanelsStayOpenExample">
-              <div class="accordion-item">
-                <h2 class="accordion-header">
+      <div className="container text-center list">
+        <div className="row justify-content-md-center">
+          <div className="col-1"></div>
+          <div className="col-10">
+            <div className="accordion" id="accordionPanelsStayOpenExample">
+              <div className="accordion-item">
+                <h2 className="accordion-header">
                   <button
-                    class="accordion-button"
+                    className="accordion-button"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapseOne"
@@ -32,9 +32,9 @@ export const EventList = () => {
                 </h2>
                 <div
                   id="panelsStayOpen-collapseOne"
-                  class="accordion-collapse collapse show"
+                  className="accordion-collapse collapse show"
                 >
-                  <div class="accordion-body">
+                  <div className="accordion-body">
                     <EventCard />
                     <EventCard />
                     <EventCard />
@@ -42,10 +42,10 @@ export const EventList = () => {
                   </div>
                 </div>
               </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header">
+              <div className="accordion-item">
+                <h2 className="accordion-header">
                   <button
-                    class="accordion-button collapsed"
+                    className="accordion-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapseTwo"
@@ -57,7 +57,7 @@ export const EventList = () => {
                 </h2>
                 <div
                   id="panelsStayOpen-collapseTwo"
-                  class="accordion-collapse collapse"
+                  className="accordion-collapse collapse"
                 >
                     <EventCard />
                     <EventCard />
@@ -68,7 +68,7 @@ export const EventList = () => {
               </div>
             </div>
           </div>
-          <div class="col-1">
+          <div className="col-1">
         </div>
       </div>
     </>
