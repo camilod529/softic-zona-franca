@@ -1,4 +1,4 @@
-export const comp_card =() =>{
+export const CompCard =() =>{
     return(
         <>
 
