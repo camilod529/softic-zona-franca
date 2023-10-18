@@ -1,9 +1,9 @@
-export { Login } from "./LoginPage";
-export { HomePage } from "./HomePage";
-export { Register } from "./RegisterPage";
-export { EventList } from "./EventListPage";
-export { AdmEmp } from "./AdmEmpPage";
-export { ProfileEmp } from "./ProfileEmpPage";
-export { RankList } from "./RankListPage";
-//export * from "./Profile";
+export * from "./LoginPage";
+export * from "./HomePage";
+export * from "./RegisterPage";
+export * from "./EventListPage";
+export * from "./AdmEmpPage";
+export * from "./ProfileEmpPage";
+export * from "./RankListPage";
 export * from "./ProfilePage";
+export * from "./AdmColaboradoresPage.tsx"
