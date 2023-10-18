@@ -1,5 +1,4 @@
 import { FormEvent, useState } from "react";
-import { Link } from "react-router-dom";
 
 import { login } from "../api/session";
 import { useUserActions } from "../hooks/useUserActions";
@@ -17,10 +16,11 @@ export function Login() {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    await login({ email: parseInt(data.nick), password: data.contrasena })
+    await login({ email: data.nick, password: data.contrasena })
       .then((res) => {
         navigate("/profile");
         setUser(res.data);
+        console.log(res.data);
       })
       .catch((err) => console.log(err));
   };
@@ -33,11 +33,6 @@ export function Login() {
           className="card-img-top login-logo"
           alt="..."
         />
-        <div>
-          <strong>Fecha del evento: </strong><br /><br />
-          <strong>Lugar: </strong><br /><br />
-          <p>Descripción</p><br /><br />
-        </div>
         <form className="login-form mr-4" onSubmit={handleSubmit}>
           <label htmlFor="email">Usuario</label>
           <input

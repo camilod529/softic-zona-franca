@@ -4,18 +4,20 @@ import { User } from "../../types/types.d";
 const initialState: User = {
   rol: 0,
   nick: "",
-  nombre: "",
+  nombre_1: "",
+  nombre_empresa: "",
   edad: "",
-  numeroContacto: "",
-  correo: "",
-  correoEmpresarial: "",
-  empresa: "",
+  fecha_nacimiento: "",
+  correo_personal: "",
+  correo_empresarial: "",
+  empresa_colaborador: "",
   genero: "",
   gustos: [],
-  urlImg: "",
+  foto: "",
   contrasena: "",
-  estado: true,
+  estado_colaborador: true,
   puntos: 0,
+  puntos_acumulados: 0,
 };
 
 export const userSlice = createSlice({
