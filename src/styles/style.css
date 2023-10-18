@@ -240,11 +240,18 @@ body {
 .contenido-alternativa {
   display: none; /* Ocultar la imagen alternativa en pantallas grandes */
 }
-
+@media (min-width: 768px) and (max-width: 991px) {
+    .carousel {
+      display: none; /* Reducir el ancho del carrusel al 50% del contenedor */
+    }
+  }
 /* Estilos para pantallas pequeñas (menos de 768px de ancho) */
 @media (max-width: 767px) {
   .contenido {
     display: none; /* Ocultar la imagen en pantallas pequeñas */
+  }
+  .carousel{
+    display: none;
   }
   .footer .row > div:not(.col-xs-12.col-sm-12.col-md-2.col-lg-2.block) {
     display: none;
@@ -265,4 +272,13 @@ body {
     position: absolute;
     left: 4rem
 }
-
+.color-nav-bar{
+    background-color: #aaaa10be;
+}
+.color-perfil{
+    background-color: #cccccc88;
+}
+.perfil-contenido{
+    margin-top: 4rem;
+    padding-top: 3rem;
+}
