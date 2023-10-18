@@ -5,6 +5,8 @@ body {
 * {
   box-sizing: border-box;
 }
+
+
 .profile {
   margin-top: 5%;
 }
@@ -12,6 +14,11 @@ body {
   padding-top: 4%;
   padding-bottom: 2%;
 }
+
+/* ======================= */
+/* ======= Footer ========= */
+/* ======================= */
+
 .footer {
   background: #1f1e21;
   margin-top: 50px;
@@ -49,6 +56,11 @@ body {
   margin: 0px;
   color: #a09f34;
 }
+
+/* ============================ */
+/* ======= Accordions ========= */
+/* ============================ */
+
 .accordion {
   --bs-accordion-btn-bg: #d1d071;
   --bs-accordion-active-bg: #a09f34;
@@ -59,7 +71,9 @@ body {
   cursor: pointer;
 }
 
+/* ======================= */
 /* ======= Login ========= */
+/* ======================= */
 
 /* Card styles */
 .card {
@@ -200,4 +214,45 @@ body {
 
 .login-form button:hover {
     background-color: #45a049;
+}
+
+/* ============================= */
+/* ======= EventDetail ========= */
+/* ============================= */
+
+.stylish-headline {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  color: #4caf50; /* Green color */
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.containerEventInfo{
+  text-align: justify;
+  background-color: white;
+  border-color: #108014;
+  border-radius: 20px;
+  border-style: solid;
+  width: 70vw;
+  height: 40vw;
+}
+
+.containerEventDetails{
+  text-align: justify;
+  color: white;
+  background-color: #108014;
+  border-color: black;
+  border-radius: 20px;
+  border-style: solid;
+  width: 30vw;
+  height: 7vw;
+}
+
+.marginr{
+  margin-right: 30px;
+  margin-bottom: 10px;
 }

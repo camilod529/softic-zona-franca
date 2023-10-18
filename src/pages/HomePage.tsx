@@ -1,7 +1,8 @@
+import { EventDetail } from "./EventDetail"; 
 export const HomePage = () => {
   return (
     <>
-      <h1>hola</h1>
+      <EventDetail/>
     </>
   );
 };
