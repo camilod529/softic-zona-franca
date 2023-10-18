@@ -1,3 +1,4 @@
+
 import { NavBarHome } from "../components";
 
 export const HomePage = () => {
@@ -9,7 +10,6 @@ export const HomePage = () => {
           src="https://i.imgur.com/9PDGhjx.jpg"
           className="contenido-alternativa img-fluid contenido "
         />
-    
     </>
   );
 };

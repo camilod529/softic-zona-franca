@@ -3,29 +3,203 @@ body{
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-.profile{
-    margin-top: 5%;
+.profile {
+  margin-top: 5%;
 }
 .top {
-    padding-top: 4%;
-    padding-bottom: 2%;
+  padding-top: 4%;
+  padding-bottom: 2%;
 }
-.footer{ background: #1F1E21; margin-top: 50px; padding: 30px 0px; color: #FFF; }
-.footer .block{ vertical-align: middle; }
-.footer .data div{ padding-left: 5px; font-size: 12px; }
-.footer .phone{ background: #888986; display: inline-block; padding: 0px 5px; }
-.footer .social .icon{ display: inline-block; margin: 5px 7px 0px 0px; }
-.footer .credits{ color: #343334; margin-left: 5px; font-weight: bold; }
-.footer .links{ padding: 0px; line-height: 12px; }
-.footer .links a{ font-size: 12px; line-height: 13px; margin: 0px; color: #A09F34; }
+.footer {
+  background: #1f1e21;
+  margin-top: 50px;
+  padding: 30px 0px;
+  color: #fff;
+}
+.footer .block {
+  vertical-align: middle;
+}
+.footer .data div {
+  padding-left: 5px;
+  font-size: 12px;
+}
+.footer .phone {
+  background: #888986;
+  display: inline-block;
+  padding: 0px 5px;
+}
+.footer .social .icon {
+  display: inline-block;
+  margin: 5px 7px 0px 0px;
+}
+.footer .credits {
+  color: #343334;
+  margin-left: 5px;
+  font-weight: bold;
+}
+.footer .links {
+  padding: 0px;
+  line-height: 12px;
+}
+.footer .links a {
+  font-size: 12px;
+  line-height: 13px;
+  margin: 0px;
+  color: #a09f34;
+}
+.accordion {
+  --bs-accordion-btn-bg: #d1d071;
+  --bs-accordion-active-bg: #a09f34;
+  --bs-accordion-active-color: white;
+  --bs-accordion-bg: #f7f7e9;
+}
+.logout-button:hover {
+  cursor: pointer;
+}
 
-.accordion{
-    --bs-accordion-btn-bg: #d1d071;
-    --bs-accordion-active-bg: #A09F34;
-    --bs-accordion-active-color: white;
-    --bs-accordion-bg: #f7f7e9;
+/* ======= Login ========= */
+
+/* Card styles */
+.card {
+    background-color: #ffffff; /* Set card background color */
+    width: 300px; /* Set card width */
+    height: 400px; /* Set card height */
+    border-radius: 10px; /* Optional: Add rounded corners to the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add box shadow for a subtle lift effect */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Left half (login form) styles */
+.left-half {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Right half (image) styles */
+.right-half {
+    flex: 1;
+}
+
+/* Login form styles */
+.input-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc; /* Input border color */
+    border-radius: 5px; /* Optional: Add rounded corners to the input */
+}
+
+.button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50; /* Set button background color */
+    color: #ffffff; /* Set button text color */
+    border: none;
+    border-radius: 5px; /* Optional: Add rounded corners to the button */
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #45a049; /* Button color on hover */
+}
+
+
+.login-card{
+    width: 60vw;
+    height: 40vw;
+    margin: auto;
+    position: absolute;
+    top: 0; bottom: 0; /* Center vertically */
+    left: 0; right: 0; /* Center horizontally */
+    background-color: #ffffff; /* Set card background color */
+    border-radius: 30px; /* Optional: Add rounded corners to the card */
+    border-width: 6px;
+    border-color: #108014;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add box shadow for a subtle lift effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-logo {
+    max-width: 50%; /* Restrict the image to fill exactly the left half */
+    max-height: 100%; /* Ensure the image doesn't exceed the card's height */
+    object-fit: cover; /* Resize the image to cover the container */
+}
+
+.login-form {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form .input-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+/* Style for the form container */
+.login-form {
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Style for labels */
+.login-form label {
+    font-size: 16px;
+    color: #333333;
+    display: block;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+/* Style for input fields */
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: calc(100% - 40px);
+    padding: 10px;
+    margin-bottom: 16px; /* Adjusted margin bottom */
+    margin-right: 8px; /* Right margin added */
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Style for the login button */
+.login-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #45a049;
 }
 .contenido {
     position: absolute;
@@ -36,10 +210,6 @@ body{
   z-index: -2;
   object-fit: cover;
   }
-
-.home {
-    background-color: rgba(255, 255, 255, 0.308);    
-}
 
 .botpage {
     position: fixed;
