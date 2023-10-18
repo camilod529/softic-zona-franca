@@ -1,3 +1,10 @@
+import { Navbar } from "../components";
+
 export function Register() {
-  return <main>Register page</main>;
+  return (
+    <>
+      <Navbar />
+      Register page
+    </>
+  );
 }

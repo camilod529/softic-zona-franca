@@ -1,7 +1,11 @@
+import { Navbar } from "../components";
+
 export const ProfileEmp = () => {
   // TODO: editar info solo para mostrar
   return (
     <>
+      <Navbar />
+
       <div className="container">
         <div className="row">
           <div className="col-9">

@@ -1,8 +1,10 @@
-import { AdmEventCard } from "../components";
+import { AdmEventCard, Navbar } from "../components";
 import { Link } from "react-router-dom";
 export const AdmEventPage = () => {
   return (
     <>
+      <Navbar />
+
       <div className="container text-center top">
         <div className="row">
           <div className="col-md-"></div>
