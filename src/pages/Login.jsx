@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 
 import { login } from "../api/session";
 import { useUserActions } from "../hooks/useUserActions";
+import { useNavigate } from "react-router-dom";
 
 export function Login() {
-  const [data, setData] = useState({ email: "", password: "" });
+  const [data, setData] = useState({ nick: "", contrasena: "" });
   const { setUser } = useUserActions();
+  const navigate = useNavigate();
 
   const onChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
@@ -16,21 +18,22 @@ export function Login() {
     e.preventDefault();
 
     await login(data)
-      .then((res) => setUser(res.data))
+      .then((res) => {
+        navigate("/profile");
+        setUser(res.data);
+      })
       .catch((err) => console.log(err));
   };
 
   return (
     <main>
-      <h1>
-        INGRESA A NUESTRA ZONA PRIVADA Y CONOCE INFORMACIÓN PERSONALIZADA.
-      </h1>
+      <h1>INGRESA A NUESTRA ZONA PRIVADA Y CONOCE INFORMACIÓN PERSONALIZADA.</h1>
 
       <form onSubmit={handleSubmit}>
-        <label htmlFor="email">Correo</label>
+        <label htmlFor="email">Usuario</label>
         <input
-          type="email"
-          name="email"
+          type="text"
+          name="nick"
           id="email"
           placeholder="Escriba su correo"
           onChange={onChange}
@@ -39,7 +42,7 @@ export function Login() {
         <label htmlFor="password">Contraseña</label>
         <input
           type="password"
-          name="password"
+          name="contrasena"
           id="password"
           placeholder="Escriba su contraseña"
           onChange={onChange}

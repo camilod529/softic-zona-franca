@@ -20,13 +20,21 @@ export function ProtectedRoute({ children }) {
     }
 
     case "/register": {
-      if (user.role !== "empresa") {
+      if (user.role !== 2) {
         return <Navigate to="/" />;
       }
       break;
     }
+    case "/profile":
+      {
+        if (user.role === 0) {
+          console.log("aaaa");
+          return <Navigate to="/login" />;
+        }
+      }
+      break;
 
-    default: 
+    default:
       break;
   }
 

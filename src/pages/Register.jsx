@@ -1,3 +1,3 @@
 export function Register() {
-  return <main></main>
+  return <main>Register page</main>;
 }
