@@ -2,23 +2,20 @@ import { addHours } from "date-fns";
 import { Calendar } from "react-big-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import { localizer } from "../helpers/calendarLocalizer";
+import { customEvent } from "../types/types";
 
-const events = [
+const events: Array<customEvent> = [
   {
     title: "Cumpleaños del jefe",
     notes: "Hay que comprar el pastel",
     start: new Date(),
     end: addHours(new Date(), 2),
     bgcolor: "#fafafa",
-    user: {
-      _id: "123",
-      name: "Camilo",
-    },
   },
 ];
 
 export const CalendarComp = () => {
-  const eventStyleGetter = (event: any, start: Date, end: Date, isSelected: boolean) => {
+  const eventStyleGetter = (event: customEvent, start: Date, end: Date, isSelected: boolean) => {
     // console.log({ event, start, end, isSelected });
 
     const style = {
@@ -29,6 +26,10 @@ export const CalendarComp = () => {
     };
     return { style };
   };
+  const onDoubleClick = (event: customEvent) => {
+    console.log({ doubleClick: event });
+  };
+
   return (
     <Calendar
       culture="es"
@@ -37,6 +38,7 @@ export const CalendarComp = () => {
       localizer={localizer}
       defaultView="week"
       events={events}
+      onDoubleClickEvent={onDoubleClick}
     />
   );
 };
