@@ -1,8 +1,10 @@
-import { RankListItem } from "../components";
+import { Navbar, RankListItem } from "../components";
 
 export const RankList = () => {
   return (
     <>
+      <Navbar />
+
       <div className="container text-center top">
         <div className="row">
           <div className="col-1"></div>

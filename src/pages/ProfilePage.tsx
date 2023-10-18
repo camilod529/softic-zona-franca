@@ -1,3 +1,4 @@
+import { Navbar } from "../components";
 import { useAppSelector } from "../hooks/store";
 
 export const ProfilePage = () => {
@@ -6,6 +7,7 @@ export const ProfilePage = () => {
   return (
     <>
       {user.rol === 1 ? <>No deberia estar aca</> : ""}
+      <Navbar />
 
       <div className="container">
         <div className="row">
