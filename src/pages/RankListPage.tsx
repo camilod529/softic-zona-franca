@@ -31,19 +31,16 @@ export const RankList = () => {
                     <strong>Empresas</strong>
                   </button>
                 </h2>
-                <div
-                  id="panelsStayOpen-collapseOne"
-                  className="accordion-collapse collapse show"
-                >
-                  <div class="container text-center mt-2 mb-3">
-                    <div class="row">
-                      <div class="col">
+                <div id="panelsStayOpen-collapseOne" className="accordion-collapse collapse show">
+                  <div className="container text-center mt-2 mb-3">
+                    <div className="row">
+                      <div className="col">
                         <strong>Rank</strong>
                       </div>
-                      <div class="col-6">
+                      <div className="col-6">
                         <strong>Nombre</strong>
                       </div>
-                      <div class="col">
+                      <div className="col">
                         <strong>ZF-Coins</strong>
                       </div>
                     </div>
@@ -65,19 +62,16 @@ export const RankList = () => {
                     <strong>Colaboradores</strong>
                   </button>
                 </h2>
-                <div
-                  id="panelsStayOpen-collapseTwo"
-                  className="accordion-collapse collapse"
-                >
-                  <div class="container text-center mt-2 mb-3">
-                    <div class="row">
-                      <div class="col">
+                <div id="panelsStayOpen-collapseTwo" className="accordion-collapse collapse">
+                  <div className="container text-center mt-2 mb-3">
+                    <div className="row">
+                      <div className="col">
                         <strong>Rank</strong>
                       </div>
-                      <div class="col-6">
+                      <div className="col-6">
                         <strong>Nombre</strong>
                       </div>
-                      <div class="col">
+                      <div className="col">
                         <strong>ZF-Coins</strong>
                       </div>
                     </div>
