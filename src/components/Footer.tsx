@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <div className="footer mobile-adjust-padding">
+    <div className="footer mobile-adjust-padding botpage">
       <div className="container text-center">
         <div className="row row-cols-4">
           <div className="col-xs-12 col-sm-12 col-md-5 col-lg-5 data block">
@@ -16,9 +16,9 @@ export default function Footer() {
             <div className="icon">
               <Link
                 target="_blank"
-                href="http://www.facebook.com/zfsantander"
+                to="http://www.facebook.com/zfsantander"
                 title="Síguenos en Facebook"
-                alt="Síguenos en Facebook"
+                
               >
                 <img
                   src="https://www.zonafrancasantander.com/template/images/icon-facebook.png"
@@ -28,7 +28,7 @@ export default function Footer() {
               </Link>
             </div>
             <div className="icon">
-              <Link target="_blank" href="https://twitter.com/zfsantander">
+              <Link target="_blank" to="https://twitter.com/zfsantander">
                 <img
                   src="https://www.zonafrancasantander.com/template/images/icon-twitter.png"
                   className="img-responsive center-block"
@@ -37,7 +37,7 @@ export default function Footer() {
               </Link>
             </div>
             <div className="icon">
-              <Link target="_blank" href="https://www.linkedin.com/company/zonafrancasantander">
+              <Link target="_blank" to="https://www.linkedin.com/company/zonafrancasantander">
                 <img
                   src="https://www.zonafrancasantander.com/template/images/icon-linkedin.png"
                   className="img-responsive center-block"
@@ -46,7 +46,7 @@ export default function Footer() {
               </Link>
             </div>
             <div className="icon">
-              <Link target="_blank" href="https://www.instagram.com/zonafranca.santander/">
+              <Link target="_blank" to="https://www.instagram.com/zonafranca.santander/">
                 <img
                   src="https://www.zonafrancasantander.com/template/images/icon-instagram.png"
                   className="img-responsive center-block"
@@ -57,45 +57,45 @@ export default function Footer() {
           </div>
           <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 links block p-l-30">
             <div className="item animate">
-              <a href="https://www.zonafrancasantander.com//secciones-135-s/%BFqui%E9nes-somos.htm">
+              <Link to="https://www.zonafrancasantander.com//secciones-135-s/%BFqui%E9nes-somos.htm">
                 <div className="animate">Conocer ZFSantander</div>
-              </a>
+              </Link>
             </div>
             <div className="item animate">
-              <a href="https://www.zonafrancasantander.com//secciones-126-s/santander%2Fcolombia-nuestra-regi%F3n.htm">
+              <Link to="https://www.zonafrancasantander.com//secciones-126-s/santander%2Fcolombia-nuestra-regi%F3n.htm">
                 <div className="animate">¿Por qué ZFSantander?</div>
-              </a>
+              </Link>
             </div>
             <div className="item animate">
-              <a href="https://www.zonafrancasantander.com//secciones-99-s/ubicaci%F3n.htm">
+              <Link to="https://www.zonafrancasantander.com//secciones-99-s/ubicaci%F3n.htm">
                 <div className="animate">Ubicación</div>
-              </a>
+              </Link>
             </div>
             <div className="item animate">
-              <a href="https://www.zonafrancasantander.com//noticias-11-m/noticias.htm">
+              <Link to="https://www.zonafrancasantander.com//noticias-11-m/noticias.htm">
                 <div className="animate">Noticias</div>
-              </a>
+              </Link>
             </div>
             <div className="item animate">
-              <a href="https://www.zonafrancasantander.com//contactos-6-m/cont%E1ctenos.htm">
+              <Link to="https://www.zonafrancasantander.com//contactos-6-m/cont%E1ctenos.htm">
                 <div className="animate">Contáctenos</div>
-              </a>
+              </Link>
             </div>
             <div className="item animate">
-              <a href="https://www.zonafrancasantander.com//proveedores-14-m/proveedores.htm">
+              <Link to="https://www.zonafrancasantander.com//proveedores-14-m/proveedores.htm">
                 <div className="animate">Proveedores</div>
-              </a>
+              </Link>
             </div>{" "}
           </div>
           <div className="col-xs-12 col-sm-12 col-md-2 col-lg-2 block">
             <br className="visible-xs" />
-            <a href="https://www.zonafrancasantander.com/">
+            <Link to="https://www.zonafrancasantander.com/">
               <img
                 src="https://www.zonafrancasantander.com/template/images/logo-footer.png"
                 className="img-responsive center-block"
                 alt=""
               />
-            </a>
+            </Link>
             <br className="visible-xs" />
             <br className="visible-xs" />
           </div>
