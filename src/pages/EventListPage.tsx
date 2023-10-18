@@ -1,7 +1,10 @@
+import { Navbar } from "../components";
 import EventCard from "../components/EventCard";
 export const EventList = () => {
   return (
     <>
+      <Navbar />
+
       <div className="container text-center top">
         <div className="row">
           <div className="col-1"></div>
@@ -30,10 +33,7 @@ export const EventList = () => {
                     Proximos eventos
                   </button>
                 </h2>
-                <div
-                  id="panelsStayOpen-collapseOne"
-                  className="accordion-collapse collapse show"
-                >
+                <div id="panelsStayOpen-collapseOne" className="accordion-collapse collapse show">
                   <div className="accordion-body">
                     <EventCard />
                     <EventCard />
@@ -55,21 +55,17 @@ export const EventList = () => {
                     Eventos pasados
                   </button>
                 </h2>
-                <div
-                  id="panelsStayOpen-collapseTwo"
-                  className="accordion-collapse collapse"
-                >
-                    <EventCard />
-                    <EventCard />
-                    <EventCard />
-                    <EventCard />
-                  </div>
+                <div id="panelsStayOpen-collapseTwo" className="accordion-collapse collapse">
+                  <EventCard />
+                  <EventCard />
+                  <EventCard />
+                  <EventCard />
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-1">
         </div>
+        <div className="col-1"></div>
       </div>
     </>
   );

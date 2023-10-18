@@ -24,7 +24,7 @@ export const Navbar = () => {
       correoEmpresarial: "",
       urlImg: "",
     });
-    navigate("/login");
+    navigate("/");
   };
   return (
     <>

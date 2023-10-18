@@ -1,3 +1,10 @@
+import { Navbar } from "../components";
+
 export const AdmColaboradoresPage = () => {
-  return <div>admColaboradoresPage</div>;
+  return (
+    <>
+      <Navbar />
+      <div>admColaboradoresPage</div>
+    </>
+  );
 };

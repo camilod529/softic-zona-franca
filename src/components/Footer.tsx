@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <div className="footer mobile-adjust-padding">
+    <div className="footer mobile-adjust-padding botpage">
       <div className="container text-center">
         <div className="row row-cols-4">
           <div className="col-xs-12 col-sm-12 col-md-5 col-lg-5 data block">
@@ -38,10 +38,9 @@ export default function Footer() {
               </Link>
             </div>
             <div className="icon">
-              <Link
-                target="_blank"
-                to="https://www.linkedin.com/company/zonafrancasantander"
-              >
+
+              <Link target="_blank" to="https://www.linkedin.com/company/zonafrancasantander">
+
                 <img
                   src="https://www.zonafrancasantander.com/template/images/icon-linkedin.png"
                   className="img-responsive center-block"
@@ -50,10 +49,9 @@ export default function Footer() {
               </Link>
             </div>
             <div className="icon">
-              <Link
-                target="_blank"
-                to="https://www.instagram.com/zonafranca.santander/"
-              >
+                  
+              <Link target="_blank" to="https://www.instagram.com/zonafranca.santander/">
+
                 <img
                   src="https://www.zonafrancasantander.com/template/images/icon-instagram.png"
                   className="img-responsive center-block"
