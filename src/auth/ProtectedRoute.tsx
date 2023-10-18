@@ -13,7 +13,7 @@ export function ProtectedRoute({ children }: { children: JSX.Element }) {
     }
 
     case "/login": {
-      if (user.rol != undefined) {
+      if (user.rol != 0) {
         return <Navigate to="/" />;
       }
       break;
