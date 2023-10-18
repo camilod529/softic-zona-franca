@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { login } from "../api/session";
@@ -10,14 +10,14 @@ export function Login() {
   const { setUser } = useUserActions();
   const navigate = useNavigate();
 
-  const onChange = (e) => {
-    setData({ ...data, [e.target.name]: e.target.value });
+  const onChange = (e: FormEvent<HTMLInputElement>) => {
+    setData({ ...data, [e.currentTarget.name]: e.currentTarget.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    await login(data)
+    await login({ email: data.nick, password: data.contrasena })
       .then((res) => {
         navigate("/profile");
         setUser(res.data);

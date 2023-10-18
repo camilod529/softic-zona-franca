@@ -6,3 +6,4 @@ export { AdmEmp } from "./AdmEmpPage";
 export { ProfileEmp } from "./ProfileEmpPage";
 export { RankList } from "./RankListPage";
 //export * from "./Profile";
+export * from "./ProfilePage";
