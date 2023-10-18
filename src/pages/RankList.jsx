@@ -1,4 +1,4 @@
-import RankListItem from "../components/RankListItem";
+import { RankListItem } from "../components";
 export const RankList = () => {
   return (
     <>
@@ -30,15 +30,12 @@ export const RankList = () => {
                     Proximos eventos
                   </button>
                 </h2>
-                <div
-                  id="panelsStayOpen-collapseOne"
-                  className="accordion-collapse collapse show"
-                >
+                <div id="panelsStayOpen-collapseOne" className="accordion-collapse collapse show">
                   <div className="accordion-body">
-                    <RankListItem/>
-                    <RankListItem/>
-                    <RankListItem/>
-                    <RankListItem/>
+                    <RankListItem />
+                    <RankListItem />
+                    <RankListItem />
+                    <RankListItem />
                   </div>
                 </div>
               </div>
@@ -55,21 +52,17 @@ export const RankList = () => {
                     Eventos pasados
                   </button>
                 </h2>
-                <div
-                  id="panelsStayOpen-collapseTwo"
-                  className="accordion-collapse collapse"
-                >
-                    <RankListItem/>
-                    <RankListItem/>
-                    <RankListItem/>
-                    <RankListItem/>
-                  </div>
+                <div id="panelsStayOpen-collapseTwo" className="accordion-collapse collapse">
+                  <RankListItem />
+                  <RankListItem />
+                  <RankListItem />
+                  <RankListItem />
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-1">
         </div>
+        <div className="col-1"></div>
       </div>
     </>
   );

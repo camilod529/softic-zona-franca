@@ -1,5 +1,3 @@
-export const RankListItem=()=> {
-    return (
-        <h1>hola</h1>
-    );
+export const RankListItem = () => {
+  return <h1>hola</h1>;
 };
