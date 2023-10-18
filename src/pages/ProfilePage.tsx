@@ -9,11 +9,14 @@ export const ProfilePage = () => {
     <>
       {user.rol === 1 ? <>No deberia estar aca</> : ""}
       <Navbar />
-      <img src="https://www.zonafrancasantander.com/imagenes/vdo_cabezotes/cabe_93d666c2e538322a27e6562c19bc5597a2066bd6.jpg" className="contenido img-fluid"/>
-    <img
-          src="https://i.imgur.com/9PDGhjx.jpg"
-          className="contenido-alternativa img-fluid contenido "
-        />
+      <img
+        src="https://www.zonafrancasantander.com/imagenes/vdo_cabezotes/cabe_93d666c2e538322a27e6562c19bc5597a2066bd6.jpg"
+        className="contenido img-fluid"
+      />
+      <img
+        src="https://i.imgur.com/9PDGhjx.jpg"
+        className="contenido-alternativa img-fluid contenido "
+      />
       <div className="container perfil-contenido">
         <div className="row color-perfil">
           <div className="col-9">
@@ -60,11 +63,9 @@ export const ProfilePage = () => {
                     <h3> Gustos: </h3>
                   </div>
                   <div className="col-4 col-sm-6">
-                    {user.gustos
-                      ? user.gustos.map((gusto) => {
-                          return gusto + " ";
-                        })
-                      : ""}
+                    {user.gustos?.map((gusto) => {
+                      return gusto + " ";
+                    })}
                   </div>
                 </div>
               </div>
@@ -94,7 +95,7 @@ export const ProfilePage = () => {
           )}
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };
