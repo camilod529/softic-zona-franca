@@ -1,8 +1,31 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAppSelector } from "../hooks/store";
+import { useUserActions } from "../hooks/useUserActions";
 
 export const Navbar = () => {
   const user = useAppSelector((state) => state.user);
+  const navigate = useNavigate();
+  const { setUser } = useUserActions();
+
+  const onLogut = () => {
+    setUser({
+      rol: 0,
+      nick: "",
+      nombre: "",
+      edad: "",
+      numeroContacto: "",
+      correo: "",
+      empresa: "",
+      genero: "",
+      gustos: [],
+      contrasena: "",
+      estado: true,
+      puntos: 0,
+      correoEmpresarial: "",
+      urlImg: "",
+    });
+    navigate("/login");
+  };
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary ">
@@ -92,10 +115,14 @@ export const Navbar = () => {
             ) : (
               ""
             )}
-            <span className="nav-item">
-              <i className="fa-solid fa-arrow-right-from-bracket"></i>
-              &nbsp;Cerrar sesion
-            </span>
+            {user.rol !== 0 ? (
+              <span className="nav-item logout-button" onClick={() => onLogut()}>
+                <i className="fa-solid fa-arrow-right-from-bracket"></i>
+                &nbsp;Cerrar sesion
+              </span>
+            ) : (
+              ""
+            )}
           </div>
         </div>
       </nav>
