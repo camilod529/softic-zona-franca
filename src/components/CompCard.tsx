@@ -15,7 +15,7 @@ export const CompCard =() =>{
           <li className="list-group-item">NIT</li>
           <li className="list-group-item">
             <Link to="#" className="card-link">
-              Ubicacion
+                
             </Link>
           </li>
           <li className="list-group-item">
