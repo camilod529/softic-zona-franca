@@ -16,3 +16,37 @@ export const createCompany = ({ nit, name }: { nit: string; name: string }) => {
     .then((res) => res.data)
     .catch((err) => console.log(err));
 };
+
+export const createColaborator = ({
+  documento_colaborador,
+  empresa_colaborador,
+  nombre_1,
+  apellido_1,
+  genero,
+  correo_personal,
+  fecha_nacimiento,
+  foto,
+}: {
+  documento_colaborador: string;
+  empresa_colaborador: string;
+  nombre_1: string;
+  apellido_1: string;
+  genero: string;
+  correo_personal: string;
+  fecha_nacimiento: Date;
+  foto: File | null;
+}) => {
+  return axios
+    .post(`${API_URL}/colaborator`, {
+      documento_colaborador,
+      empresa_colaborador,
+      nombre_1,
+      apellido_1,
+      genero,
+      correo_personal,
+      fecha_nacimiento,
+      foto,
+    })
+    .then((res) => res.data)
+    .catch((err) => console.log(err));
+};
