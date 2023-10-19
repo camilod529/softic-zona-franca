@@ -3,13 +3,14 @@ import { Navbar } from "../components";
 import EventCard from "../components/EventCard";
 import Footer from "../components/Footer";
 import { getEvents } from "../api/session";
+import { Event } from "../types/types.d";
 
 export const EventList = () => {
-  const [events, setEvents] = useState([]);
+  const [events, setEvents] = useState<Event[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const getEventsAsync = async () => {
     setIsLoading(true);
-    await getEvents().then((res: []) => {
+    await getEvents().then((res: Event[]) => {
       setEvents(res);
       setIsLoading(false);
     });
@@ -59,41 +60,29 @@ export const EventList = () => {
                       Proximos eventos
                     </button>
                   </h2>
-                  <div id="panelsStayOpen-collapseOne" className="accordion-collapse collapse show">
+                  <div
+                    id="panelsStayOpen-collapseOne"
+                    className="accordion-collapse collapse show"
+                  >
                     <div className="accordion-body">
                       {!isLoading
-                        ? events.map(
-                            (event: {
-                              id_evento: number;
-                              nombre_evento: string;
-                              descripcion_evento: string;
-                              foto_evento: string;
-                              fecha_evento: string;
-                              fecha_evento_fin: string;
-                              aforo_maximo: number;
-                              aforo_registrado: number;
-                              puntos_colaborador: number;
-                              puntos_empresa: number;
-                              puntos_castigo: number;
-                              estado_boolean: boolean;
-                              user_insert: string;
-                              date_insert: string;
-                            }) => {
-                              if (new Date(event.fecha_evento) > new Date()) {
-                                return (
-                                  <>
-                                    <EventCard
-                                      key={event.id_evento}
-                                      title={event.nombre_evento}
-                                      description={event.descripcion_evento}
-                                      imageUrl={event.foto_evento}
-                                    />
-                                  </>
-                                );
-                              }
-                              return <></>;
+                        ? events.length > 0 &&
+                          events.map((event) => {
+                            if (new Date(event.fecha_evento) > new Date()) {
+                              return (
+                                <>
+                                  <EventCard
+                                    key={event.id_evento}
+                                    event={event}
+                                    title={event.nombre_evento}
+                                    description={event.descripcion_evento}
+                                    imageUrl={event.foto_evento}
+                                  />
+                                </>
+                              );
                             }
-                          )
+                            return <></>;
+                          })
                         : ""}
                     </div>
                   </div>
@@ -111,40 +100,27 @@ export const EventList = () => {
                       Eventos pasados
                     </button>
                   </h2>
-                  <div id="panelsStayOpen-collapseTwo" className="accordion-collapse collapse">
+                  <div
+                    id="panelsStayOpen-collapseTwo"
+                    className="accordion-collapse collapse"
+                  >
                     {!isLoading
-                      ? events.map(
-                          (event: {
-                            id_evento: number;
-                            nombre_evento: string;
-                            descripcion_evento: string;
-                            foto_evento: string;
-                            fecha_evento: string;
-                            fecha_evento_fin: string;
-                            aforo_maximo: number;
-                            aforo_registrado: number;
-                            puntos_colaborador: number;
-                            puntos_empresa: number;
-                            puntos_castigo: number;
-                            estado_boolean: boolean;
-                            user_insert: string;
-                            date_insert: string;
-                          }) => {
-                            if (new Date(event.fecha_evento) < new Date()) {
-                              return (
-                                <>
-                                  <EventCard
-                                    key={event.id_evento}
-                                    title={event.nombre_evento}
-                                    description={event.descripcion_evento}
-                                    imageUrl={event.foto_evento}
-                                  />
-                                </>
-                              );
-                            }
-                            return <></>;
+                      ? events.map((event) => {
+                          if (new Date(event.fecha_evento) < new Date()) {
+                            return (
+                              <>
+                                <EventCard
+                                  key={event.id_evento}
+                                  event={event}
+                                  title={event.nombre_evento}
+                                  description={event.descripcion_evento}
+                                  imageUrl={event.foto_evento}
+                                />
+                              </>
+                            );
                           }
-                        )
+                          return <></>;
+                        })
                       : ""}
                   </div>
                 </div>
