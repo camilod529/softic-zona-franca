@@ -33,8 +33,8 @@ export const AdmEmp = () => {
         className="contenido-alternativa img-fluid contenido "
       />
       <Navbar />
-      <div className="container-adminEmp">
-        <div className="content-container top">
+      <div className="container-adminEmp ">
+        <div className="content-container titulo">
           <div className="container text-center">
             <div className="row">
               <div className="col-md-"></div>
@@ -63,16 +63,16 @@ export const AdmEmp = () => {
                   <CompCard />
                   <CompCard />
                   <CompCard /> */}
-                  <div className="col">
-                    <div className="card h-100">
-                      <img src="..." className="card-img-top" alt="..." />
-                      <div className="card-body">
-                        <h5 className="card-title">Agregar empresa</h5>
-                        <Link to={"/createCompany"} className="card-text">
-                          Aqui podra agregar una empresa nueva
-                        </Link>
-                      </div>
-                    </div>
+                  <div className="card" style={{ width: "18rem" }}>
+                    <img src="..." className="card-img-top" alt="..." />
+                    <div className="card-body"></div>
+                    <ul className="list-group list-group-flush">
+                      <li className="list-group-item"></li>
+                      <Link to={"/createColaborator"} className="list-group-item">
+                        <h5 className="card-title">Agregar colaborador</h5>
+                      </Link>
+                      <li className="list-group-item"></li>
+                    </ul>
                   </div>
                 </div>
               </div>
