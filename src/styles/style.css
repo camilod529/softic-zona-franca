@@ -77,16 +77,38 @@ body {
 
 /* Card styles */
 .card {
-  background-color: #ffffff; /* Set card background color */
-  width: 300px; /* Set card width */
-  height: 400px; /* Set card height */
-  border-radius: 10px; /* Optional: Add rounded corners to the card */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add box shadow for a subtle lift effect */
+  margin: auto;
+  background-color: #ffffff;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 8rem; /* Add top margin for spacing between .card and the content above */
+  margin-bottom: 8rem;}
+
+.login-card {
+  width: 100%;
+  background-color: #ffffff;
+    border-radius: 20px;
+    border-width: 4px;
+    border-color: #108014;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
+
+
+/* Add a media query for smaller screens */
+@media (max-width: 768px) {
+  .card, .login-card {
+    width: 90%; /* Adjust width for smaller screens */
+    max-width: none; /* Remove max-width for smaller screens */
+  }
+}
+
 
 /* Left half (login form) styles */
 .left-half {
@@ -129,25 +151,6 @@ body {
 
 .button:hover {
   background-color: #45a049; /* Button color on hover */
-}
-
-.login-card {
-  width: 60vw;
-  height: 40vw;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  bottom: 0; /* Center vertically */
-  left: 0;
-  right: 0; /* Center horizontally */
-  background-color: #ffffff; /* Set card background color */
-  border-radius: 30px; /* Optional: Add rounded corners to the card */
-  border-width: 6px;
-  border-color: #108014;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add box shadow for a subtle lift effect */
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .login-logo {
@@ -215,6 +218,19 @@ body {
 .login-form button:hover {
   background-color: #45a049;
 }
+
+.stylish-headline {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  color: #4caf50; /* Green color */
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
 .contenido {
   position:fixed;
   top: 0;
@@ -298,6 +314,7 @@ body {
   .footer .row > div:not(.col-xs-12.col-sm-12.col-md-2.col-lg-2.block) {
     display: none;
   }
+  
   .contenido-alternativa {
     display: block; /* Mostrar la imagen alternativa en pantallas pequeñas */
   }
@@ -322,4 +339,14 @@ body {
 }
 .puntos{
     margin-right: 2rem;
+}
+.prizeCard{
+border-radius: 20px;
+border-width: 2px;
+border-color: #108014;
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.col{
+  max-height: 34rem;
 }
