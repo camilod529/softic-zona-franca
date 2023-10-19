@@ -24,6 +24,30 @@ export type customEvent = {
   end: Date;
   bgcolor: string;
 };
+export type Company = {
+  nombre_empresa: string;
+  puntos: number;
+};
+
+export type Colaborator = {
+  apellido_1: string;
+  apellido_2: string;
+  correo_empresarial: string;
+  correo_personal: string;
+  date_insert: string;
+  date_update: null;
+  documento_colaborador: string;
+  empresa_colaborador: string;
+  estado_colaborador: boolean;
+  fecha_nacimiento: string;
+  foto: string;
+  genero: string;
+  nombre_1: string;
+  nombre_2: string;
+  puntos_acumulados: number;
+  user_insert: string;
+  user_update: null;
+};
 
 export type Event = {
   id_evento: number;
