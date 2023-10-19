@@ -52,7 +52,7 @@ export const AdmEmp = () => {
                 <div className="row row-cols-1 row-cols-md-3 g-4">
                   {!isLoading
                     ? companies.map((company: Company) => {
-                        return <CompCard title={company.nombre_empresa} desc={company.nit} />;
+                        return <CompCard title={company.nombre_empresa} nit={company.nit} />;
                       })
                     : "Cargando..."}
                   {/* <CompCard />
@@ -64,7 +64,6 @@ export const AdmEmp = () => {
                   <CompCard />
                   <CompCard /> */}
                   <div className="card" style={{ width: "18rem" }}>
-                    <img src="..." className="card-img-top" alt="..." />
                     <div className="card-body"></div>
                     <ul className="list-group list-group-flush">
                       <li className="list-group-item"></li>

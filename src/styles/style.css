@@ -285,8 +285,12 @@ body {
   display: none; /* Ocultar la imagen alternativa en pantallas grandes */
 }
 .carusel {
-  margin-top: 6%;
-  margin-bottom: 6%;
+  width: 100%;
+  height: 75vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .login {
   min-height: 60vh;

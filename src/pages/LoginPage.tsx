@@ -20,7 +20,7 @@ export function Login() {
 
     await login({ email: data.nick, password: data.contrasena })
       .then((res) => {
-        navigate("/profile");
+        navigate("/mainPage");
         setUser(res.data);
         console.log(res.data);
       })

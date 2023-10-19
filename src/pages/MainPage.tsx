@@ -1,5 +1,4 @@
 import { CarouselEvent, Navbar} from "../components";
-import { CalendarComp } from "../components/CalendarComp";
 import Footer from "../components/Footer";
 
 export const MainPage = () => {
@@ -16,7 +15,6 @@ export const MainPage = () => {
         className="contenido-alternativa img-fluid contenido "
       />
       <CarouselEvent />
-      <CalendarComp/>
       <Footer />
     </>
   );
