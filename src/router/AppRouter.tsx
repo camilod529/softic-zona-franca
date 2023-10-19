@@ -14,6 +14,7 @@ import {
   RankList,
   CreateCompanyPage,
   EventDetail,
+  MainPage,
 } from "../pages";
 import { AdmEventPage } from "../pages/AdmEventPage";
 
@@ -42,6 +43,14 @@ export const AppRouter = () => {
           element={
             <ProtectedRoute>
               <Register />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/mainPage"
+          element={
+            <ProtectedRoute>
+              <MainPage/>
             </ProtectedRoute>
           }
         />

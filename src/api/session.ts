@@ -54,3 +54,17 @@ export const createColaborator = ({
     .then((res) => res.data)
     .catch((err) => console.log(err));
 };
+
+export const getCompanyByName = (name: string | null) => {
+  return axios
+    .get(`${API_URL}/company/name/${name}`)
+    .then((res) => res.data)
+    .catch((err) => console.log(err));
+};
+
+export const getEvents = () => {
+  return axios
+    .get(`${API_URL}/events`)
+    .then((res) => res.data)
+    .catch((err) => console.log(err));
+};
