@@ -37,20 +37,24 @@ export const createColaborator = ({
   foto: File | null;
 }) => {
   return axios
-    .post(`${API_URL}/colaborator`, {
-      documento_colaborador,
-      empresa_colaborador,
-      nombre_1,
-      apellido_1,
-      genero,
-      correo_personal,
-      fecha_nacimiento,
-      foto,
-    }, {
-      headers: {
-        'Content-Type': 'multipart/form-data'
+    .post(
+      `${API_URL}/colaborator`,
+      {
+        documento_colaborador,
+        empresa_colaborador,
+        nombre_1,
+        apellido_1,
+        genero,
+        correo_personal,
+        fecha_nacimiento,
+        foto,
+      },
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
       }
-    })
+    )
     .then((res) => res.data)
     .catch((err) => console.log(err));
 };
@@ -79,6 +83,57 @@ export const getEvents = () => {
 export const getColaborators = () => {
   return axios
     .get(`${API_URL}/colaborators`)
+    .then((res) => res.data)
+    .catch((err) => console.log(err));
+};
+
+export const createEvent = ({
+  id_evento,
+  nombre_evento,
+  descripcion_evento,
+  foto_evento,
+  fecha_evento,
+  fecha_evento_fin,
+  aforo_maximo,
+  aforo_registrado,
+  puntos_colaborador,
+  puntos_empresa,
+  puntos_castigo,
+}: {
+  id_evento: number;
+  nombre_evento: string;
+  descripcion_evento: string;
+  foto_evento: File | null;
+  fecha_evento: Date;
+  fecha_evento_fin: Date;
+  aforo_maximo: number;
+  aforo_registrado: number;
+  puntos_colaborador: number;
+  puntos_empresa: number;
+  puntos_castigo: number;
+}) => {
+  return axios
+    .post(
+      `${API_URL}/events/${id_evento}`,
+      {
+        id_evento,
+        nombre_evento,
+        descripcion_evento,
+        foto_evento,
+        fecha_evento,
+        fecha_evento_fin,
+        aforo_maximo,
+        aforo_registrado,
+        puntos_colaborador,
+        puntos_empresa,
+        puntos_castigo,
+      },
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      }
+    )
     .then((res) => res.data)
     .catch((err) => console.log(err));
 };
