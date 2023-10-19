@@ -2,8 +2,26 @@ import { Link } from "react-router-dom";
 import { Navbar } from "../components";
 import { CompCard } from "../components/CompCard";
 import Footer from "../components/Footer";
+import { useEffect, useState } from "react";
+import { getCompanies } from "../api/session";
+import { Company } from "../types/types";
 
 export const AdmEmp = () => {
+  const [companies, setCompanies] = useState<Company[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const getCompaniesAsync = async () => {
+    setIsLoading(true);
+    await getCompanies().then((res: Company[]) => {
+      setCompanies(res);
+      console.log(companies);
+      setIsLoading(false);
+    });
+    console.log(companies);
+  };
+
+  useEffect(() => {
+    getCompaniesAsync();
+  }, []);
   return (
     <>
       <img
@@ -32,7 +50,11 @@ export const AdmEmp = () => {
               <div className="col col-lg-2"></div>
               <div className="col-md-auto">
                 <div className="row row-cols-1 row-cols-md-3 g-4">
-                  <CompCard />
+                  {!isLoading
+                    ? companies.map((company: Company) => {
+                        return <CompCard title={company.nombre_empresa} desc={company.nit} />;
+                      })
+                    : "Cargando..."}
                   {/* <CompCard />
                   <CompCard />
                   <CompCard />
