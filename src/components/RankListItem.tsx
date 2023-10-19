@@ -1,18 +1,18 @@
 export const RankListItem = () => {
   return (
     <>
-      <ul class="list-group">
+      <ul className="list-group">
 
-        <li class="list-group-item mt-1">
-          <div class="container text-center">
-            <div class="row">
-              <div class="col">
+        <li className="list-group-item mt-1">
+          <div className="container text-center">
+            <div className="row">
+              <div className="col">
                 <strong>1st</strong>
               </div>
-              <div class="col-6">
+              <div className="col-6">
                 <strong>hola</strong>
               </div>
-              <div class="col">
+              <div className="col">
                 <strong>10000</strong>
               </div>
             </div>

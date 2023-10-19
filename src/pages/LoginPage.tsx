@@ -3,6 +3,8 @@ import { FormEvent, useState } from "react";
 import { login } from "../api/session";
 import { useUserActions } from "../hooks/useUserActions";
 import { useNavigate } from "react-router-dom";
+import { NavBarHome } from "../components";
+import Footer from "../components/Footer";
 
 export function Login() {
   const [data, setData] = useState({ nick: "", contrasena: "" });
@@ -27,7 +29,17 @@ export function Login() {
 
   return (
     <main>
-      <div className="card login-card">
+      <NavBarHome/>
+      <img
+        src="https://www.zonafrancasantander.com/imagenes/vdo_cabezotes/cabe_93d666c2e538322a27e6562c19bc5597a2066bd6.jpg"
+        className="contenido img-fluid"
+      />
+      <img
+        src="https://i.imgur.com/9PDGhjx.jpg"
+        className="contenido-alternativa img-fluid contenido "
+      />
+      <div className="login">
+      <div className="card login-card ">
         <form className="login-form mr-4" onSubmit={handleSubmit}>
           <label htmlFor="email">Usuario</label>
           <input
@@ -51,6 +63,8 @@ export function Login() {
           <button className="btn btn-primary mt-3">Ingresar</button>
         </form>
       </div>
+      </div>
+      <Footer/>
     </main>
   );
 }

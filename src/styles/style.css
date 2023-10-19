@@ -285,6 +285,9 @@ body {
   margin-top: 6%;
   margin-bottom: 6%;
 }
+.login{
+  min-height: 60vh;
+}
 .titulo{
   background-color: #ccccccc7;
   margin-top: 3rem;
