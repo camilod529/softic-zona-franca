@@ -365,8 +365,8 @@ body {
 
 .interests-container {
   max-width: 1000px; /* Set a specific width */
-  margin: 0 auto; 
-  margin-top: 5rem;/* Center the container horizontally */
+  margin: 0 auto;
+  margin-top: 5rem; /* Center the container horizontally */
 }
 
 .interest-checkbox input[type="checkbox"] {
@@ -387,6 +387,10 @@ body {
 .interest-checkbox input[type="checkbox"]:checked + label {
   background-color: #43a047; /* Darker shade of the background color when checkbox is checked */
 }
-.marRight{
+.marRight {
   margin-right: 100px;
+}
+.container-awards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }

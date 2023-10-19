@@ -33,6 +33,7 @@ export const Navbar = () => {
 
   useEffect(() => {
     // Send a query to the server to get the points
+    console.log("Esto se ejecutó");
     axios
       .get("http://localhost:3000/api/points", {
         params: {
@@ -55,16 +56,13 @@ export const Navbar = () => {
     <>
       <nav className="navbar navbar-expand-lg color-nav-bar">
         <div className="container-fluid d-flex justify-content-between ">
-          <Link
-            className="navbar-brand"
-            to={user.rol === 2 || user.rol === 3 ? "/profile" : ""}
-          >
+          <Link className="navbar-brand" to={user.rol === 2 || user.rol === 3 ? "/profile" : ""}>
             {user.rol === 1 ? "Inicio" : "Perfil"}
             {/* IMG avatar y nombre del usuario */}
             {user.rol === 3 ? (
               <img
                 className="ms-2"
-                src="https://img.freepik.com/free-psd/3d-render-avatar-character_23-2150611731.jpg?w=740&t=st=1697585995~exp=1697586595~hmac=df734503a938305cb6ac289c263bbcc1bbdfba962222f45162cf58ae097e71f9"
+                src={user.foto}
                 alt=""
                 style={{
                   width: "3rem",
@@ -132,6 +130,11 @@ export const Navbar = () => {
                       Mi empresa
                     </Link>
                   </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to={"/shop"}>
+                      Premios
+                    </Link>
+                  </li>
                 </>
               ) : (
                 ""
@@ -150,10 +153,7 @@ export const Navbar = () => {
               ""
             )}
             {user.rol !== 0 ? (
-              <span
-                className="nav-item nav-link logout-button"
-                onClick={() => onLogut()}
-              >
+              <span className="nav-item nav-link logout-button" onClick={() => onLogut()}>
                 <i className="fa-solid fa-arrow-right-from-bracket"></i>
                 &nbsp;Cerrar sesion
               </span>
