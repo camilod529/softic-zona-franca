@@ -1,23 +1,4 @@
-import { useEffect, useState } from "react";
-import { Event } from "../types/types";
-import { getEvents } from "../api/session";
-
 export const CarouselEvent = () => {
-  const [events, setEvents] = useState<Event[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const getEventsAsync = async () => {
-    setIsLoading(true);
-    await getEvents().then((res: Event[]) => {
-      setEvents(res);
-      console.log(events);
-      setIsLoading(false);
-    });
-    console.log(events);
-  };
-
-  useEffect(() => {
-    getEventsAsync();
-  }, []);
   return (
     <div className="d-flex justify-content-center carusel">
       <div id="carouselExample" className="carousel slide">
