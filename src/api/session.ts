@@ -37,24 +37,20 @@ export const createColaborator = ({
   foto: File | null;
 }) => {
   return axios
-    .post(
-      `${API_URL}/colaborator`,
-      {
-        documento_colaborador,
-        empresa_colaborador,
-        nombre_1,
-        apellido_1,
-        genero,
-        correo_personal,
-        fecha_nacimiento,
-        foto,
-      },
-      {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
+    .post(`${API_URL}/colaborator`, {
+      documento_colaborador,
+      empresa_colaborador,
+      nombre_1,
+      apellido_1,
+      genero,
+      correo_personal,
+      fecha_nacimiento,
+      foto,
+    }, {
+      headers: {
+        'Content-Type': 'multipart/form-data'
       }
-    )
+    })
     .then((res) => res.data)
     .catch((err) => console.log(err));
 };

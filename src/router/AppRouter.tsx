@@ -4,6 +4,7 @@ import { ProtectedRoute } from "../auth/ProtectedRoute";
 import { CreateColaboradorPage } from "../pages/CreateColaboradorPage";
 import {
   AdmEmp,
+  AdmEventPage,
   HomePage,
   Login,
   ProfilePage,
@@ -13,9 +14,13 @@ import {
   ProfileEmp,
   RankList,
   CreateCompanyPage,
-  MainPage,
+  TagsPage,
+  PrizeCorner,
+  EventDetail,
+  MainPage
 } from "../pages";
-import { AdmEventPage } from "../pages/AdmEventPage";
+
+
 
 export const AppRouter = () => {
   return (
@@ -65,7 +70,7 @@ export const AppRouter = () => {
           path="/admEventos"
           element={
             <ProtectedRoute>
-              <AdmEventPage/>
+              <AdmEventPage />
             </ProtectedRoute>
           }
         />
@@ -85,6 +90,16 @@ export const AppRouter = () => {
             </ProtectedRoute>
           }
         />
+
+        <Route
+          path="/events/:id"
+          element={
+            <ProtectedRoute>
+              <EventDetail />
+            </ProtectedRoute>
+          }
+        />
+
         <Route
           path="/miEmpresa"
           element={
@@ -106,6 +121,22 @@ export const AppRouter = () => {
           element={
             <ProtectedRoute>
               <CreateCompanyPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/interest"
+          element={
+            <ProtectedRoute>
+              <TagsPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/shop"
+          element={
+            <ProtectedRoute>
+              <PrizeCorner/>
             </ProtectedRoute>
           }
         />

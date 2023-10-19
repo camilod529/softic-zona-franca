@@ -24,7 +24,6 @@ export type customEvent = {
   end: Date;
   bgcolor: string;
 };
-
 export type Company = {
   nombre_empresa: string;
   puntos: number;
@@ -48,4 +47,19 @@ export type Colaborator = {
   puntos_acumulados: number;
   user_insert: string;
   user_update: null;
+};
+
+export type Event = {
+  id_evento: number;
+  nombre_evento: string;
+  descripcion_evento: string;
+  fecha_evento: Date;
+  fecha_evento_fin: Date;
+  aforo_maximo: number;
+  aforo_registrado: number;
+  puntos_colaborador: number;
+  puntos_empresa: number;
+  puntos_castigo: number;
+  estado_boolean: boolean;
+  foto_evento: string;
 };
