@@ -11,18 +11,20 @@ export const Navbar = () => {
     setUser({
       rol: 0,
       nick: "",
-      nombre: "",
+      nombre_1: "",
+      nombre_empresa: "",
       edad: "",
-      numeroContacto: "",
-      correo: "",
-      empresa: "",
+      fecha_nacimiento: "",
+      correo_personal: "",
+      correo_empresarial: "",
+      empresa_colaborador: "",
       genero: "",
       gustos: [],
+      foto: "",
       contrasena: "",
-      estado: true,
+      estado_colaborador: false,
       puntos: 0,
-      correoEmpresarial: "",
-      urlImg: "",
+      puntos_acumulados: 0,
     });
     navigate("/");
   };
@@ -115,12 +117,12 @@ export const Navbar = () => {
               </li>
             </ul>
             {user.rol === 2 || user.rol === 3 ? (
-              <span className="navbar-text puntos">Puntos: 1000</span>
+              <span className="navbar-text">Puntos: 1000 &nbsp;</span>
             ) : (
               ""
             )}
             {user.rol !== 0 ? (
-              <span className="nav-item logout-button" onClick={() => onLogut()}>
+              <span className="nav-item nav-link logout-button" onClick={() => onLogut()}>
                 <i className="fa-solid fa-arrow-right-from-bracket"></i>
                 &nbsp;Cerrar sesion
               </span>
