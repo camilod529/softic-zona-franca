@@ -12,6 +12,7 @@ export const EventList = () => {
     setIsLoading(true);
     await getEvents().then((res: Event[]) => {
       setEvents(res);
+      console.log(events);
       setIsLoading(false);
     });
     console.log(events);
@@ -42,7 +43,7 @@ export const EventList = () => {
           <div className="col-1"></div>
         </div>
 
-        <div className="container text-center list ">
+        <div className="container text-center list">
           <div className="row justify-content-md-center">
             <div className="col-1"></div>
             <div className="col-10">
@@ -60,25 +61,20 @@ export const EventList = () => {
                       Proximos eventos
                     </button>
                   </h2>
-                  <div
-                    id="panelsStayOpen-collapseOne"
-                    className="accordion-collapse collapse show"
-                  >
+                  <div id="panelsStayOpen-collapseOne" className="accordion-collapse collapse show">
                     <div className="accordion-body">
                       {!isLoading
-                        ? events.length > 0 &&
+                        ? events?.length > 0 &&
                           events.map((event) => {
                             if (new Date(event.fecha_evento) > new Date()) {
                               return (
-                                <>
-                                  <EventCard
-                                    key={event.id_evento}
-                                    event={event}
-                                    title={event.nombre_evento}
-                                    description={event.descripcion_evento}
-                                    imageUrl={event.foto_evento}
-                                  />
-                                </>
+                                <EventCard
+                                  key={event.id_evento}
+                                  event={event}
+                                  title={event.nombre_evento}
+                                  description={event.descripcion_evento}
+                                  imageUrl={event.foto_evento}
+                                />
                               );
                             }
                             return <></>;
@@ -100,23 +96,18 @@ export const EventList = () => {
                       Eventos pasados
                     </button>
                   </h2>
-                  <div
-                    id="panelsStayOpen-collapseTwo"
-                    className="accordion-collapse collapse"
-                  >
+                  <div id="panelsStayOpen-collapseTwo" className="accordion-collapse collapse">
                     {!isLoading
                       ? events.map((event) => {
                           if (new Date(event.fecha_evento) < new Date()) {
                             return (
-                              <>
-                                <EventCard
-                                  key={event.id_evento}
-                                  event={event}
-                                  title={event.nombre_evento}
-                                  description={event.descripcion_evento}
-                                  imageUrl={event.foto_evento}
-                                />
-                              </>
+                              <EventCard
+                                key={event.id_evento}
+                                event={event}
+                                title={event.nombre_evento}
+                                description={event.descripcion_evento}
+                                imageUrl={event.foto_evento}
+                              />
                             );
                           }
                           return <></>;

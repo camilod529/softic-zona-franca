@@ -24,14 +24,14 @@ export function EventDetail() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/event/${id}`)
+      .get(`http://localhost:3000/api/event/${id}`)
       .then((res) => setEvent(res.data))
       .catch((err) => console.log(err));
   }, []);
 
   return (
     <>
-    <img
+      <img
         src="https://www.zonafrancasantander.com/imagenes/vdo_cabezotes/cabe_93d666c2e538322a27e6562c19bc5597a2066bd6.jpg"
         className="contenido img-fluid"
       />
@@ -42,28 +42,28 @@ export function EventDetail() {
       <Navbar />
       <div className="">
         <div className="container titulo">
-      {event.id_evento !== 0 ? (
-        <>
-  
-          <h1 className="stylish-headline mt-5 mb-5">Título del evento</h1>
-          <img
-            className="rounded mx-auto d-block img-fluid mb-5 mt-5"
-            src={event.foto_evento}
-            alt={event.nombre_evento}
-          />
-          <div className="containerEventDetails mx-auto">
-            <p className="mt-3">
-              <strong>Fecha del evento: </strong>
-            </p>
-            <p className="mt-2">
-              <strong>Lugar: </strong>
-            </p>
-          </div>
-        </>
-      ) : (
-        <h1>No existe el evento</h1>
-      )}
-      </div>
+          {event.id_evento !== 0 ? (
+            <>
+              <h1 className="stylish-headline mt-5 mb-5">{event.nombre_evento}</h1>
+              <img
+                className="rounded mx-auto d-block img-fluid mb-5 mt-5"
+                src={event.foto_evento}
+                alt={event.nombre_evento}
+              />
+              <div className="containerEventDetails mx-auto">
+                <p className="mt-3">
+                  <strong>Descripción: </strong>
+                  <span>{event.descripcion_evento}</span>
+                  <br />
+                  <strong>Fecha del evento: </strong>
+                  <span>{new Date(event.fecha_evento).toDateString()}</span>
+                </p>
+              </div>
+            </>
+          ) : (
+            <h1>No existe el evento</h1>
+          )}
+        </div>
       </div>
       <Footer />
     </>
