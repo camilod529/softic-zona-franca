@@ -25,6 +25,7 @@ export type customEvent = {
   bgcolor: string;
 };
 export type Company = {
+  nit?: string;
   nombre_empresa: string;
   puntos: number;
 };
