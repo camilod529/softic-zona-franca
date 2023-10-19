@@ -216,7 +216,7 @@ body {
   background-color: #45a049;
 }
 .contenido {
-  position: absolute;
+  position:fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -224,9 +224,33 @@ body {
   z-index: -2;
   object-fit: cover;
 }
-
+.content-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #f0f0f0;
+  padding: 20px; /* Opcional: Agrega espacio alrededor del contenido */
+}
+.footerEspecial{
+  position:fixed; /* Posición absoluta en relación con el contenedor principal */
+  bottom: 0; /* Alinea el footer en la parte inferior del contenedor */
+  width: 100vw; /* Ocupa todo el ancho del contenedor */
+  background: #333; /* Estilo de fondo del footer */
+  color: #fff; /* Color del texto del footer */
+  padding: 0px;
+}
+/* Ajusta el estilo del footer */
+.footer {
+  position: absolute; /* Posición absoluta en relación con el contenedor principal */
+  bottom: 0; /* Alinea el footer en la parte inferior del contenedor */
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  background: #333; /* Estilo de fondo del footer */
+  color: #fff; /* Color del texto del footer */
+  padding: 10px; /* Espaciado interno del footer */
+}
 .botpage {
-  position: fixed;
+  position:absolute;
   bottom: 0;
   width: 100%;
 }
