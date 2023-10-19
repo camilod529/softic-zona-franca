@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 
 import { ProtectedRoute } from "../auth/ProtectedRoute";
+import { CreateColaboradorPage } from "../pages/CreateColaboradorPage";
 import {
   AdmEmp,
   HomePage,
@@ -95,6 +96,14 @@ export const AppRouter = () => {
           element={
             <ProtectedRoute>
               <CreateCompanyPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/createColaborator"
+          element={
+            <ProtectedRoute>
+              <CreateColaboradorPage />
             </ProtectedRoute>
           }
         />
