@@ -13,6 +13,7 @@ import {
   RankList,
   CreateCompanyPage,
 } from "../pages";
+import { AdmEventPage } from "../pages/AdmEventPage";
 
 export const AppRouter = () => {
   return (
@@ -54,7 +55,7 @@ export const AppRouter = () => {
           path="/admEventos"
           element={
             <ProtectedRoute>
-              <AdmEmp />
+              <AdmEventPage/>
             </ProtectedRoute>
           }
         />
