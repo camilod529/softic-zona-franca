@@ -97,7 +97,6 @@ export const ProfilePage = () => {
         </div>
       </div>
       <Footer />
-      <CalendarComp />
     </>
   );
 };

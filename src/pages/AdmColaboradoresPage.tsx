@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 import { AdmColCard, Navbar } from "../components";
 import Footer from "../components/Footer";
 export const AdmColaboradoresPage = () => {
@@ -31,27 +31,22 @@ export const AdmColaboradoresPage = () => {
               <div className="col-md-auto">
                 <div className="row row-cols-1 row-cols-md-3 g-4">
                   <AdmColCard />
+                  {/* <AdmColCard />
                   <AdmColCard />
                   <AdmColCard />
                   <AdmColCard />
                   <AdmColCard />
-                  <AdmColCard />
-                  <AdmColCard />
+                  <AdmColCard /> */}
 
                   <div className="card" style={{ width: "18rem" }}>
                     <img src="..." className="card-img-top" alt="..." />
-                    <div className="card-body">
-                      
-                      
-                    </div>
+                    <div className="card-body"></div>
                     <ul className="list-group list-group-flush">
                       <li className="list-group-item"></li>
-                      <li className="list-group-item">
-                      <h5 className="card-title">Agregar colaborador</h5>
-                      </li>
-                      <li className="list-group-item">
-                        
-                      </li>
+                      <Link to={"/createColaborator"} className="list-group-item">
+                        <h5 className="card-title">Agregar colaborador</h5>
+                      </Link>
+                      <li className="list-group-item"></li>
                     </ul>
                   </div>
                 </div>
