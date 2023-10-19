@@ -4,6 +4,7 @@ import { ProtectedRoute } from "../auth/ProtectedRoute";
 import { CreateColaboradorPage } from "../pages/CreateColaboradorPage";
 import {
   AdmEmp,
+  AdmEventPage,
   HomePage,
   Login,
   ProfilePage,
