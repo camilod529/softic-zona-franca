@@ -6,4 +6,5 @@ export * from "./AdmEmpPage";
 export * from "./ProfileEmpPage";
 export * from "./RankListPage";
 export * from "./ProfilePage";
-export * from "./AdmColaboradoresPage.tsx"
+export * from "./AdmColaboradoresPage.tsx";
+export * from "./CreateCompanyPage.tsx";
