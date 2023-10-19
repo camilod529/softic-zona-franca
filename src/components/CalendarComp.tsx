@@ -16,7 +16,7 @@ const events: Array<customEvent> = [
 
 export const CalendarComp = () => {
   const eventStyleGetter = (event: customEvent, start: Date, end: Date, isSelected: boolean) => {
-    // console.log({ event, start, end, isSelected });
+    //console.log({ event, start, end, isSelected });
 
     const style = {
       backgroundColor: "#347CF7",
@@ -31,6 +31,7 @@ export const CalendarComp = () => {
   };
 
   return (
+    <div className="titulo">
     <Calendar
       culture="es"
       style={{ height: "500px" }}
@@ -40,5 +41,6 @@ export const CalendarComp = () => {
       events={events}
       onDoubleClickEvent={onDoubleClick}
     />
+    </div>
   );
 };

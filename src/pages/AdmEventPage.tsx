@@ -1,21 +1,29 @@
 import { AdmEventCard, Navbar } from "../components";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 export const AdmEventPage = () => {
   return (
     <>
       <Navbar />
-
-      <div className="container text-center top">
-        <div className="row">
+      <img
+        src="https://www.zonafrancasantander.com/imagenes/vdo_cabezotes/cabe_93d666c2e538322a27e6562c19bc5597a2066bd6.jpg"
+        className="contenido img-fluid"
+      />
+      <img
+        src="https://i.imgur.com/9PDGhjx.jpg"
+        className="contenido-alternativa img-fluid contenido "
+      />
+      <div className="container text-center top titulo">
+        <div className="">
           <div className="col-md-"></div>
           <div className="col-md">
             <h1>Eventos Programados</h1>
           </div>
           <div className="col-md-"></div>
         </div>
-      </div>
+      
 
-      <div className="container text-center">
+      <div className="container text-center ">
         <div className="row justify-content-md-center">
           <div className="col col-lg-2"></div>
           <div className="col-md-auto">
@@ -48,6 +56,8 @@ export const AdmEventPage = () => {
           <div className="col col-lg-2"></div>
         </div>
       </div>
+      </div>
+      <Footer/>
     </>
   );
 };

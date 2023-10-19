@@ -1,11 +1,20 @@
 import { Navbar, RankListItem } from "../components";
+import Footer from "../components/Footer";
 
 export const RankList = () => {
   return (
     <>
+    <img
+        src="https://www.zonafrancasantander.com/imagenes/vdo_cabezotes/cabe_93d666c2e538322a27e6562c19bc5597a2066bd6.jpg"
+        className="contenido img-fluid"
+      />
+      <img
+        src="https://i.imgur.com/9PDGhjx.jpg"
+        className="contenido-alternativa img-fluid contenido "
+      />
       <Navbar />
 
-      <div className="container text-center top">
+      <div className="container text-center titulo">
         <div className="row">
           <div className="col-1"></div>
           <div className="col-10">
@@ -13,7 +22,7 @@ export const RankList = () => {
           </div>
           <div className="col-1"></div>
         </div>
-      </div>
+      
 
       <div className="container text-center list">
         <div className="row justify-content-md-center">
@@ -89,6 +98,8 @@ export const RankList = () => {
         </div>
         <div className="col-1"></div>
       </div>
+      </div>
+      <Footer/>
     </>
   );
 };

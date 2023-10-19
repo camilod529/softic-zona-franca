@@ -1,10 +1,10 @@
 import { Navbar } from "../components";
+import { CalendarComp } from "../components/CalendarComp";
 import Footer from "../components/Footer";
 import { useAppSelector } from "../hooks/store";
 
 export const ProfilePage = () => {
   const user = useAppSelector((state) => state.user);
-  console.log(user);
   return (
     <>
       {user.rol === 1 ? <>No deberia estar aca</> : ""}
@@ -19,7 +19,6 @@ export const ProfilePage = () => {
         className="contenido-alternativa img-fluid contenido "
       />
       <div className="container perfil-contenido">
-
         <div className="row color-perfil">
           <div className="col-9 ">
             <h1>Informacion De Perfil</h1>
@@ -98,6 +97,7 @@ export const ProfilePage = () => {
         </div>
       </div>
       <Footer />
+      <CalendarComp />
     </>
   );
 };

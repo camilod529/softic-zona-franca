@@ -55,13 +55,25 @@ export function ProtectedRoute({ children }: { children: JSX.Element }) {
         return <Navigate to="/" />;
       }
       break;
+    case "/mainPage":
+      if (user.rol === 0) {
+        return <Navigate to="/" />;
+      }
+      break;
     case "/rank":
       if (user.rol === 0) {
         return <Navigate to="/" />;
       }
       break;
     case "/createCompany":
-      if (user.rol !== 0) {
+      if (user.rol !== 1) {
+
+        return <Navigate to="/" />;
+      }
+      break;
+    case "/createColaborator":
+      if (user.rol !== 2) {
+
         return <Navigate to="/" />;
       }
       break;

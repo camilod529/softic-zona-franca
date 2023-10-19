@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 
 import { ProtectedRoute } from "../auth/ProtectedRoute";
+import { CreateColaboradorPage } from "../pages/CreateColaboradorPage";
 import {
   AdmEmp,
   HomePage,
@@ -15,6 +16,8 @@ import {
   TagsPage,
   PrizeCorner
 } from "../pages";
+
+import { MainPage } from "../pages/MainPage";
 
 export const AppRouter = () => {
   return (
@@ -45,6 +48,14 @@ export const AppRouter = () => {
           }
         />
         <Route
+          path="/mainPage"
+          element={
+            <ProtectedRoute>
+              <MainPage/>
+            </ProtectedRoute>
+          }
+        />
+        <Route
           path="/adminEmpresa"
           element={
             <ProtectedRoute>
@@ -56,7 +67,7 @@ export const AppRouter = () => {
           path="/admEventos"
           element={
             <ProtectedRoute>
-              <AdmEmp />
+              <AdmEventPage/>
             </ProtectedRoute>
           }
         />
@@ -116,6 +127,15 @@ export const AppRouter = () => {
             </ProtectedRoute>
           }
         />
+        <Route
+          path="/createColaborator"
+          element={
+            <ProtectedRoute>
+              <CreateColaboradorPage />
+            </ProtectedRoute>
+          }
+        />
+
         <Route path="/*" element={<HomePage />} />
       </Routes>
     </>

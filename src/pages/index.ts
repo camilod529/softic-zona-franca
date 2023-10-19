@@ -13,3 +13,7 @@ export * from "./ProfilePage";
 export * from "./RankListPage";
 export * from "./RegisterPage";
 export * from "./TagsPage";
+export * from "./ProfilePage";
+export * from "./AdmColaboradoresPage.tsx";
+export * from "./CreateCompanyPage.tsx";
+export * from "./MainPage";

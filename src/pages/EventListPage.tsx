@@ -14,8 +14,8 @@ export const EventList = () => {
       />
       <Navbar />
 
-      <div className="container text-center top">
-        <div className="row titulo">,
+      <div className="container text-center top titulo">
+        <div className="row ">,
           <div className="col-1"></div>
           <div className="col-10">
             <h1 >Lista de eventos</h1>
@@ -24,7 +24,7 @@ export const EventList = () => {
         </div>
       
 
-      <div className="container text-center list titulo">
+      <div className="container text-center list ">
         <div className="row justify-content-md-center">
           <div className="col-1"></div>
           <div className="col-10">
