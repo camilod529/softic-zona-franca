@@ -90,10 +90,10 @@ body {
 .login-card {
   width: 100%;
   background-color: #ffffff;
-  border-radius: 20px;
-  border-width: 4px;
-  border-color: #108014;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    border-width: 4px;
+    border-color: #108014;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -218,6 +218,19 @@ body {
 .login-form button:hover {
   background-color: #45a049;
 }
+
+.stylish-headline {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  color: #4caf50; /* Green color */
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
 .contenido {
   position:fixed;
   top: 0;
@@ -298,12 +311,6 @@ body {
     display: none;
   }
 
-
-  
-  
-  
-  
-
   .contenido-alternativa {
     display: block; /* Mostrar la imagen alternativa en pantallas pequeñas */
   }
@@ -328,4 +335,14 @@ body {
 }
 .puntos{
     margin-right: 2rem;
+}
+.prizeCard{
+border-radius: 20px;
+border-width: 2px;
+border-color: #108014;
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.col{
+  max-height: 34rem;
 }
