@@ -46,6 +46,10 @@ export const createColaborator = ({
       correo_personal,
       fecha_nacimiento,
       foto,
+    }, {
+      headers: {
+        'Content-Type': 'multipart/form-data'
+      }
     })
     .then((res) => res.data)
     .catch((err) => console.log(err));
