@@ -65,3 +65,10 @@ export const getCompanyByName = (name: string | null) => {
     .then((res) => res.data)
     .catch((err) => console.log(err));
 };
+
+export const getEvents = () => {
+  return axios
+    .get(`${API_URL}/events`)
+    .then((res) => res.data)
+    .catch((err) => console.log(err));
+};
