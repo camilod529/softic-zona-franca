@@ -1,12 +1,21 @@
 import { Navbar } from "../components";
+import Footer from "../components/Footer";
 
 export const ProfileEmp = () => {
   // TODO: editar info solo para mostrar
   return (
     <>
+    <img
+        src="https://www.zonafrancasantander.com/imagenes/vdo_cabezotes/cabe_93d666c2e538322a27e6562c19bc5597a2066bd6.jpg"
+        className="contenido img-fluid"
+      />
+      <img
+        src="https://i.imgur.com/9PDGhjx.jpg"
+        className="contenido-alternativa img-fluid contenido "
+      />
       <Navbar />
 
-      <div className="container">
+      <div className="container titulo">
         <div className="row">
           <div className="col-9">
             <h1>Informacion De Perfil</h1>
@@ -55,6 +64,7 @@ export const ProfileEmp = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 };

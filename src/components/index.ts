@@ -5,3 +5,4 @@ export * from "./AdmEventCard.jsx"
 export * from "./RankListItem.jsx";
 export * from "./NavBarHome.js"
 export * from "./CarouselEvent.js"
+export * from "./AdmColCard.js"

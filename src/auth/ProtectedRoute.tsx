@@ -61,7 +61,7 @@ export function ProtectedRoute({ children }: { children: JSX.Element }) {
       }
       break;
     case "/createCompany":
-      if (user.rol !== 0) {
+      if (user.rol !== 1) {
         return <Navigate to="/" />;
       }
       break;
