@@ -4,6 +4,7 @@ import { ProtectedRoute } from "../auth/ProtectedRoute";
 import { CreateColaboradorPage } from "../pages/CreateColaboradorPage";
 import {
   AdmEmp,
+  AdmEventPage,
   HomePage,
   Login,
   ProfilePage,
@@ -13,10 +14,14 @@ import {
   ProfileEmp,
   RankList,
   CreateCompanyPage,
+  TagsPage,
+  PrizeCorner
+
   EventDetail,
-  MainPage,
+  MainPage
 } from "../pages";
-import { AdmEventPage } from "../pages/AdmEventPage";
+
+import { MainPage } from "../pages/MainPage";
 
 export const AppRouter = () => {
   return (
@@ -117,6 +122,22 @@ export const AppRouter = () => {
           element={
             <ProtectedRoute>
               <CreateCompanyPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/interest"
+          element={
+            <ProtectedRoute>
+              <TagsPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/shop"
+          element={
+            <ProtectedRoute>
+              <PrizeCorner/>
             </ProtectedRoute>
           }
         />

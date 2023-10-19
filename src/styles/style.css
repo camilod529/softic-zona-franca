@@ -6,7 +6,6 @@ body {
   box-sizing: border-box;
 }
 
-
 .profile {
   margin-top: 5%;
 }
@@ -87,7 +86,8 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin-top: 8rem; /* Add top margin for spacing between .card and the content above */
-  margin-bottom: 8rem;}
+  margin-bottom: 8rem;
+}
 
 .login-card {
   width: 100%;
@@ -102,15 +102,14 @@ body {
   padding: 20px;
 }
 
-
 /* Add a media query for smaller screens */
 @media (max-width: 768px) {
-  .card, .login-card {
+  .card,
+  .login-card {
     width: 90%; /* Adjust width for smaller screens */
     max-width: none; /* Remove max-width for smaller screens */
   }
 }
-
 
 /* Left half (login form) styles */
 .left-half {
@@ -229,7 +228,7 @@ body {
   align-items: center;
 }
 .contenido {
-  position:fixed;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -241,8 +240,13 @@ body {
   background: #f0f0f0;
   padding: 20px; /* Opcional: Agrega espacio alrededor del contenido */
 }
-.footerEspecial{
-  position:fixed; /* Posición absoluta en relación con el contenedor principal */
+
+/* ======================== */
+/* ======= Footer ========= */
+/* ======================== */
+
+.footerEspecial {
+  position: fixed; /* Posición absoluta en relación con el contenedor principal */
   bottom: 0; /* Alinea el footer en la parte inferior del contenedor */
   width: 100vw; /* Ocupa todo el ancho del contenedor */
   background: #333; /* Estilo de fondo del footer */
@@ -280,15 +284,14 @@ body {
 .contenido-alternativa {
   display: none; /* Ocultar la imagen alternativa en pantallas grandes */
 }
-.carusel{
-  
+.carusel {
   margin-top: 6%;
   margin-bottom: 6%;
 }
-.login{
+.login {
   min-height: 60vh;
 }
-.titulo{
+.titulo {
   background-color: #ccccccc7;
   margin-top: 3rem;
   padding-top: 2rem;
@@ -296,27 +299,21 @@ body {
   min-height: 70vh;
 }
 @media (min-width: 768px) and (max-width: 991px) {
-    .carousel {
-      display: none; /* Reducir el ancho del carrusel al 50% del contenedor */
-    }
+  .carousel {
+    display: none; /* Reducir el ancho del carrusel al 50% del contenedor */
   }
+}
 /* Estilos para pantallas pequeñas (menos de 768px de ancho) */
 @media (max-width: 767px) {
   .contenido {
     display: none; /* Ocultar la imagen en pantallas pequeñas */
   }
-  .carousel{
+  .carousel {
     display: none;
   }
   .footer .row > div:not(.col-xs-12.col-sm-12.col-md-2.col-lg-2.block) {
     display: none;
   }
-
-
-  
-  
-  
-  
 
   .contenido-alternativa {
     display: block; /* Mostrar la imagen alternativa en pantallas pequeñas */
@@ -324,22 +321,68 @@ body {
 }
 
 .imgnav {
-    position: absolute;
-    left: 4rem
+  position: absolute;
+  left: 4rem;
 }
-.color-nav-bar{
-    background-color: #aaaa10be;
+.color-nav-bar {
+  background-color: #aaaa10be;
 }
-.color-perfil{
-    background-color: #cccccc88;
-    margin-bottom: 5rem;
-    margin-top: 0;
+.color-perfil {
+  background-color: #cccccc88;
+  margin-bottom: 5rem;
+  margin-top: 0;
+}
+.perfil-contenido {
+  margin-top: 3rem;
+}
+.puntos {
+  margin-right: 2rem;
+}
 
+/* ====================== */
+/* ======= Tags ========= */
+/* ====================== */
+
+.stylish-headline {
+  font-family: "Roboto", sans-serif; /* Apply custom font */
+  font-size: 72px; /* Set larger font size */
+  font-weight: 700; /* Set font weight */
+  color: #4caf50; /* Vibrant green color */
+  text-align: center; /* Center align the text */
+  text-shadow: 4px 4px 8px rgba(76, 175, 80, 0.8); /* Add a bold text shadow */
 }
-.perfil-contenido{
-    margin-top: 3rem;
-    
+/* Add styles for the round-cornered checkboxes */
+.interest-checkbox {
+  display: inline-flex; /* Display checkboxes inline */
+  align-items: center;
+  margin-right: 20px; /* Add spacing between individual tags */
+  margin-bottom: 20px; /* Add more spacing between rows of tags */
 }
-.puntos{
-    margin-right: 2rem;
+
+.interests-container {
+  max-width: 1000px; /* Set a specific width */
+  margin: 0 auto; 
+  margin-top: 5rem;/* Center the container horizontally */
+}
+
+.interest-checkbox input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.interest-checkbox label {
+  display: flex; /* Make the label a flex container */
+  align-items: center; /* Center the checkbox and text vertically */
+  border-radius: 5px; /* Set border radius for the label container */
+  padding: 12px 16px;
+  background-color: #4caf50; /* Set the background color for the label container */
+  color: white; /* Set text color to white */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add a smooth transition effect for background color */
+}
+
+.interest-checkbox input[type="checkbox"]:checked + label {
+  background-color: #43a047; /* Darker shade of the background color when checkbox is checked */
+}
+.marRight{
+  margin-right: 100px;
 }
