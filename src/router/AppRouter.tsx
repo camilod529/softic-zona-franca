@@ -15,13 +15,12 @@ import {
   RankList,
   CreateCompanyPage,
   TagsPage,
-  PrizeCorner
-
+  PrizeCorner,
   EventDetail,
   MainPage
 } from "../pages";
 
-import { MainPage } from "../pages/MainPage";
+
 
 export const AppRouter = () => {
   return (
