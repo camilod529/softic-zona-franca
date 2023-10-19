@@ -19,7 +19,7 @@ export const ProfileEmp = () => {
   };
 
   useEffect(() => {
- //   getCompany();
+   getCompany();
   }, []);
 
   return (
@@ -46,13 +46,13 @@ export const ProfileEmp = () => {
                 <div className="col-8 col-sm-6">
                   <h3> Nombre: </h3>
                 </div>
-                <div className="col-4 col-sm-6">tuki</div>
+                <div className="col-4 col-sm-6">{data.nombre_empresa}</div>
               </div>
               <div className="row, profile">
                 <div className="col-8 col-sm-6">
                   <h3> Puntos: </h3>
                 </div>
-                <div className="col-4 col-sm-6">100</div>
+                <div className="col-4 col-sm-6">{data.puntos}</div>
               </div>
             </div>
           </div>

@@ -1,6 +1,8 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useAppSelector } from "../hooks/store";
 import { useUserActions } from "../hooks/useUserActions";
+import { useEffect } from "react";
+import axios from "axios";
 
 export const Navbar = () => {
   const user = useAppSelector((state) => state.user);
@@ -28,11 +30,35 @@ export const Navbar = () => {
     });
     navigate("/");
   };
+
+  useEffect(() => {
+    // Send a query to the server to get the points
+    axios
+      .get("http://localhost:3000/api/points", {
+        params: {
+          nick: user.nick,
+          rol: user.rol,
+        },
+      })
+      .then((res) => {
+        if (res.data.puntos) {
+          setUser({ ...user, puntos: res.data.puntos });
+        }
+
+        if (res.data.puntos_acumulados) {
+          setUser({ ...user, puntos_acumulados: res.data.puntos_acumulados });
+        }
+      })
+      .catch((err) => console.log(err));
+  }, []);
   return (
     <>
       <nav className="navbar navbar-expand-lg color-nav-bar">
         <div className="container-fluid d-flex justify-content-between ">
-          <Link className="navbar-brand" to={user.rol === 2 || user.rol === 3 ? "/profile" : ""}>
+          <Link
+            className="navbar-brand"
+            to={user.rol === 2 || user.rol === 3 ? "/profile" : ""}
+          >
             {user.rol === 1 ? "Inicio" : "Perfil"}
             {/* IMG avatar y nombre del usuario */}
             {user.rol === 3 ? (
@@ -117,12 +143,17 @@ export const Navbar = () => {
               </li>
             </ul>
             {user.rol === 2 || user.rol === 3 ? (
-              <span className="navbar-text">Puntos: 1000 &nbsp;</span>
+              <span className="navbar-text">
+                Puntos: {user.puntos || user.puntos_acumulados} &nbsp;
+              </span>
             ) : (
               ""
             )}
             {user.rol !== 0 ? (
-              <span className="nav-item nav-link logout-button" onClick={() => onLogut()}>
+              <span
+                className="nav-item nav-link logout-button"
+                onClick={() => onLogut()}
+              >
                 <i className="fa-solid fa-arrow-right-from-bracket"></i>
                 &nbsp;Cerrar sesion
               </span>
