@@ -12,6 +12,8 @@ import {
   ProfileEmp,
   RankList,
   CreateCompanyPage,
+  TagsPage,
+  PrizeCorner
 } from "../pages";
 
 export const AppRouter = () => {
@@ -98,7 +100,22 @@ export const AppRouter = () => {
             </ProtectedRoute>
           }
         />
-
+        <Route
+          path="/interest"
+          element={
+            <ProtectedRoute>
+              <TagsPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/shop"
+          element={
+            <ProtectedRoute>
+              <PrizeCorner/>
+            </ProtectedRoute>
+          }
+        />
         <Route path="/*" element={<HomePage />} />
       </Routes>
     </>

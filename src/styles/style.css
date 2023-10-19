@@ -241,6 +241,11 @@ body {
   background: #f0f0f0;
   padding: 20px; /* Opcional: Agrega espacio alrededor del contenido */
 }
+
+/* ======================== */
+/* ======= Footer ========= */
+/* ======================== */
+
 .footerEspecial{
   position:fixed; /* Posición absoluta en relación con el contenedor principal */
   bottom: 0; /* Alinea el footer en la parte inferior del contenedor */
@@ -337,4 +342,44 @@ body {
 }
 .puntos{
     margin-right: 2rem;
+}
+
+/* ====================== */
+/* ======= Tags ========= */
+/* ====================== */
+
+/* Add styles for the round-cornered checkboxes */
+.interest-checkbox {
+  display: inline-flex; /* Display checkboxes inline */
+  align-items: center;
+  margin-right: 20px; /* Add spacing between individual tags */
+  margin-bottom: 10px; /* Add spacing between rows of tags */
+}
+
+.interest-checkbox input[type="checkbox"] {
+  margin-right: 10px;
+  border-radius: 5px; /* Set border radius for the checkbox */
+}
+
+.interest-checkbox label {
+  border-radius: 5px; /* Set border radius for the label container */
+  padding: 8px 12px;
+  background-color: #3498db; /* Set the background color for the label container */
+  color: white; /* Set text color to white */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add a smooth transition effect for background color */
+}
+
+/* Change background color on hover */
+.interest-checkbox label:hover {
+  background-color: #2980b9; /* Darker shade of the background color on hover */
+}
+
+.stylish-headline {
+  font-family: 'Roboto', sans-serif; /* Apply custom font */
+  font-size: 72px; /* Set larger font size */
+  font-weight: 700; /* Set font weight */
+  color: #4CAF50; /* Vibrant green color */
+  text-align: center; /* Center align the text */
+  text-shadow: 4px 4px 8px rgba(76, 175, 80, 0.8); /* Add a bold text shadow */
 }
