@@ -16,4 +16,5 @@ export * from "./TagsPage";
 export * from "./ProfilePage";
 export * from "./AdmColaboradoresPage.tsx";
 export * from "./CreateCompanyPage.tsx";
+export * from "./EventDetail.tsx";
 export * from "./MainPage";

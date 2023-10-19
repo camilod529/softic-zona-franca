@@ -37,24 +37,20 @@ export const createColaborator = ({
   foto: File | null;
 }) => {
   return axios
-    .post(
-      `${API_URL}/colaborator`,
-      {
-        documento_colaborador,
-        empresa_colaborador,
-        nombre_1,
-        apellido_1,
-        genero,
-        correo_personal,
-        fecha_nacimiento,
-        foto,
-      },
-      {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
+    .post(`${API_URL}/colaborator`, {
+      documento_colaborador,
+      empresa_colaborador,
+      nombre_1,
+      apellido_1,
+      genero,
+      correo_personal,
+      fecha_nacimiento,
+      foto,
+    }, {
+      headers: {
+        'Content-Type': 'multipart/form-data'
       }
-    )
+    })
     .then((res) => res.data)
     .catch((err) => console.log(err));
 };
@@ -62,6 +58,13 @@ export const createColaborator = ({
 export const getCompanyByName = (name: string | null) => {
   return axios
     .get(`${API_URL}/company/name/${name}`)
+    .then((res) => res.data)
+    .catch((err) => console.log(err));
+};
+
+export const getEvents = () => {
+  return axios
+    .get(`${API_URL}/events`)
     .then((res) => res.data)
     .catch((err) => console.log(err));
 };
