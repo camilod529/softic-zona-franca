@@ -31,6 +31,7 @@ export const CalendarComp = () => {
   };
 
   return (
+    <div className="titulo">
     <Calendar
       culture="es"
       style={{ height: "500px" }}
@@ -40,5 +41,6 @@ export const CalendarComp = () => {
       events={events}
       onDoubleClickEvent={onDoubleClick}
     />
+    </div>
   );
 };
