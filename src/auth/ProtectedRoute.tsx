@@ -30,32 +30,32 @@ export function ProtectedRoute({ children }: { children: JSX.Element }) {
         return <Navigate to="/login" />;
       }
       break;
-    case "adminEmpresa":
+    case "/adminEmpresa":
       if (user.rol !== 1) {
         return <Navigate to="/" />;
       }
       break;
-    case "admEventos":
+    case "/admEventos":
       if (user.rol !== 1) {
         return <Navigate to="/" />;
       }
       break;
-    case "admColaboradores":
+    case "/admColaboradores":
       if (user.rol !== 2) {
         return <Navigate to="/" />;
       }
       break;
-    case "events":
+    case "/events":
       if (user.rol === 1) {
         return <Navigate to="/" />;
       }
       break;
-    case "miEmpresa":
+    case "/miEmpresa":
       if (user.rol === 0) {
         return <Navigate to="/" />;
       }
       break;
-    case "rank":
+    case "/rank":
       if (user.rol === 0) {
         return <Navigate to="/" />;
       }
