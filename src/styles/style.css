@@ -302,27 +302,6 @@ body {
   padding-bottom: 8rem;
   min-height: 70vh;
 }
-@media (min-width: 768px) and (max-width: 991px) {
-  .carousel {
-    display: none; /* Reducir el ancho del carrusel al 50% del contenedor */
-  }
-}
-/* Estilos para pantallas pequeñas (menos de 768px de ancho) */
-@media (max-width: 767px) {
-  .contenido {
-    display: none; /* Ocultar la imagen en pantallas pequeñas */
-  }
-  .carousel {
-    display: none;
-  }
-  .footer .row > div:not(.col-xs-12.col-sm-12.col-md-2.col-lg-2.block) {
-    display: none;
-  }
-
-  .contenido-alternativa {
-    display: block; /* Mostrar la imagen alternativa en pantallas pequeñas */
-  }
-}
 
 .imgnav {
   position: absolute;
