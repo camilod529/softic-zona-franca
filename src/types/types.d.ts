@@ -64,15 +64,3 @@ export type Event = {
   estado_boolean: boolean;
   foto_evento: string;
 };
-
-export type Prize = {
-  id_premio: number;
-  nombre_premio: string;
-  detalles_premio: string;
-  coste_premio: number;
-  estado_premio: true;
-  user_insert: string;
-  user_update: null;
-  date_insert: Date;
-  date_update: null;
-};

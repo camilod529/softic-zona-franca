@@ -50,7 +50,7 @@ export function EventDetail() {
                 src={event.foto_evento}
                 alt={event.nombre_evento}
               />
-              <div className="containerEventDetails mx-auto">
+              <div className="containerEventDetails">
                 <p className="mt-3">
                   <strong>Descripción: </strong>
                   <span>{event.descripcion_evento}</span>

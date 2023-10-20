@@ -296,11 +296,12 @@ body {
   min-height: 60vh;
 }
 .titulo {
-  background-color: #ccccccc7;
+  background-color: #cccccce7;
   margin-top: 3rem;
   padding-top: 2rem;
-  padding-bottom: 8rem;
-  min-height: 70vh;
+  padding-bottom: 2rem;
+  min-height: 70%;
+  border-radius: 20px;
 }
 
 .imgnav {
@@ -311,7 +312,7 @@ body {
   background-color: #aaaa10be;
 }
 .color-perfil {
-  background-color: #cccccc88;
+  background-color: #c7c7c7d8;
   margin-bottom: 5rem;
   margin-top: 0;
 }
@@ -333,6 +334,8 @@ body {
   color: #4caf50; /* Vibrant green color */
   text-align: center; /* Center align the text */
   text-shadow: 4px 4px 8px rgba(76, 175, 80, 0.8); /* Add a bold text shadow */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 /* Add styles for the round-cornered checkboxes */
 .interest-checkbox {
@@ -344,8 +347,8 @@ body {
 
 .interests-container {
   max-width: 1000px; /* Set a specific width */
-  margin: 0 auto;
-  margin-top: 5rem; /* Center the container horizontally */
+  margin: 0 auto; 
+  margin-top: 5rem;/* Center the container horizontally */
 }
 
 .interest-checkbox input[type="checkbox"] {
@@ -366,10 +369,10 @@ body {
 .interest-checkbox input[type="checkbox"]:checked + label {
   background-color: #43a047; /* Darker shade of the background color when checkbox is checked */
 }
-.marRight {
+.marRight{
   margin-right: 100px;
 }
-.container-awards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+.containerEventDetails{
+  margin-right: 100px;
+  margin-left: 100px;
 }
