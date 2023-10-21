@@ -5,6 +5,10 @@ body {
 * {
   box-sizing: border-box;
 }
+.container-fluid {
+  max-width: 100%; /* Establece el ancho máximo del contenedor al 100% del ancho de la pantalla */
+  overflow-x: hidden; /* Oculta cualquier desbordamiento horizontal */
+}
 
 .profile {
   margin-top: 5%;
@@ -19,13 +23,13 @@ body {
 /* ============================ */
 /* ======= Accordions ========= */
 /* ============================ */
-
 .accordion {
   --bs-accordion-btn-bg: #d1d071;
   --bs-accordion-active-bg: #a09f34;
   --bs-accordion-active-color: white;
   --bs-accordion-bg: #f7f7e9;
 }
+
 
 /* ======================= */
 /* ======= Login ========= */
@@ -292,55 +296,4 @@ body {
 .containerEventDetails{
   margin-right: 100px;
   margin-left: 100px;
-}
-.botpage {
-  position: absolute;
-}
-.footer {
-  margin-top: 50px;
-  color: #fff;
-  width: 100%; /* Ocupa todo el ancho del contenedor */
-  background: #333; /* Estilo de fondo del footer */
-  padding: 10px; /* Espaciado interno del footer */
-}
-
-.footer .block {
-  vertical-align: middle;
-}
-.footer .data div {
-  padding-left: 5px;
-  font-size: 12px;
-}
-.footer .phone {
-  background: #888986;
-  display: inline-block;
-  padding: 0px 5px;
-}
-.footer .social .icon {
-  display: inline-block;
-  margin: 5px 7px 0px 0px;
-}
-.footer .credits {
-  color: #343334;
-  margin-left: 5px;
-  font-weight: bold;
-}
-.footer .links {
-  padding: 0px;
-  line-height: 12px;
-}
-.footer .links a {
-  font-size: 12px;
-  line-height: 13px;
-  margin: 0px;
-  color: #a09f34;
-}
-
-.footerEspecial {
-  position: fixed; /* Posición absoluta en relación con el contenedor principal */
-  bottom: 0; /* Alinea el footer en la parte inferior del contenedor */
-  width: 100vw; /* Ocupa todo el ancho del contenedor */
-  background: #333; /* Estilo de fondo del footer */
-  color: #fff; /* Color del texto del footer */
-  padding: 0px;
 }
