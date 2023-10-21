@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "../styles/navbarhome.css"
 
 export const NavBarHome = () => {
   return (
@@ -6,7 +7,9 @@ export const NavBarHome = () => {
       <div className="row">
         <div className="col-2 d-flex align-items-start">
         <div className="text-center">
-  <img src="https://www.zonafrancasantander.com/template//images/logo.png" className="rounded imgnav" alt="..."/>
+        <Link to={"/main"} className="login-text  logout-button">
+        <img src="https://www.zonafrancasantander.com/template//images/logo.png" className="rounded imgnav" alt="..."/>
+          </Link>
 </div>
         </div>
         <div className="col-8"></div>

@@ -16,48 +16,6 @@ body {
   width: 75%;
 }
 
-/* ======================= */
-/* ======= Footer ========= */
-/* ======================= */
-
-.footer {
-  background: #1f1e21;
-  margin-top: 50px;
-  padding: 30px 0px;
-  color: #fff;
-}
-.footer .block {
-  vertical-align: middle;
-}
-.footer .data div {
-  padding-left: 5px;
-  font-size: 12px;
-}
-.footer .phone {
-  background: #888986;
-  display: inline-block;
-  padding: 0px 5px;
-}
-.footer .social .icon {
-  display: inline-block;
-  margin: 5px 7px 0px 0px;
-}
-.footer .credits {
-  color: #343334;
-  margin-left: 5px;
-  font-weight: bold;
-}
-.footer .links {
-  padding: 0px;
-  line-height: 12px;
-}
-.footer .links a {
-  font-size: 12px;
-  line-height: 13px;
-  margin: 0px;
-  color: #a09f34;
-}
-
 /* ============================ */
 /* ======= Accordions ========= */
 /* ============================ */
@@ -67,9 +25,6 @@ body {
   --bs-accordion-active-bg: #a09f34;
   --bs-accordion-active-color: white;
   --bs-accordion-bg: #f7f7e9;
-}
-.logout-button:hover {
-  cursor: pointer;
 }
 
 /* ======================= */
@@ -241,46 +196,13 @@ body {
   padding: 20px; /* Opcional: Agrega espacio alrededor del contenido */
 }
 
-/* ======================== */
-/* ======= Footer ========= */
-/* ======================== */
 
-.footerEspecial {
-  position: fixed; /* Posición absoluta en relación con el contenedor principal */
-  bottom: 0; /* Alinea el footer en la parte inferior del contenedor */
-  width: 100vw; /* Ocupa todo el ancho del contenedor */
-  background: #333; /* Estilo de fondo del footer */
-  color: #fff; /* Color del texto del footer */
-  padding: 0px;
-}
-/* Ajusta el estilo del footer */
-.footer {
-  width: 100%; /* Ocupa todo el ancho del contenedor */
-  background: #333; /* Estilo de fondo del footer */
-  color: #fff; /* Color del texto del footer */
-  padding: 10px; /* Espaciado interno del footer */
-}
-.container-fluid {
-  max-width: 100%; /* Establece el ancho máximo del contenedor al 100% del ancho de la pantalla */
-  overflow-x: hidden; /* Oculta cualquier desbordamiento horizontal */
-}
 .side {
   padding-right: 2%;
   padding-left: 2rem;
 }
 /* En tu archivo CSS (por ejemplo, estilos.css) */
 
-.login-text {
-  margin-right: 10%;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  font-size: large;
-  text-decoration: none;
-  color: black;
-}
-.topside {
-  background-color: rgba(255, 255, 255, 0.308);
-}
 .contenido-alternativa {
   display: none; /* Ocultar la imagen alternativa en pantallas grandes */
 }
@@ -302,11 +224,6 @@ body {
   padding-bottom: 2rem;
   min-height: 70%;
   border-radius: 20px;
-}
-
-.imgnav {
-  position: absolute;
-  left: 4rem;
 }
 .color-nav-bar {
   background-color: #aaaa10be;
@@ -375,4 +292,55 @@ body {
 .containerEventDetails{
   margin-right: 100px;
   margin-left: 100px;
+}
+.botpage {
+  position: absolute;
+}
+.footer {
+  margin-top: 50px;
+  color: #fff;
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  background: #333; /* Estilo de fondo del footer */
+  padding: 10px; /* Espaciado interno del footer */
+}
+
+.footer .block {
+  vertical-align: middle;
+}
+.footer .data div {
+  padding-left: 5px;
+  font-size: 12px;
+}
+.footer .phone {
+  background: #888986;
+  display: inline-block;
+  padding: 0px 5px;
+}
+.footer .social .icon {
+  display: inline-block;
+  margin: 5px 7px 0px 0px;
+}
+.footer .credits {
+  color: #343334;
+  margin-left: 5px;
+  font-weight: bold;
+}
+.footer .links {
+  padding: 0px;
+  line-height: 12px;
+}
+.footer .links a {
+  font-size: 12px;
+  line-height: 13px;
+  margin: 0px;
+  color: #a09f34;
+}
+
+.footerEspecial {
+  position: fixed; /* Posición absoluta en relación con el contenedor principal */
+  bottom: 0; /* Alinea el footer en la parte inferior del contenedor */
+  width: 100vw; /* Ocupa todo el ancho del contenedor */
+  background: #333; /* Estilo de fondo del footer */
+  color: #fff; /* Color del texto del footer */
+  padding: 0px;
 }
