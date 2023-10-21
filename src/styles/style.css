@@ -5,6 +5,10 @@ body {
 * {
   box-sizing: border-box;
 }
+.container-fluid {
+  max-width: 100%; /* Establece el ancho máximo del contenedor al 100% del ancho de la pantalla */
+  overflow-x: hidden; /* Oculta cualquier desbordamiento horizontal */
+}
 
 .profile {
   margin-top: 5%;
@@ -19,13 +23,13 @@ body {
 /* ============================ */
 /* ======= Accordions ========= */
 /* ============================ */
-
 .accordion {
   --bs-accordion-btn-bg: #d1d071;
   --bs-accordion-active-bg: #a09f34;
   --bs-accordion-active-color: white;
   --bs-accordion-bg: #f7f7e9;
 }
+
 
 /* ======================= */
 /* ======= Login ========= */
