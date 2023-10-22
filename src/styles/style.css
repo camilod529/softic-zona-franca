@@ -1,5 +1,6 @@
 body {
   background-color: #f2f2dc76;
+  font-family: "Lato", sans-serif !important;
 }
 
 * {
@@ -112,8 +113,6 @@ body {
   align-items: center;
   padding: 20px;
 }
-
-
 
 /* Left half (login form) styles */
 .left-half {
@@ -344,7 +343,10 @@ body {
 .botpage {
   position: absolute;
 }
+.full-width {
+  width: 100%;
 }
+
 .container-fluid {
   max-width: 100%; /* Establece el ancho máximo del contenedor al 100% del ancho de la pantalla */
   overflow-x: hidden; /* Oculta cualquier desbordamiento horizontal */
@@ -464,8 +466,6 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
-
-
 
 .col-md-6 {
   position: relative;
