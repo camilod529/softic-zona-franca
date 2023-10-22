@@ -54,12 +54,22 @@ export const Navbar = () => {
   return (
     <>
       
-<nav className="navbar navbar-expand-lg bg-body-tertiary">
-  <div className="container-fluid">
+<nav className="navbar navbar-expand-lg topside align-items-start p-0">
+{user.rol === 0 ?(
+              <Link to={"/main"} className="login-text  logout-button">
+              <img src="https://www.zonafrancasantander.com/template//images/logo.png" className="rounded imgnav" alt="..."/>
+                </Link>
+            ) : (
+              ""
+            )}
+  <div className="container-fluid ">
+
+  
   <Link className="navbar-brand" to={user.rol === 2 || user.rol === 3 ? "/profile" : ""}>
-            {user.rol === 1 ? "Inicio" : "Perfil"}
+            {user.rol === 0 ? "" : "Perfil"}
+            {user.rol === 1 ? "Inicio" : ""}
             {/* IMG avatar y nombre del usuario */}
-            {user.rol === 3 ? (
+            {user.rol === 3 ? ( 
               <img
                 className="ms-2"
                 src="https://img.freepik.com/free-psd/3d-render-avatar-character_23-2150611731.jpg?w=740&t=st=1697585995~exp=1697586595~hmac=df734503a938305cb6ac289c263bbcc1bbdfba962222f45162cf58ae097e71f9"
@@ -72,6 +82,7 @@ export const Navbar = () => {
             ) : (
               ""
             )}
+            
           </Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
@@ -86,6 +97,9 @@ export const Navbar = () => {
         <li className="nav-item">
           <Link className="nav-link" to={"/admEventos"}>Administrar eventos</Link>
         </li>
+        <li className="nav-item">
+          <Link className="nav-link "  to={"/rank"}>Tabla de puntos</Link>
+        </li>
         </>
         ) : (
           ""
@@ -97,6 +111,9 @@ export const Navbar = () => {
         </li>
         <li className="nav-item">
           <Link className="nav-link" to={"/events"}>Eventos</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link "  to={"/rank"}>Tabla de puntos</Link>
         </li>
         </>
         ) : (
@@ -113,13 +130,14 @@ export const Navbar = () => {
         <li className="nav-item">
           <Link className="nav-link" to={"/shop"}>Premios</Link>
         </li>
+        <li className="nav-item">
+          <Link className="nav-link "  to={"/rank"}>Tabla de puntos</Link>
+        </li>
         </>
         ) : (
           ""
         )}
-        <li className="nav-item">
-          <Link className="nav-link "  to={"/rank"}>Tabla de puntos</Link>
-        </li>
+        
       </ul>
       {user.rol === 2 || user.rol === 3 ? (
               <span className="d-flex">
@@ -133,6 +151,15 @@ export const Navbar = () => {
                 <i className="fa-solid fa-arrow-right-from-bracket"></i>
                 &nbsp;Cerrar sesion
               </span>
+            ) : (
+              ""
+            )}
+      {user.rol === 0? (
+              <div className="col-2 d-flex align-items-end justify-content-end">
+              <Link to={"/login"} className="login-text  logout-button">
+                <i className="fa-solid fa-right-to-bracket"></i>&nbsp;Login
+              </Link>
+            </div>
             ) : (
               ""
             )}
