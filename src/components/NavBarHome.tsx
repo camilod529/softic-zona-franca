@@ -5,11 +5,15 @@ export const NavBarHome = () => {
     <div className="container-fluid text-center p-0 topside">
       <div className="row">
         <div className="col-2 d-flex align-items-start">
-        <div className="text-center">
-        <Link to={"/main"} className="login-text  logout-button">
-        <img src="https://www.zonafrancasantander.com/template//images/logo.png" className="rounded imgnav" alt="..."/>
-          </Link>
-</div>
+          <div className="text-center">
+            <Link to={"/main"} className="login-text  logout-button">
+              <img
+                src="https://www.zonafrancasantander.com/template//images/logo.png"
+                className="rounded imgnav"
+                alt="..."
+              />
+            </Link>
+          </div>
         </div>
         <div className="col-8"></div>
         <div className="col-2 d-flex align-items-end justify-content-end">
