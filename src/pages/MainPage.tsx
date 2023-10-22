@@ -1,4 +1,4 @@
-import { CarouselEvent, NavBarHome, Navbar } from "../components";
+import { CarouselEvent, Navbar } from "../components";
 import Footer from "../components/Footer";
 
 export const MainPage = () => {

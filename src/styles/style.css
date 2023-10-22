@@ -37,7 +37,10 @@ body {
 ========================================================================
 ========================================================================
 ======================================================================== */
-
+.mside{
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
 .topside {
   background-color: #aaaa10;
 }
@@ -344,7 +347,7 @@ body {
 .botpage {
   position: absolute;
 }
-}
+
 .container-fluid {
   max-width: 100%; /* Establece el ancho máximo del contenedor al 100% del ancho de la pantalla */
   overflow-x: hidden; /* Oculta cualquier desbordamiento horizontal */
