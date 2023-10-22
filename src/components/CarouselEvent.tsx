@@ -1,10 +1,7 @@
-
-
 export const CarouselEvent = () => {
   return (
     <div className="container text-center">
       <div className="row justify-content-md-center">
-        
         <div className="col-md-auto">
           <div
             id="carouselExampleFade"
@@ -59,7 +56,6 @@ export const CarouselEvent = () => {
             </button>
           </div>
         </div>
-        
       </div>
     </div>
   );

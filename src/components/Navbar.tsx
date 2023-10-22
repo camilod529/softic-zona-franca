@@ -3,8 +3,6 @@ import { useAppSelector } from "../hooks/store";
 import { useUserActions } from "../hooks/useUserActions";
 import { useEffect } from "react";
 import axios from "axios";
-import ""
-import "../styles/navbar.css"
 
 export const Navbar = () => {
   const user = useAppSelector((state) => state.user);

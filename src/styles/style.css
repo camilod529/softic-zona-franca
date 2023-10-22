@@ -5,6 +5,57 @@ body {
 * {
   box-sizing: border-box;
 }
+
+/* Add a media query for smaller screens */
+@media (max-width: 768px) {
+  .card,
+  .login-card {
+    width: 90%; /* Adjust width for smaller screens */
+    max-width: none; /* Remove max-width for smaller screens */
+  }
+}
+@media (min-width: 992px) {
+  .col-md-push-6 {
+    left: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-6 {
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .col-lg-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+
+/* =====================================================================
+========================================================================
+========================================================================
+========================================================================
+========================================================================
+======================================================================== */
+
+.topside {
+  background-color: #aaaa10;
+}
+.imgnav {
+  position: absolute;
+  left: 4rem;
+}
+.login-text {
+  margin-right: 10%;
+  margin-top: 2.5px;
+  margin-bottom: 2.5px;
+  font-size: large;
+  text-decoration: none;
+  color: black;
+}
+.logout-button:hover {
+  cursor: pointer;
+}
 .container-fluid {
   max-width: 100%; /* Establece el ancho máximo del contenedor al 100% del ancho de la pantalla */
   overflow-x: hidden; /* Oculta cualquier desbordamiento horizontal */
@@ -19,17 +70,18 @@ body {
 
   width: 75%;
 }
-
-/* ============================ */
-/* ======= Accordions ========= */
-/* ============================ */
+/* =====================================================================
+========================================================================
+========================================================================
+========================================================================
+========================================================================
+======================================================================== */
 .accordion {
   --bs-accordion-btn-bg: #d1d071;
   --bs-accordion-active-bg: #a09f34;
   --bs-accordion-active-color: white;
   --bs-accordion-bg: #f7f7e9;
 }
-
 
 /* ======================= */
 /* ======= Login ========= */
@@ -61,14 +113,7 @@ body {
   padding: 20px;
 }
 
-/* Add a media query for smaller screens */
-@media (max-width: 768px) {
-  .card,
-  .login-card {
-    width: 90%; /* Adjust width for smaller screens */
-    max-width: none; /* Remove max-width for smaller screens */
-  }
-}
+
 
 /* Left half (login form) styles */
 .left-half {
@@ -200,7 +245,6 @@ body {
   padding: 20px; /* Opcional: Agrega espacio alrededor del contenido */
 }
 
-
 .side {
   padding-right: 2%;
   padding-left: 2rem;
@@ -268,8 +312,8 @@ body {
 
 .interests-container {
   max-width: 1000px; /* Set a specific width */
-  margin: 0 auto; 
-  margin-top: 5rem;/* Center the container horizontally */
+  margin: 0 auto;
+  margin-top: 5rem; /* Center the container horizontally */
 }
 
 .interest-checkbox input[type="checkbox"] {
@@ -290,16 +334,152 @@ body {
 .interest-checkbox input[type="checkbox"]:checked + label {
   background-color: #43a047; /* Darker shade of the background color when checkbox is checked */
 }
-.marRight{
+.marRight {
   margin-right: 100px;
 }
-.containerEventDetails{
+.containerEventDetails {
   margin-right: 100px;
   margin-left: 100px;
 }
 .botpage {
   position: absolute;
 }
+}
+.container-fluid {
+  max-width: 100%; /* Establece el ancho máximo del contenedor al 100% del ancho de la pantalla */
+  overflow-x: hidden; /* Oculta cualquier desbordamiento horizontal */
+}
+.topside {
+  background-color: #aaaa10;
+}
+.imgnav {
+  position: absolute;
+  left: 4rem;
+}
+.login-text {
+  margin-right: 10%;
+  margin-top: 2.5px;
+  margin-bottom: 2.5px;
+  font-size: large;
+  text-decoration: none;
+  color: black;
+}
+.logout-button:hover {
+  cursor: pointer;
+}
+.botpage {
+  position: absolute;
+}
+.slide-events {
+  max-width: 100%; /* El contenedor se ajustará al ancho de su contenedor padre */
+}
+
+.carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.carousel-item img {
+  max-width: 100%; /* Las imágenes se ajustarán al ancho del contenedor */
+  height: auto; /* Las imágenes mantendrán su relación de aspecto */
+}
+
+/* A PARTIR DE AQUÍ EMPECÉ A TRABAJAR -D*/
+
+.carousel-inner {
+  height: 350px; /* Altura máxima del carrusel, ajusta según tus necesidades */
+}
+.cool-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: #aaaa10; /* Light Yellow Color */
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+  animation: glow-animation 1.5s infinite alternate;
+}
+
+@keyframes glow-animation {
+  0% {
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+  }
+  100% {
+    text-shadow: 6px 6px 12px rgba(170, 170, 16, 0.8);
+  }
+}
+.services {
+  background: #303030;
+  padding: 0px;
+  position: relative;
+  color: #fff;
+}
+.services .arrow {
+  background: #aaaa10;
+  position: absolute;
+  height: 107px;
+  top: -5px;
+  padding-right: 40px;
+  line-height: 107px;
+  text-align: right;
+  font-size: 35px;
+  font-weight: lighter;
+}
+.services .arrow .corner {
+  width: 0;
+  height: 0;
+  border-top: 53px solid transparent;
+  border-bottom: 53px solid transparent;
+  border-left: 20px solid #aaaa10;
+  position: absolute;
+  top: 0;
+  right: -20px;
+}
+.services .item {
+  display: inline-block;
+  width: 24%;
+  min-width: 100px;
+  text-align: center;
+  padding: 10px 0px;
+  vertical-align: top;
+  font-size: 12px;
+  color: #fff;
+  line-height: 12px;
+  height: 97px;
+  overflow: hidden;
+  position: relative;
+}
+.m-b-30 {
+  margin-bottom: 30px !important;
+}
+.col-xs-6 {
+  width: 50%;
+}
+
+.serv-container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+
+.col-md-6 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+/* =====================================================================
+========================================================================
+========================================================================
+========================================================================
+========================================================================
+======================================================================== */
+
 .footer {
   margin-top: 50px;
   color: #fff;
@@ -347,48 +527,4 @@ body {
   background: #333; /* Estilo de fondo del footer */
   color: #fff; /* Color del texto del footer */
   padding: 0px;
-}
-.container-fluid {
-  max-width: 100%; /* Establece el ancho máximo del contenedor al 100% del ancho de la pantalla */
-  overflow-x: hidden; /* Oculta cualquier desbordamiento horizontal */
-}
-.topside {
-  background-color: #AAAA10;
-}
-.imgnav {
-  position: absolute;
-  left: 4rem;
-}
-.login-text {
-  margin-right: 10%;
-  margin-top: 2.5px;
-  margin-bottom: 2.5px;
-  font-size: large;
-  text-decoration: none;
-  color: black;
-}
-.logout-button:hover {
-  cursor: pointer;
-}
-.botpage{
-  position:absolute;
-}
-.slide-events {
-  max-width: 100%; /* El contenedor se ajustará al ancho de su contenedor padre */
-}
-
-.carousel-inner {
-  max-height: 400px; /* Altura máxima del carrusel, ajusta según tus necesidades */
-}
-
-.carousel-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.carousel-item img {
-  max-width: 100%; /* Las imágenes se ajustarán al ancho del contenedor */
-  height: auto; /* Las imágenes mantendrán su relación de aspecto */
 }
