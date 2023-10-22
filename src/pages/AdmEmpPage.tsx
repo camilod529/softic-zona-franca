@@ -52,23 +52,20 @@ export const AdmEmp = () => {
                 <div className="row row-cols-1 row-cols-md-3 g-4">
                   {!isLoading
                     ? companies.map((company: Company) => {
-                        return <CompCard title={company.nombre_empresa} nit={company.nit} />;
+                        return (
+                          <CompCard
+                            title={company.nombre_empresa}
+                            nit={company.nit}
+                          />
+                        );
                       })
                     : "Cargando..."}
-                  {/* <CompCard />
-                  <CompCard />
-                  <CompCard />
-                  <CompCard />
-                  <CompCard />
-                  <CompCard />
-                  <CompCard />
-                  <CompCard /> */}
                   <div className="card" style={{ width: "18rem" }}>
                     <div className="card-body"></div>
                     <ul className="list-group list-group-flush">
                       <li className="list-group-item"></li>
-                      <Link to={"/createColaborator"} className="list-group-item">
-                        <h5 className="card-title">Agregar colaborador</h5>
+                      <Link to={"/createCompany"} className="list-group-item">
+                        <h5 className="card-title">Agregar empresa</h5>
                       </Link>
                       <li className="list-group-item"></li>
                     </ul>
