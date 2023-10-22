@@ -344,3 +344,47 @@ body {
   color: #fff; /* Color del texto del footer */
   padding: 0px;
 }
+.container-fluid {
+  max-width: 100%; /* Establece el ancho máximo del contenedor al 100% del ancho de la pantalla */
+  overflow-x: hidden; /* Oculta cualquier desbordamiento horizontal */
+}
+.topside {
+  background-color: #AAAA10;
+}
+.imgnav {
+  position: absolute;
+  left: 4rem;
+}
+.login-text {
+  margin-right: 10%;
+  margin-top: 2.5px;
+  margin-bottom: 2.5px;
+  font-size: large;
+  text-decoration: none;
+  color: black;
+}
+.logout-button:hover {
+  cursor: pointer;
+}
+.botpage{
+  position:absolute;
+}
+.slide-events {
+  max-width: 100%; /* El contenedor se ajustará al ancho de su contenedor padre */
+}
+
+.carousel-inner {
+  max-height: 400px; /* Altura máxima del carrusel, ajusta según tus necesidades */
+}
+
+.carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.carousel-item img {
+  max-width: 100%; /* Las imágenes se ajustarán al ancho del contenedor */
+  height: auto; /* Las imágenes mantendrán su relación de aspecto */
+}
