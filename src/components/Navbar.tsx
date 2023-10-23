@@ -66,7 +66,7 @@ export const Navbar = () => {
           ""
         )}
         
-        <div className="container-fluid p-1">
+        <div className="container-fluid p-2 mside">
           {user.rol ===0? null :(
           <Link
             className="navbar-brand"
