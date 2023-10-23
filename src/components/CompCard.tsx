@@ -13,15 +13,9 @@ export const CompCard = ({ title = "", nit = "" }) => {
             NIT: <span>{nit}</span>
           </li>
           <li className="list-group-item">
-            <Link to="#" className="card-link">
-                
-            </Link>
+            <Link to="#" className="card-link"></Link>
           </li>
-          <li className="list-group-item">
-            <Link to="#" className="card-link">
-              Pagina web
-            </Link>
-          </li>
+          <li className="list-group-item btn btn-primary green-button mt-3">eliminar empresa</li>
         </ul>
       </div>
     </>

@@ -3,7 +3,7 @@ import { FormEvent, useState } from "react";
 import { login } from "../api/session";
 import { useUserActions } from "../hooks/useUserActions";
 import { useNavigate } from "react-router-dom";
-import { NavBarHome } from "../components";
+import { Navbar } from "../components";
 import Footer from "../components/Footer";
 
 export function Login() {
@@ -29,7 +29,7 @@ export function Login() {
 
   return (
     <main>
-      <NavBarHome/>
+      <Navbar/>
       <img
         src="https://www.zonafrancasantander.com/imagenes/vdo_cabezotes/cabe_93d666c2e538322a27e6562c19bc5597a2066bd6.jpg"
         className="contenido img-fluid"

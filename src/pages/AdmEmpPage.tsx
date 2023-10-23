@@ -67,7 +67,7 @@ export const AdmEmp = () => {
                       <ul className="list-group list-group-flush">
                         <li className="list-group-item"></li>
                         <Link to={"/createCompany"} className="list-group-item">
-                          <h5 className="card-title">Agregar empresa</h5>
+                          <h5 className="btn btn-primary">Agregar empresa</h5>
                         </Link>
                         <li className="list-group-item"></li>
                       </ul>

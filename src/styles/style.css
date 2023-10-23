@@ -100,8 +100,8 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  margin-top: 8rem; /* Add top margin for spacing between .card and the content above */
-  margin-bottom: 8rem;
+  margin-top: 4rem; /* Add top margin for spacing between .card and the content above */
+  margin-bottom: 4rem;
 }
 
 .login-card {
@@ -349,7 +349,17 @@ body {
 .full-width {
   width: 100%;
 }
-
+.green-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
 .container-fluid {
   max-width: 100%; /* Establece el ancho máximo del contenedor al 100% del ancho de la pantalla */
   overflow-x: hidden; /* Oculta cualquier desbordamiento horizontal */

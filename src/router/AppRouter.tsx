@@ -17,10 +17,9 @@ import {
   TagsPage,
   PrizeCorner,
   EventDetail,
-  MainPage
+  MainPage,
+  CreateEventPage
 } from "../pages";
-
-
 
 export const AppRouter = () => {
   return (
@@ -54,7 +53,7 @@ export const AppRouter = () => {
           path="/mainPage"
           element={
             <ProtectedRoute>
-              <MainPage/>
+              <MainPage />
             </ProtectedRoute>
           }
         />
@@ -136,7 +135,7 @@ export const AppRouter = () => {
           path="/shop"
           element={
             <ProtectedRoute>
-              <PrizeCorner/>
+              <PrizeCorner />
             </ProtectedRoute>
           }
         />
@@ -148,6 +147,15 @@ export const AppRouter = () => {
             </ProtectedRoute>
           }
         />
+        <Route
+          path="/createEvent"
+          element={
+            <ProtectedRoute>
+              <CreateEventPage />
+            </ProtectedRoute>
+          }
+        />
+
 
         <Route path="/*" element={<HomePage />} />
       </Routes>
