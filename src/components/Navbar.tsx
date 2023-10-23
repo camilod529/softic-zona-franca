@@ -54,17 +54,7 @@ export const Navbar = () => {
   return (
     <>
       <nav className="navbar navbar-expand-lg topside align-items-start p-0">
-        {user.rol === 0 ? (
-          <Link to={"/main"} className="login-text  logout-button">
-            <img
-              src="https://www.zonafrancasantander.com/template//images/logo.png"
-              className="rounded imgnav"
-              alt="..."
-            />
-          </Link>
-        ) : (
-          ""
-        )}
+        
         
         <div className="container-fluid p-0 mside">
           {user.rol ===0? null:(
@@ -204,15 +194,7 @@ export const Navbar = () => {
             ) : (
               ""
             )}
-            {user.rol === 0 ? (
-              <div className="col-2 d-flex align-items-end justify-content-end">
-                <Link to={"/login"} className="login-text  logout-button">
-                  <i className="fa-solid fa-right-to-bracket"></i>&nbsp;Login
-                </Link>
-              </div>
-            ) : (
-              ""
-            )}
+          
             </div>
           </div>
         </div>
