@@ -108,7 +108,7 @@ body {
   background-color: #ffffff;
   border-radius: 20px;
   border-width: 4px;
-  border-color: #108014;
+  border-color: #aaaa10;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
@@ -214,7 +214,7 @@ body {
 .login-form button {
   width: 100%;
   padding: 12px;
-  background-color: #4caf50;
+  background-color: #aaaa10;
   color: #ffffff;
   border: none;
   border-radius: 5px;
@@ -224,7 +224,9 @@ body {
 }
 
 .login-form button:hover {
-  background-color: #45a049;
+  background-color: #82820d;
+}.green-btn:hover {
+  background-color: #82820d;
 }
 .container-adminEmp {
   width: 100%;
@@ -350,7 +352,7 @@ body {
 .green-btn {
   width: 100%;
   padding: 12px;
-  background-color: #4caf50;
+  background-color: #aaaa10;
   color: #ffffff;
   border: none;
   border-radius: 5px;

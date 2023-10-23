@@ -26,18 +26,14 @@ export const RankList = () => {
 
   return (
     <>
-      <img
-        src="https://www.zonafrancasantander.com/imagenes/vdo_cabezotes/cabe_93d666c2e538322a27e6562c19bc5597a2066bd6.jpg"
-        className="contenido img-fluid"
-      />
-      <img
-        src="https://i.imgur.com/9PDGhjx.jpg"
-        className="contenido-alternativa img-fluid contenido "
-      />
       <Navbar />
+      <img
+        src="https://www.zonafrancasantander.com/imagenes//vco_secciones/secc_37d4bbfbf2565771790085cdc4767c80413274bd.jpg"
+        className="img-fluid"
+      />
 
       <div className="container text-center titulo">
-        <div className="row">
+        <div className="row mb-5">
           <div className="col-1"></div>
           <div className="col-10">
             <h1>Tabla de puntajes</h1>
@@ -47,7 +43,6 @@ export const RankList = () => {
 
         <div className="container text-center list">
           <div className="row justify-content-md-center">
-            <div className="col-1"></div>
             <div className="col-10">
               <div className="accordion" id="accordionPanelsStayOpenExample">
                 <div className="accordion-item">
@@ -63,16 +58,19 @@ export const RankList = () => {
                       <strong>Empresas</strong>
                     </button>
                   </h2>
-                  <div id="panelsStayOpen-collapseOne" className="accordion-collapse collapse show">
+                  <div
+                    id="panelsStayOpen-collapseOne"
+                    className="accordion-collapse collapse show"
+                  >
                     <div className="container text-center mt-2 mb-3">
                       <div className="row">
-                        <div className="col">
+                        <div className="col-2">
                           <strong>Rank</strong>
                         </div>
-                        <div className="col-6">
+                        <div className="col-8">
                           <strong>Nombre</strong>
                         </div>
-                        <div className="col">
+                        <div className="col-2">
                           <strong>ZF-Coins</strong>
                         </div>
                       </div>
@@ -104,7 +102,10 @@ export const RankList = () => {
                       <strong>Colaboradores</strong>
                     </button>
                   </h2>
-                  <div id="panelsStayOpen-collapseTwo" className="accordion-collapse collapse">
+                  <div
+                    id="panelsStayOpen-collapseTwo"
+                    className="accordion-collapse collapse"
+                  >
                     <div className="container text-center mt-2 mb-3">
                       <div className="row">
                         <div className="col">
@@ -120,12 +121,18 @@ export const RankList = () => {
                     </div>
                     {!isLoading
                       ? colaboradores
-                          ?.sort((a, b) => b.puntos_acumulados - a.puntos_acumulados)
+                          ?.sort(
+                            (a, b) => b.puntos_acumulados - a.puntos_acumulados
+                          )
                           .map((colaborador, index) => (
                             <RankListItem
                               key={index}
                               index={index + 1}
-                              nombre={colaborador.nombre_1 + " " + colaborador.apellido_1}
+                              nombre={
+                                colaborador.nombre_1 +
+                                " " +
+                                colaborador.apellido_1
+                              }
                               puntos={colaborador.puntos_acumulados}
                             />
                           ))

@@ -60,7 +60,7 @@ export function Login() {
             onChange={onChange}
           />{" "}
           <br />
-          <button className="btn btn-primary mt-3">Ingresar</button>
+          <button className="mt-3">Ingresar</button>
         </form>
       </div>
       </div>

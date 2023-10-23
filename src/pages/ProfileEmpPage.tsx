@@ -4,7 +4,6 @@ import { Navbar } from "../components";
 import { useAppSelector } from "../hooks/store";
 import Footer from "../components/Footer";
 
-
 export const ProfileEmp = () => {
   const user = useAppSelector((state) => state.user);
   const [isLoading, setIsLoading] = useState(false);
@@ -19,50 +18,45 @@ export const ProfileEmp = () => {
   };
 
   useEffect(() => {
-   getCompany();
+    getCompany();
   }, []);
 
   return (
     <>
-    <img
-        src="https://www.zonafrancasantander.com/imagenes/vdo_cabezotes/cabe_93d666c2e538322a27e6562c19bc5597a2066bd6.jpg"
-        className="contenido img-fluid"
-      />
-      <img
-        src="https://i.imgur.com/9PDGhjx.jpg"
-        className="contenido-alternativa img-fluid contenido "
-      />
       <Navbar />
+      <img
+        src="https://www.zonafrancasantander.com/imagenes//vco_secciones/secc_76f4e9a348c87c16b40928e70145006630d90631.gif"
+        className="img-fluid"
+      />
       {!isLoading ? (
         <div className="">
-        <div className="container titulo">
-          <div className="row">
-            <div className="col-9">
-              <h1>Informacion De mi empresa</h1>
-            </div>
-
-            <div className="col-6">
-              <div className="row, profile">
-                <div className="col-8 col-sm-6">
-                  <h3> Nombre: </h3>
-                </div>
-                <div className="col-4 col-sm-6">{data.nombre_empresa}</div>
+          <div className="container titulo">
+            <div className="row">
+              <div className="col-9">
+                <h1>Informacion De mi empresa</h1>
               </div>
-              <div className="row, profile">
-                <div className="col-8 col-sm-6">
-                  <h3> Puntos: </h3>
+
+              <div className="col-6">
+                <div className="row, profile">
+                  <div className="col-8 col-sm-6">
+                    <h3> Nombre: </h3>
+                  </div>
+                  <div className="col-4 col-sm-6">{data.nombre_empresa}</div>
                 </div>
-                <div className="col-4 col-sm-6">{data.puntos}</div>
+                <div className="row, profile">
+                  <div className="col-8 col-sm-6">
+                    <h3> Puntos: </h3>
+                  </div>
+                  <div className="col-4 col-sm-6">{data.puntos}</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        </div>
       ) : (
         ""
       )}
-      <Footer/>
-
+      <Footer />
     </>
   );
 };

@@ -9,10 +9,9 @@ export const ProfilePage = () => {
     <>
       {user.rol === 1 ? <>No deberia estar aca</> : ""}
       <Navbar />
-
       <img
-        src="https://www.zonafrancasantander.com/imagenes/vdo_cabezotes/cabe_93d666c2e538322a27e6562c19bc5597a2066bd6.jpg"
-        className="contenido img-fluid"
+        src="https://www.zonafrancasantander.com/imagenes//vco_secciones/secc_76f4e9a348c87c16b40928e70145006630d90631.gif"
+        className="img-fluid"
       />
       <img
         src="https://i.imgur.com/9PDGhjx.jpg"

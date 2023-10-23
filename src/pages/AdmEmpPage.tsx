@@ -24,15 +24,11 @@ export const AdmEmp = () => {
   }, []);
   return (
     <>
-      <img
-        src="https://www.zonafrancasantander.com/imagenes/vdo_cabezotes/cabe_93d666c2e538322a27e6562c19bc5597a2066bd6.jpg"
-        className="contenido img-fluid"
-      />
-      <img
-        src="https://i.imgur.com/9PDGhjx.jpg"
-        className="contenido-alternativa img-fluid contenido "
-      />
       <Navbar />
+      <img
+        src="https://www.zonafrancasantander.com/imagenes//vco_secciones/secc_a3e99dc8bef438dc841961034d5b9f04032c72f3.jpg"
+        className="img-fluid"
+      />
       <div className="container-adminEmp ">
         <div className="content-container titulo">
           <div className="container text-center">
@@ -65,14 +61,13 @@ export const AdmEmp = () => {
                     <ul className="list-group list-group-flush">
                       <li className="list-group-item"></li>
                       <Link to={"/createCompany"} className="list-group-item">
-                        <h5 className="card-title btn btn-primary">Agregar empresa</h5>
+                        <h5 className="card-title btn">Agregar empresa</h5>
                       </Link>
                       <li className="list-group-item"></li>
                     </ul>
                   </div>
                 </div>
               </div>
-              <div className="col col-lg-2"></div>
             </div>
           </div>
         </div>
