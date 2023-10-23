@@ -18,7 +18,7 @@ export const NavBarHome = () => {
         <div className="col-8"></div>
         <div className="col-2 d-flex align-items-end justify-content-end">
           <Link to={"/login"} className="login-text  logout-button">
-            <i className="fa-solid fa-right-to-bracket"></i>&nbsp;Login
+            <i className="fa-solid fa-right-to-bracket">&nbsp;Login</i>
           </Link>
         </div>
       </div>
