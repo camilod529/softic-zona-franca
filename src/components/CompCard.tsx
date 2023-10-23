@@ -17,11 +17,7 @@ export const CompCard = ({ title = "", nit = "" }) => {
                 
             </Link>
           </li>
-          <li className="list-group-item">
-            <Link to="#" className="card-link">
-              Pagina web
-            </Link>
-          </li>
+          <li className="list-group-item green-btn">Eliminar empresa</li>
         </ul>
       </div>
     </>

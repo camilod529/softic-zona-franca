@@ -63,15 +63,9 @@ export const AdmEventPage = () => {
                   </div>
                   <ul className="list-group list-group-flush">
                     <li className="list-group-item">
-                      <h5 className="card-title">Agregar Evento</h5>
-                    </li>
-                    <li className="list-group-item">
-                      <p className="card-text">Haga click aqui para crear un evento nuevo</p>
-                    </li>
-                    <li className="list-group-item">
-                      <Link to="#" className="card-link">
-                        Card link
-                      </Link>
+                      <h5 className="card-title btn btn-primary">
+                        Agregar Evento
+                      </h5>
                     </li>
                   </ul>
                 </div>
