@@ -67,10 +67,10 @@ export const Navbar = () => {
         )}
         
         <div className="container-fluid p-0 mside">
-          {user.rol ===0? null :(
+          {user.rol ===0? null:(
           <Link
             className="navbar-brand"
-            to={user.rol === 2 || user.rol === 3 ? "/profile" : ""}
+            to={user.rol === 2 || user.rol === 3 ? "/profile" : "/mainPage"}
           >
             
             {user.rol === 1 ? "Inicio" : "Perfil"}
