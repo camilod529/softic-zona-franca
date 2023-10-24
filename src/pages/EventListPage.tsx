@@ -24,18 +24,14 @@ export const EventList = () => {
 
   return (
     <>
-      <img
-        src="https://www.zonafrancasantander.com/imagenes/vdo_cabezotes/cabe_93d666c2e538322a27e6562c19bc5597a2066bd6.jpg"
-        className="contenido img-fluid"
-      />
-      <img
-        src="https://i.imgur.com/9PDGhjx.jpg"
-        className="contenido-alternativa img-fluid contenido "
-      />
       <Navbar />
+      <img
+        src="https://www.zonafrancasantander.com/imagenes/vdo_cabezotes/cabe_8119d8765cfacb5e022d989e82286070aeb16633.jpg"
+        className="img-fluid"
+      />
 
       <div className="container text-center top titulo">
-        <div className="row ">
+        <div className="row mb-5">
           ,<div className="col-1"></div>
           <div className="col-10">
             <h1>Lista de eventos</h1>

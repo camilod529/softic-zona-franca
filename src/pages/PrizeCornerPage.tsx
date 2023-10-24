@@ -4,8 +4,12 @@ import { Navbar } from "../components";
 export const PrizeCorner = () => {
   return (
     <>
-    <Navbar/>
-    <h1 className="stylish-headline mt-5">Tienda de Premios</h1>
+      <Navbar />
+      <img
+        src="https://www.zonafrancasantander.com/imagenes//vco_secciones/secc_b271a675b677dfa13f571cf1ddbe66b79b10fd87.jpg"
+        className="img-fluid"
+      />
+      <h1 className="stylish-headline mt-5">Tienda de Premios</h1>
 
       <div className="container text-center">
         <div className="row">
@@ -33,7 +37,7 @@ export const PrizeCorner = () => {
           <PrizeCard />
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };
