@@ -125,7 +125,7 @@ export const Navbar = () => {
                     <Link
                       className="nav-link active"
                       aria-current="page"
-                      to={"/LinkdmColaboradores"}
+                      to={"/admColaboradores"}
                     >
                       Administrar colaboradores
                     </Link>
