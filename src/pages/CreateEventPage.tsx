@@ -65,7 +65,7 @@ export const CreateEventPage = () => {
                     type="text"
                     name="nombre_evento"
                     id="nombre_evento"
-                    placeholder="Escriba el nombre del evento"
+                    placeholder="Escriba el ID del evento"
                     onChange={onChange}
                   />{" "}
                   <br />
@@ -76,7 +76,7 @@ export const CreateEventPage = () => {
                 type="text"
                 name="empresa_colaborador"
                 id="empresa_colaborador"
-                placeholder="Escriba el nit de la empresa del colaborador"
+                placeholder="Escriba el nombre del evento"
                 onChange={onChange}
               />{" "}
               <br />
@@ -85,7 +85,7 @@ export const CreateEventPage = () => {
                     type="text"
                     name="descripcion_evento"
                     id="descripcion_evento"
-                    placeholder="Escriba la descripcion"
+                    placeholder="Escriba la descripcion del evento"
                     onChange={onChange}
                   />{" "}
                   <br />
@@ -94,7 +94,7 @@ export const CreateEventPage = () => {
                     type="file"
                     name="foto_evento"
                     id="foto_evento"
-                    placeholder="Ingrese la foto del eventos"
+                    placeholder="Ingrese el banner del evento"
                     onChange={onChange}
                   />{" "}
 
