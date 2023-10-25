@@ -217,7 +217,7 @@ body {
 
 /* Style for input fields */
 .colaborator-form input[type="text"],
-.colaborator-form input[type="password"] {
+.colaborator-form select {
   width: 50%;
   padding: 10px;
   margin-bottom: 16px; /* Adjusted margin bottom */
