@@ -11,18 +11,17 @@ export const MainPage = () => {
         className="img-fluid banner"
       />
 
-      <div className="services m-b-30">
-        <div className="col-xs-6 arrow hidden-xs">
-          SERVICIOS EN LÍNEA <div className="corner"></div>
+      <div className="  m-b-30 row row-cols-1 row-cols-md-2 ">
+        <div className="col arrow servicesbanner">
+          SERVICIOS EN LÍNEA 
         </div>
-
-        <div className="serv-container">
-          <div className="col-xs-12 col-sm-12 col-md-6 col-md-push-6 col-lg-6 col-lg-push-6 text-left content-service">
+      <div className="col services ">
+          <div className="col ">
             <a
               href="https://www.zonafrancasantander.com//contactos-6-m/contactenos.htm"
               className="item"
             >
-              <div>
+          <div className="col">
                 <img
                   src="https://www.zonafrancasantander.com/template/images/item-service-1.png"
                   className="img-responsive center-block"
@@ -36,7 +35,7 @@ export const MainPage = () => {
               href="http://zonafrancasantander.com/secciones-172-s/trabaje-con-nosotros.htm"
               className="item"
             >
-              <div>
+              <div className="col">
                 <img
                   src="https://www.zonafrancasantander.com/template/images/item-service-2.png"
                   className="img-responsive center-block"
@@ -50,7 +49,7 @@ export const MainPage = () => {
               href="https://www.zonafrancasantander.com/secciones-143-s/empresasinstaladas.htm"
               className="item"
             >
-              <div>
+              <div className="col">
                 <img
                   src="https://www.zonafrancasantander.com/template/images/item-service-3.png"
                   className="img-responsive center-block"
@@ -64,7 +63,7 @@ export const MainPage = () => {
               href="https://www.zonafrancasantander.com//oferta-inmobiliaria-15-m/todas-las-ofertas.htm"
               className="item"
             >
-              <div>
+              <div className="col">
                 <img
                   src="https://www.zonafrancasantander.com/template/images/item-service-4.png"
                   className="img-responsive center-block"
