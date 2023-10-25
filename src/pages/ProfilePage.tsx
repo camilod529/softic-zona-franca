@@ -20,54 +20,39 @@ export const ProfilePage = () => {
       <div className="container perfil-contenido">
         <div className="row color-perfil">
           <div className="col-9 ">
-            <h1>Informacion De Perfil</h1>
+            <h1 className="text-center mt-5 mb-5 display-2">
+              Informacion De Perfil
+            </h1>
           </div>
           {user.rol === 3 ? (
             <>
-              <div className="col-4">
-                <img src={user.foto} className="img-thumbnail" alt="..." />
+              <div className="row">
+                <div className="col m-3">
+                  <img src={user.foto} className="img-thumbnail" alt="..." />
+                </div>
+                <div className="col">
+                  <h1 className="m-3">Nombre:</h1>
+                  <p className="m-3 infoPerfiles">{user.nombre_1}</p>
+                  <h1 className="m-3 ">Edad:</h1>
+                  <p className="m-3 infoPerfiles">{user.edad}</p>
+                  <h1 className="m-3">Correo electronico:</h1>
+                  <p className="m-3 infoPerfiles">{user.correo_personal}</p>
+                  <h1 className="m-3">Empresa:</h1>
+                  <p className="m-3 infoPerfiles">{user.empresa_colaborador}</p>
+                  <h1 className="m-3">Genero:</h1>
+                  <p className="m-3 infoPerfiles">{user.genero}</p>
+                  <h1 className="m-3">Gustos:</h1>
+                  <p className="m-3 infoPerfiles">
+                    <div className="col-4 col-sm-6">
+                      {user.gustos?.map((gusto) => {
+                        return gusto + " ";
+                      })}
+                    </div>
+                  </p>
+                </div>
               </div>
-              <div className="col-6">
-                <div className="row, profile">
-                  <div className="col-8 col-sm-6">
-                    <h3> Nombre: </h3>
-                  </div>
-                  <div className="col-4 col-sm-6">{user.nombre_1}</div>
-                </div>
-                <div className="row, profile">
-                  <div className="col-8 col-sm-6">
-                    <h3> Edad: </h3>
-                  </div>
-                  <div className="col-4 col-sm-6">{user.edad}</div>
-                </div>
-                <div className="row, profile">
-                  <div className="col-8 col-sm-6">
-                    <h3> Correo: </h3>
-                  </div>
-                  <div className="col-4 col-sm-6">{user.correo_personal}</div>
-                </div>
-                <div className="row, profile">
-                  <div className="col-8 col-sm-6">
-                    <h3> Empresa: </h3>
-                  </div>
-                  <div className="col-4 col-sm-6">{user.empresa_colaborador}</div>
-                </div>
-                <div className="row, profile">
-                  <div className="col-8 col-sm-6">
-                    <h3> Genero: </h3>
-                  </div>
-                  <div className="col-4 col-sm-6">{user.genero}</div>
-                </div>
-                <div className="row, profile">
-                  <div className="col-8 col-sm-6">
-                    <h3> Gustos: </h3>
-                  </div>
-                  <div className="col-4 col-sm-6">
-                    {user.gustos?.map((gusto) => {
-                      return gusto + " ";
-                    })}
-                  </div>
-                </div>
+              <div className="container text-center">
+                <div className="row justify-content-md-center m-5"></div>
               </div>
             </>
           ) : (
@@ -75,19 +60,21 @@ export const ProfilePage = () => {
           )}
           {user.rol === 2 ? (
             <>
-              <div className="col-6">
-                <div className="row profile">
-                  <div className="col-8 col-sm-6">
-                    <h3> Nombre: </h3>
-                  </div>
-                  <div className="col-4 col-sm-6">{user.nombre_empresa}</div>
+              <div className="row">
+                <div className="col m-3">
+                  <img src="" className="img-fluid" alt="" />
                 </div>
-                <div className="row profile">
-                  <div className="col-8 col-sm-6">
-                    <h3> Puntos: </h3>
-                  </div>
-                  <div className="col-4 col-sm-6">{user.puntos}</div>
+                <div className="col">
+                  <h1 className="m-3">Nombre:</h1>
+                  <p className="m-3 infoPerfiles">{user.nombre_empresa}</p>
+                  <h1 className="m-3 ">Puntos obtenidos:</h1>
+                  <p className="m-3 infoPerfiles">{user.puntos}</p>
+                  <h1 className="m-3">NIT empresarial:</h1>
+                  <p className="m-3 infoPerfiles">{}</p>
                 </div>
+              </div>
+              <div className="container text-center">
+                <div className="row justify-content-md-center m-5"></div>
               </div>
             </>
           ) : (

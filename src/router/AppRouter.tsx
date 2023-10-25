@@ -17,7 +17,8 @@ import {
   TagsPage,
   PrizeCorner,
   EventDetail,
-  MainPage
+  MainPage,
+  CreateEventPage
 } from "../pages";
 
 
@@ -145,6 +146,14 @@ export const AppRouter = () => {
           element={
             <ProtectedRoute>
               <CreateColaboradorPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/createEvent"
+          element={
+            <ProtectedRoute>
+              <CreateEventPage />
             </ProtectedRoute>
           }
         />

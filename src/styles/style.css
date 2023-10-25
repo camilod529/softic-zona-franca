@@ -1,5 +1,5 @@
 body {
-  background-color: #f2f2dc76;
+  background-color: #ffffff;
 }
 
 * {
@@ -192,13 +192,17 @@ body {
   text-align: center;
 }
 .colaborator-form {
+  
+  border-color: black;
+  border-radius: 10px;
+  border-style:groove;
   margin-top: 5rem;
   margin-bottom: 5rem;
   width: 50vw;
   padding-top: 3rem;
   padding-bottom: 3rem;
   border-radius: 10px;
-  background-color: #ffffff;
+  background-color: #aaaa1091;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
   text-align: center;
   display: flex;
@@ -213,10 +217,13 @@ body {
   display: block;
   margin-bottom: 8px;
   text-align: left;
+  font-weight: bold;
 }
 
 /* Style for input fields */
 .colaborator-form input[type="text"],
+.colaborator-form input[type="datetime-local"],
+.colaborator-form input[type="number"],
 .colaborator-form select {
   width: 50%;
   padding: 10px;
@@ -253,6 +260,10 @@ body {
   display: block;
   margin-bottom: 8px;
   text-align: left;
+  
+}
+.infoPerfiles{
+  font-size:xx-large;
 }
 
 /* Style for input fields */
