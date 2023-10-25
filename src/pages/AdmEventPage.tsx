@@ -53,19 +53,14 @@ export const AdmEventPage = () => {
                     })
                   : ""}
                 <div className="card" style={{ width: "18rem" }}>
-                  <img src="..." className="card-img-top" alt="..." />
-                  <div className="card-body">
-                    <br></br>
+                  <div
+                    className="card-body"
+                    style={{ paddingTop: "6rem", paddingBottom: "6rem" }}
+                  >
+                    <Link to={"/createCompany"} className="green-btn">
+                      <h5 className="card-title btn">Agregar evento</h5>
+                    </Link>
                   </div>
-                  <ul className="list-group list-group-flush">
-                    <li className="list-group-item">
-                    <Link to={"/createEvent"} className="list-group-item">
-                      <h5 className="card-title btn btn-primary">
-                        Agregar Evento
-                      </h5>
-                      </Link>
-                    </li>
-                  </ul>
                 </div>
               </div>
             </div>

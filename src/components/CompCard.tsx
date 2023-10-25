@@ -12,7 +12,7 @@ export const CompCard = ({ title = "", nit = "" }) => {
           justifyContent: "center"
         }}
       >
-        <h5 className="">{title}</h5>
+        <h5>{title}</h5>
         <p className="card-text"></p>
 
         <ul className="list-group list-group-flush">
