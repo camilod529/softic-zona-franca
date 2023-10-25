@@ -3,6 +3,7 @@ import { CalendarComp } from "../components/CalendarComp";
 import Footer from "../components/Footer";
 import { useAppSelector } from "../hooks/store";
 
+
 export const ProfilePage = () => {
   const user = useAppSelector((state) => state.user);
   return (
@@ -70,7 +71,7 @@ export const ProfilePage = () => {
                   <h1 className="m-3 ">Puntos obtenidos:</h1>
                   <p className="m-3 infoPerfiles">{user.puntos}</p>
                   <h1 className="m-3">NIT empresarial:</h1>
-                  <p className="m-3 infoPerfiles">{}</p>
+                  <p className="m-3 infoPerfiles"></p>
                 </div>
               </div>
               <div className="container text-center">

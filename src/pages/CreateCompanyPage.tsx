@@ -33,40 +33,52 @@ export const CreateCompanyPage = () => {
         src="https://i.imgur.com/9PDGhjx.jpg"
         className="contenido-alternativa img-fluid contenido "
       />
-      <div className="container-adminEmp">
-      <div className="content-container titulo">
-          <div className="container text-center">
-            <div className="row">
-              <div className="col-md-"></div>
-              <div className="col-md">
-              <form className="login-form mr-4" onSubmit={handleSubmit}>
-        <label htmlFor="nit">nit</label>
-        <input
-          type="text"
-          name="nit"
-          id="nit"
-          placeholder="Escriba su nit"
-          onChange={onChange}
-        />{" "}
-        <br />
-        <br />
-        <label htmlFor="name">Contraseña</label>
-        <input
-          type="text"
-          name="name"
-          id="name"
-          placeholder="Escriba el nombre de la compañia"
-          onChange={onChange}
-        />{" "}
-        <br />
-        <button className="btn btn-primary mt-3">Ingresar</button>
-      </form>
-              </div>
-              <div className="col-md-"></div>
-            </div>
-          </div>
+      <div className="row justify-content-md-center">
+        <div className="col col-lg-2"></div>
+        <div className="col-md-auto">
+          <main>
+            <form className="colaborator-form mr-4" onSubmit={handleSubmit}>
+              <label htmlFor="documento_colaborador">
+                NIT de la empresa
+              </label>
+              <input
+                type="text"
+                name="documento_colaborador"
+                id="documento_colaborador"
+                placeholder="Escriba el nit de la empresa"
+                onChange={onChange}
+              />{" "}
+              <br />
+              <br />
+              <label htmlFor="empresa_colaborador">
+                Nombre
+              </label>
+              <input
+                type="text"
+                name="empresa_colaborador"
+                id="empresa_colaborador"
+                placeholder="Escriba el nombre de la empresa"
+                onChange={onChange}
+              />{" "}
+              <br />
+              <label htmlFor="nombre_1">Oficina</label>
+              <input
+                type="text"
+                name="nombre_1"
+                id="nombre_1"
+                placeholder="Escriba la o las oficinas de la empresa"
+                onChange={onChange}
+              />{" "}
+              <br />
+              
+              <button className="btn btn-primary mt-3">
+                Añadir empresa
+              </button>
+            </form>
+          </main>
         </div>
-        </div>
+        <div className="col col-lg-2"></div>
+      </div>
       <Footer/>
     </main>
     
