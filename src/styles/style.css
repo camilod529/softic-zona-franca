@@ -99,8 +99,8 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  margin-top: 8rem; /* Add top margin for spacing between .card and the content above */
-  margin-bottom: 8rem;
+  margin-top: 4rem; /* Add top margin for spacing between .card and the content above */
+  margin-bottom: 4rem;
 }
 
 .login-card {
@@ -409,12 +409,15 @@ body {
 }
 .cool-title {
   font-family: "Montserrat", sans-serif;
-  font-size: 40px;
+  font-size: 60px;
   font-weight: bold;
   color: #aaaa10; /* Light Yellow Color */
   text-transform: uppercase;
+  text-align: center;
   letter-spacing: 3px;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
   animation: glow-animation 1.5s infinite alternate;
 }
 

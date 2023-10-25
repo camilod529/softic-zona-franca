@@ -31,20 +31,13 @@ export function EventDetail() {
 
   return (
     <>
-      <img
-        src="https://www.zonafrancasantander.com/imagenes/vdo_cabezotes/cabe_93d666c2e538322a27e6562c19bc5597a2066bd6.jpg"
-        className="contenido img-fluid"
-      />
-      <img
-        src="https://i.imgur.com/9PDGhjx.jpg"
-        className="contenido-alternativa img-fluid contenido "
-      />
+
       <Navbar />
       <div className="">
         <div className="container titulo">
           {event.id_evento !== 0 ? (
             <>
-              <h1 className="stylish-headline mt-5 mb-5">{event.nombre_evento}</h1>
+              <h1 className="cool-title mt-5 mb-5">{event.nombre_evento}</h1>
               <img
                 className="rounded mx-auto d-block img-fluid mb-5 mt-5"
                 src={event.foto_evento}
