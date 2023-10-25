@@ -27,7 +27,7 @@ export const AdmEmp = () => {
       <Navbar />
       <img
         src="https://www.zonafrancasantander.com/imagenes//vco_secciones/secc_a3e99dc8bef438dc841961034d5b9f04032c72f3.jpg"
-        className="img-fluid"
+        className="img-fluid banner"
       />
       <div className="container-adminEmp ">
         <div className="content-container titulo">

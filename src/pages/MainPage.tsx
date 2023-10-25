@@ -8,7 +8,7 @@ export const MainPage = () => {
 
       <img
         src="https://www.zonafrancasantander.com/imagenes/vdo_cabezotes/cabe_93d666c2e538322a27e6562c19bc5597a2066bd6.jpg"
-        className="img-fluid"
+        className="img-fluid banner"
       />
 
       <div className="services m-b-30">
