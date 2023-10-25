@@ -56,14 +56,12 @@ export const AdmEmp = () => {
                       })
                     : "Cargando..."}
                   <div className="card" style={{ width: "18rem" }}>
-                    <div className="card-body"></div>
-                    <ul className="list-group list-group-flush">
-                      <li className="list-group-item"></li>
-                      <Link to={"/createCompany"} className="list-group-item">
+                    <div className="card-body" style={{paddingTop: '6rem', paddingBottom: '6rem'}}>
+                      <Link to={"/createCompany"} className="green-btn">
+                        
                         <h5 className="card-title btn">Agregar empresa</h5>
                       </Link>
-                      <li className="list-group-item"></li>
-                    </ul>
+                    </div>
                   </div>
                 </div>
               </div>
