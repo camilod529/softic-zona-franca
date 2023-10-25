@@ -44,21 +44,49 @@ export function EventDetail() {
         <div className="container titulo">
           {event.id_evento !== 0 ? (
             <>
-              <h1 className="stylish-headline mt-5 mb-5">{event.nombre_evento}</h1>
-              <img
-                className="rounded mx-auto d-block img-fluid mb-5 mt-5"
-                src={event.foto_evento}
-                alt={event.nombre_evento}
-              />
-              <div className="containerEventDetails">
-                <p className="mt-3">
-                  <strong>Descripción: </strong>
-                  <span>{event.descripcion_evento}</span>
-                  <br />
-                  <strong>Fecha del evento: </strong>
-                  <span>{new Date(event.fecha_evento).toDateString()}</span>
-                </p>
+             <h1 className="stylish-headline mt-5 mb-5">
+                    {event.nombre_evento}
+                  </h1>
+              <div className="row">
+                <div className="col">
+                  <img
+                    src={event.foto_evento}
+                    className="img-fluid"
+                    alt={event.nombre_evento}
+                  />
+                </div>
+                <div className="col">
+                 
+                  <h3 className="m-3">Fecha:</h3>
+                  <h5 className="m-3">{new Date(event.fecha_evento).toDateString()}</h5>
+                  <h3 className="m-3">Descripcion:</h3>
+                  <h5 className="m-3">{event.descripcion_evento}</h5>
+                  <h3 className="m-3">Etiquetas:</h3>
+                </div>
               </div>
+              <div className="container text-center">
+  <div className="row justify-content-md-center m-5">
+    <div className="col col-lg-2">
+      
+    </div>
+    <div className="col-md-auto">
+    <form>
+  <fieldset className="text-center">
+    <h1> Pre-registrate aqui</h1>
+    <div className="mb-3 formSpace">
+      <label className="form-label"></label>
+      <input type="text"  className="form-control " placeholder="Cedula"/>
+    </div>
+
+    <button type="submit" className="btn btn-primary">Submit</button>
+  </fieldset>
+</form>
+    </div>
+    <div className="col col-lg-2">
+      
+    </div>
+  </div>
+  </div>
             </>
           ) : (
             <h1>No existe el evento</h1>
