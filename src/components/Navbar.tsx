@@ -111,6 +111,11 @@ export const Navbar = () => {
                     </Link>
                   </li>
                   <li className="nav-item">
+                    <Link className="nav-link" to={"/admPrizes"}>
+                      Administrar premios
+                    </Link>
+                  </li>
+                  <li className="nav-item">
                     <Link className="nav-link " to={"/rank"}>
                       Tabla de puntos
                     </Link>

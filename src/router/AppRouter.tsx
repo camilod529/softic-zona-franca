@@ -18,10 +18,10 @@ import {
   PrizeCorner,
   EventDetail,
   MainPage,
-  CreateEventPage
+  CreateEventPage,
 } from "../pages";
-
-
+import { CreatePrizePage } from "../pages/CreatePrizePage";
+import { AdmPrizePage } from "../pages/AdmPrizePage";
 
 export const AppRouter = () => {
   return (
@@ -55,7 +55,7 @@ export const AppRouter = () => {
           path="/mainPage"
           element={
             <ProtectedRoute>
-              <MainPage/>
+              <MainPage />
             </ProtectedRoute>
           }
         />
@@ -80,6 +80,14 @@ export const AppRouter = () => {
           element={
             <ProtectedRoute>
               <AdmColaboradoresPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admPrizes"
+          element={
+            <ProtectedRoute>
+              <AdmPrizePage />
             </ProtectedRoute>
           }
         />
@@ -137,7 +145,7 @@ export const AppRouter = () => {
           path="/shop"
           element={
             <ProtectedRoute>
-              <PrizeCorner/>
+              <PrizeCorner />
             </ProtectedRoute>
           }
         />
@@ -154,6 +162,14 @@ export const AppRouter = () => {
           element={
             <ProtectedRoute>
               <CreateEventPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/createPrize"
+          element={
+            <ProtectedRoute>
+              <CreatePrizePage />
             </ProtectedRoute>
           }
         />

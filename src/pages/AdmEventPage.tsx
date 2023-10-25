@@ -57,14 +57,13 @@ export const AdmEventPage = () => {
                     className="card-body"
                     style={{ paddingTop: "6rem", paddingBottom: "6rem" }}
                   >
-                    <Link to={"/createCompany"} className="green-btn">
+                    <Link to={"/createEvent"} className="green-btn">
                       <h5 className="card-title btn">Agregar evento</h5>
                     </Link>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="col col-lg-2"></div>
           </div>
         </div>
       </div>

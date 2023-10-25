@@ -87,7 +87,6 @@ export const RankList = () => {
                             />
                           ))
                       : ""}
-                    <RankListItem index="" puntos={""} />
                   </div>
                 </div>
                 <div className="accordion-item">
@@ -138,7 +137,6 @@ export const RankList = () => {
                             />
                           ))
                       : ""}
-                    <RankListItem index="" puntos={""} />
                   </div>
                 </div>
               </div>
