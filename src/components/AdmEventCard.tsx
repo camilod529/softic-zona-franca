@@ -6,8 +6,8 @@ export const AdmEventCard = ({ title = "", desc = "", img = "" }) => {
         <div className="card-body">
           <h5 className="card-title">{title}</h5>
           <p className="card-text">{desc}</p>
-          <p className="btn btn-primary green-btn">Eliminar</p>
         </div>
+        <p className="btn btn-primary green-btn">Eliminar</p>
       </div>
     </>
   );
