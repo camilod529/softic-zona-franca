@@ -504,9 +504,9 @@ body {
   position: relative;
   color: #fff;
 }
-.services .arrow {
+.servicesbanner{
   background: #aaaa10;
-  position: absolute;
+  
   height: 107px;
   top: -5px;
   padding-right: 40px;
@@ -515,16 +515,7 @@ body {
   font-size: 35px;
   font-weight: lighter;
 }
-.services .arrow .corner {
-  width: 0;
-  height: 0;
-  border-top: 53px solid transparent;
-  border-bottom: 53px solid transparent;
-  border-left: 20px solid #aaaa10;
-  position: absolute;
-  top: 0;
-  right: -20px;
-}
+
 .services .item {
   display: inline-block;
   width: 24%;
