@@ -29,7 +29,7 @@ export const RankList = () => {
       <Navbar />
       <img
         src="https://www.zonafrancasantander.com/imagenes//vco_secciones/secc_37d4bbfbf2565771790085cdc4767c80413274bd.jpg"
-        className="img-fluid"
+        className="img-fluid banner"
       />
 
       <div className="container text-center titulo">

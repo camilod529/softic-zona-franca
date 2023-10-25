@@ -55,7 +55,7 @@ export const AdmColaboradoresPage = () => {
                     <div className="card-body"></div>
                     <ul className="list-group list-group-flush">
                       <li className="list-group-item"></li>
-                      <Link to={"/createColaborador"} className="list-group-item">
+                      <Link to={"/createColaborator"} className="list-group-item">
                         <h5 className="card-title">Agregar colaborador</h5>
                       </Link>
                       <li className="list-group-item"></li>

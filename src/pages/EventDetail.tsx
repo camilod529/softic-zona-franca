@@ -37,11 +37,11 @@ export function EventDetail() {
         <div className="container titulo">
           {event.id_evento !== 0 ? (
             <>
-             <h1 className="stylish-headline mt-5 mb-5">
+             <h1 className="text-center mt-5 mb-5 display-2">
                     {event.nombre_evento}
                   </h1>
               <div className="row">
-                <div className="col">
+                <div className="col m-3">
                   <img
                     src={event.foto_evento}
                     className="img-fluid"

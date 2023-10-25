@@ -26,7 +26,7 @@ export const ProfileEmp = () => {
       <Navbar />
       <img
         src="https://www.zonafrancasantander.com/imagenes//vco_secciones/secc_76f4e9a348c87c16b40928e70145006630d90631.gif"
-        className="img-fluid"
+        className="img-fluid banner"
       />
       {!isLoading ? (
         <div className="">

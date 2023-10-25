@@ -27,7 +27,7 @@ export const EventList = () => {
       <Navbar />
       <img
         src="https://www.zonafrancasantander.com/imagenes/vdo_cabezotes/cabe_8119d8765cfacb5e022d989e82286070aeb16633.jpg"
-        className="img-fluid"
+        className="img-fluid banner"
       />
 
       <div className="container text-center top titulo">
