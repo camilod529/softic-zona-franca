@@ -33,8 +33,7 @@ export const AdmEmp = () => {
         <div className="content-container titulo">
           <div className="container text-center">
             <div className="row">
-              <div className="col-md-"></div>
-              <div className="col-md">
+              <div className="col-md mb-5 mt-3">
                 <h1>Compañias Vinculadas</h1>
               </div>
               <div className="col-md-"></div>

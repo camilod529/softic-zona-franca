@@ -87,6 +87,7 @@ export const RankList = () => {
                             />
                           ))
                       : ""}
+                    <RankListItem index="" puntos={""} />
                   </div>
                 </div>
                 <div className="accordion-item">
@@ -108,13 +109,13 @@ export const RankList = () => {
                   >
                     <div className="container text-center mt-2 mb-3">
                       <div className="row">
-                        <div className="col">
+                        <div className="col-2">
                           <strong>Rank</strong>
                         </div>
-                        <div className="col-6">
+                        <div className="col-8">
                           <strong>Nombre</strong>
                         </div>
-                        <div className="col">
+                        <div className="col-2">
                           <strong>ZF-Coins</strong>
                         </div>
                       </div>
@@ -137,12 +138,12 @@ export const RankList = () => {
                             />
                           ))
                       : ""}
+                    <RankListItem index="" puntos={""} />
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-1"></div>
         </div>
       </div>
       <Footer />

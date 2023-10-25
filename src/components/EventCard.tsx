@@ -16,7 +16,7 @@ export default function EventCard({
 
   return (
     <div
-      className="card mb-3"
+      className="card "
       onClick={() => navigate(`/events/${event.id_evento}`)}
     >
       <img src={imageUrl} className="card-img-top" alt="..." />
