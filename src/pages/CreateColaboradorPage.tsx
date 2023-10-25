@@ -46,9 +46,15 @@ export const CreateColaboradorPage = () => {
   return (
     <>
       <Navbar />
-      <main>
-        <form className="login-form mr-4" onSubmit={handleSubmit}>
-          <label htmlFor="documento_colaborador">documento colaborador</label>
+      
+  <div className="row justify-content-md-center">
+      <div className="col col-lg-2">
+    
+    </div>
+      <div className="col-md-auto">
+    <main>
+        <form className="colaborator-form mr-4" onSubmit={handleSubmit}>
+          <label htmlFor="documento_colaborador">Documento Colaborador</label>
           <input
             type="text"
             name="documento_colaborador"
@@ -58,7 +64,7 @@ export const CreateColaboradorPage = () => {
           />{" "}
           <br />
           <br />
-          <label htmlFor="empresa_colaborador">nit empresa colaborador</label>
+          <label htmlFor="empresa_colaborador">NIT empresa colaborador</label>
           <input
             type="text"
             name="empresa_colaborador"
@@ -67,7 +73,7 @@ export const CreateColaboradorPage = () => {
             onChange={onChange}
           />{" "}
           <br />
-          <label htmlFor="nombre_1">primer nombre</label>
+          <label htmlFor="nombre_1">Primer Nombre</label>
           <input
             type="text"
             name="nombre_1"
@@ -76,7 +82,7 @@ export const CreateColaboradorPage = () => {
             onChange={onChange}
           />{" "}
           <br />
-          <label htmlFor="apellido_1">primer apellido</label>
+          <label htmlFor="apellido_1">Primer Apellido</label>
           <input
             type="text"
             name="apellido_1"
@@ -103,7 +109,7 @@ export const CreateColaboradorPage = () => {
             onChange={onChange}
           />{" "}
           <br />
-          <label htmlFor="fecha_nacimiento">fecha nacimiento</label>
+          <label htmlFor="fecha_nacimiento">Fecha nacimiento</label>
           <input
             type="datetime-local"
             name="fecha_nacimiento"
@@ -112,7 +118,7 @@ export const CreateColaboradorPage = () => {
             onChange={onChange}
           />{" "}
           <br />
-          <label htmlFor="foto">foto</label>
+          <label htmlFor="foto">Foto</label>
           <input
             type="file"
             name="foto"
@@ -124,6 +130,17 @@ export const CreateColaboradorPage = () => {
           <button className="btn btn-primary mt-3">Crear colaborador</button>
         </form>
       </main>
+    </div>
+    <div className="col col-lg-2">
+      
+    </div>
+    </div>
+
     </>
   );
 };
+
+    
+    
+    
+  
