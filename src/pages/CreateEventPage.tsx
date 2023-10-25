@@ -1,6 +1,6 @@
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { createEvent } from "../api/session";
+{/*import { createEvent } from "../api/session";*/}
 import { Navbar } from "../components";
 import Footer from "../components/Footer";
 
@@ -24,7 +24,7 @@ export const CreateEventPage = () => {
     setData({ ...data, [e.currentTarget.name]: e.currentTarget.value });
   };
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  {/*const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(data);
     await createEvent({
@@ -41,40 +41,27 @@ export const CreateEventPage = () => {
       puntos_castigo: data.puntos_castigo,
     })
       .then(() => {
-        navigate("/adminEmpresa");
+        navigate("/adminEventos");
       })
       .catch((err) => console.log(err));
-  };
+  };*/}
   return (
     <main>
       <Navbar />
-      <img
-        src="https://www.zonafrancasantander.com/imagenes/vdo_cabezotes/cabe_93d666c2e538322a27e6562c19bc5597a2066bd6.jpg"
-        className="contenido img-fluid"
-      />
+      
       <img
         src="https://i.imgur.com/9PDGhjx.jpg"
         className="contenido-alternativa img-fluid contenido "
       />
-      <div className="container-adminEmp">
-        <div className="content-container titulo">
-          <div className="container text-center">
-            <div className="row">
-              <div className="col-md-"></div>
-              <div className="col-md">
-                <form className="login-form mr-4" onSubmit={handleSubmit}>
-                  <label htmlFor="nit">id evento</label>
-                  <input
-                    type="text"
-                    name="id_evento"
-                    id="id_evento"
-                    placeholder="Escriba el id del evento"
-                    onChange={onChange}
-                  />{" "}
-                  <br />
-                  <br />
-                  <label htmlFor="nombre_evento">nombre evento</label>
-                  <input
+      <div className="row justify-content-md-center">
+        <div className="col col-lg-2"></div>
+        <div className="col-md-auto">
+          <main>
+            <form className="colaborator-form mr-4" /*onSubmit={handleSubmit}*/>
+              <label htmlFor="documento_colaborador">
+                ID Evento
+              </label>
+              <input
                     type="text"
                     name="nombre_evento"
                     id="nombre_evento"
@@ -82,8 +69,19 @@ export const CreateEventPage = () => {
                     onChange={onChange}
                   />{" "}
                   <br />
-                  <label htmlFor="descripcion_evento">Descripcion evento</label>
-                  <input
+              <label htmlFor="empresa_colaborador">
+                Nombre del Evento
+              </label>
+              <input
+                type="text"
+                name="empresa_colaborador"
+                id="empresa_colaborador"
+                placeholder="Escriba el nit de la empresa del colaborador"
+                onChange={onChange}
+              />{" "}
+              <br />
+              <label htmlFor="nombre_1">Descripcion del Evento</label>
+              <input
                     type="text"
                     name="descripcion_evento"
                     id="descripcion_evento"
@@ -91,17 +89,18 @@ export const CreateEventPage = () => {
                     onChange={onChange}
                   />{" "}
                   <br />
-                  <label htmlFor="foto_evento">Foto evento</label>
-                  <input
+              <label htmlFor="apellido_1">Banner</label>
+              <input
                     type="file"
                     name="foto_evento"
                     id="foto_evento"
                     placeholder="Ingrese la foto del eventos"
                     onChange={onChange}
                   />{" "}
-                  <br />
-                  <label htmlFor="fecha_evento">Fecha evento inicio</label>
-                  <input
+
+              <br />
+              <label htmlFor="genero">Fecha de inicio</label>
+              <input
                     type="datetime-local"
                     name="fecha_evento"
                     id="fecha_evento"
@@ -109,8 +108,11 @@ export const CreateEventPage = () => {
                     onChange={onChange}
                   />{" "}
                   <br />
-                  <label htmlFor="fecha_evento_fin">Fecha evento fin</label>
-                  <input
+              
+              
+              <br />
+              <label htmlFor="correo_personal">Fecha de cierre</label>
+              <input
                     type="datetime-local"
                     name="fecha_evento_fin"
                     id="fecha_evento_fin"
@@ -118,8 +120,9 @@ export const CreateEventPage = () => {
                     onChange={onChange}
                   />{" "}
                   <br />
-                  <label htmlFor="aforo_maximo">aforo maximo </label>
-                  <input
+              <br />
+              <label htmlFor="fecha_nacimiento">Aforo Maximo</label>
+              <input
                     min={1}
                     type="number"
                     name="aforo_maximo"
@@ -128,8 +131,8 @@ export const CreateEventPage = () => {
                     onChange={onChange}
                   />{" "}
                   <br />
-                  <label htmlFor="aforo_registrado">aforo registrado</label>
-                  <input
+              <label htmlFor="foto">Aforo registrado</label>
+              <input
                     min={0}
                     type="number"
                     name="aforo_registrado"
@@ -138,7 +141,7 @@ export const CreateEventPage = () => {
                     onChange={onChange}
                   />{" "}
                   <br />
-                  <label htmlFor="puntos_colaborador">puntos colaborador</label>
+                  <label htmlFor="foto">Puntos para Colaboradores</label>
                   <input
                     min={0}
                     type="number"
@@ -148,7 +151,7 @@ export const CreateEventPage = () => {
                     onChange={onChange}
                   />{" "}
                   <br />
-                  <label htmlFor="puntos_empresa">puntos empresa</label>
+                  <label htmlFor="foto">Puntos a Empresas</label>
                   <input
                     min={0}
                     type="number"
@@ -157,24 +160,13 @@ export const CreateEventPage = () => {
                     placeholder="Ingrese los puntos a asignar a la empresa"
                     onChange={onChange}
                   />{" "}
-                  <br />
-                  <label htmlFor="puntos_castigos">puntos empresa</label>
-                  <input
-                    min={0}
-                    type="number"
-                    name="puntos_castigos"
-                    id="puntos_castigos"
-                    placeholder="Ingrese los puntos a asignar a la empresa"
-                    onChange={onChange}
-                  />{" "}
-                  <br />
-                  <button className="btn btn-primary mt-3">Ingresar</button>
-                </form>
-              </div>
-              <div className="col-md-"></div>
-            </div>
-          </div>
+              <button className="btn btn-primary mt-3">
+                Crear colaborador
+              </button>
+            </form>
+          </main>
         </div>
+        <div className="col col-lg-2"></div>
       </div>
       <Footer />
     </main>

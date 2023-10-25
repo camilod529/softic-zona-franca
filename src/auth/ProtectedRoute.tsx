@@ -77,6 +77,12 @@ export function ProtectedRoute({ children }: { children: JSX.Element }) {
         return <Navigate to="/" />;
       }
       break;
+      case "/createEvent":
+      if (user.rol !== 1) {
+
+        return <Navigate to="/" />;
+      }
+      break;
     default:
       break;
   }
