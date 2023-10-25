@@ -92,6 +92,12 @@ export const CreateColaboradorPage = () => {
           />{" "}
           <br />
           <label htmlFor="genero">Genero</label>
+          <select aria-label="Seleccione el genero" >
+  <option selected>Seleccione el genero</option>
+  <option value="1">Masculino</option>
+  <option value="2">Femenino</option>
+ 
+</select>
           <input
             type="text"
             name="genero"
