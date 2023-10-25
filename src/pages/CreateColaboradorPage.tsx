@@ -95,7 +95,7 @@ export const CreateColaboradorPage = () => {
               />{" "}
               <br />
               <label htmlFor="genero">Genero</label>
-              <select onChange={onChange} id="genero" name ="genero"aria-label="Seleccione el genero">
+              <select id="genero" name ="genero" aria-label="Seleccione el genero">
                 <option selected>Seleccione el genero</option>
                 <option value="Masculino">Masculino</option>
                 <option value="Femenino">Femenino</option>
