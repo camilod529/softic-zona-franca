@@ -78,7 +78,7 @@ export const CreateCompanyPage = () => {
               />{" "}
               <br />
               <button
-                className="btn btn-primary mt-3"
+                className="btn btn-primary"
                 style={{
                   border: "solid",
                   borderColor: "black",

@@ -62,14 +62,14 @@ export const CreateEventPage = () => {
         <div className="col-md-auto">
           <main>
             <form className="colaborator-form mr-4" /*onSubmit={handleSubmit}*/>
-              <label htmlFor="documento_colaborador">ID Evento</label>
+              {/* <label htmlFor="documento_colaborador">ID Evento</label>
               <input
                 type="text"
                 name="ID_evento"
                 id="ID_evento"
                 placeholder="Escriba el ID del evento"
                 onChange={onChange}
-              />{" "}
+              />{" "} */}
               <br />
               <label htmlFor="nombre_evento">Nombre del Evento</label>
               <input
@@ -85,7 +85,7 @@ export const CreateEventPage = () => {
                 type="text"
                 name="descripcion_evento"
                 id="descripcion_evento"
-                placeholder="Escriba la descripcion"
+                placeholder="Escriba la descripcion del evento"
                 onChange={onChange}
               />{" "}
               <br />
@@ -160,7 +160,13 @@ export const CreateEventPage = () => {
               />{" "}
               <button
                 className="btn btn-primary mt-3 green-btn"
-                style={{ width: "30%" }}
+                style={{
+                  width: "30%",
+                  border: "solid",
+                  borderColor: "black",
+                  borderWidth: "1px",
+                  color: "black",
+                }}
               >
                 Crear evento
               </button>
