@@ -22,26 +22,25 @@ export const CreateCompanyPage = () => {
       .catch((err) => console.log(err));
   };
   return (
-   
     <main>
-      <Navbar/>
+      <Navbar />
       <img
-        src="https://www.zonafrancasantander.com/imagenes/vdo_cabezotes/cabe_93d666c2e538322a27e6562c19bc5597a2066bd6.jpg"
-        className="contenido img-fluid"
+        src="https://www.zonafrancasantander.com/imagenes//vco_secciones/secc_a3e99dc8bef438dc841961034d5b9f04032c72f3.jpg"
+        className="img-fluid banner"
       />
-      <img
-        src="https://i.imgur.com/9PDGhjx.jpg"
-        className="contenido-alternativa img-fluid contenido "
-      />
+
       <div className="row justify-content-md-center">
         <div className="col col-lg-2"></div>
         <div className="col-md-auto">
           <main>
             <form className="colaborator-form mr-4" onSubmit={handleSubmit}>
-              <label htmlFor="documento_colaborador">
-                NIT de la empresa
-              </label>
+              <label htmlFor="documento_colaborador">NIT de la empresa</label>
               <input
+                style={{
+                  border: "solid",
+                  borderColor: "black",
+                  borderWidth: "1px",
+                }}
                 type="text"
                 name="documento_colaborador"
                 id="documento_colaborador"
@@ -50,10 +49,13 @@ export const CreateCompanyPage = () => {
               />{" "}
               <br />
               <br />
-              <label htmlFor="empresa_colaborador">
-                Nombre
-              </label>
+              <label htmlFor="empresa_colaborador">Nombre</label>
               <input
+                style={{
+                  border: "solid",
+                  borderColor: "black",
+                  borderWidth: "1px",
+                }}
                 type="text"
                 name="empresa_colaborador"
                 id="empresa_colaborador"
@@ -63,6 +65,11 @@ export const CreateCompanyPage = () => {
               <br />
               <label htmlFor="nombre_1">Oficina</label>
               <input
+                style={{
+                  border: "solid",
+                  borderColor: "black",
+                  borderWidth: "1px",
+                }}
                 type="text"
                 name="nombre_1"
                 id="nombre_1"
@@ -70,8 +77,15 @@ export const CreateCompanyPage = () => {
                 onChange={onChange}
               />{" "}
               <br />
-              
-              <button className="btn btn-primary mt-3">
+              <button
+                className="btn btn-primary mt-3"
+                style={{
+                  border: "solid",
+                  borderColor: "black",
+                  borderWidth: "1px",
+                  color: "black",
+                }}
+              >
                 Añadir empresa
               </button>
             </form>
@@ -79,8 +93,7 @@ export const CreateCompanyPage = () => {
         </div>
         <div className="col col-lg-2"></div>
       </div>
-      <Footer/>
+      <Footer />
     </main>
-    
   );
 };
