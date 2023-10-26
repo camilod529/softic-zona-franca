@@ -16,7 +16,7 @@ export const TagsPage = () => {
       <Navbar />
       <div className="">
         <div className="container titulo">
-          <h1 className="stylish-headline mt-5">Intereses</h1>
+          <h1 className="cool-title mt-5">Intereses</h1>
 
           <div className="greaterdiv"></div>
           <div className="interests-container">
