@@ -34,10 +34,6 @@ export function Login() {
         src="https://www.zonafrancasantander.com/imagenes/vdo_cabezotes/cabe_93d666c2e538322a27e6562c19bc5597a2066bd6.jpg"
         className="contenido img-fluid banner"
       />
-      <img
-        src="https://i.imgur.com/9PDGhjx.jpg"
-        className="contenido-alternativa img-fluid contenido "
-      />
       <div className="login">
       <div className="card login-card ">
         <form className="login-form mr-4" onSubmit={handleSubmit}>

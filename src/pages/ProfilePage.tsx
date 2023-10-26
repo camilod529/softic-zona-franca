@@ -14,10 +14,6 @@ export const ProfilePage = () => {
         src="https://www.zonafrancasantander.com/imagenes//vco_secciones/secc_76f4e9a348c87c16b40928e70145006630d90631.gif"
         className="img-fluid banner"
       />
-      <img
-        src="https://i.imgur.com/9PDGhjx.jpg"
-        className="contenido-alternativa img-fluid contenido "
-      />
       <div className="container perfil-contenido">
         <div className="row color-perfil">
           <div className="col-9 ">

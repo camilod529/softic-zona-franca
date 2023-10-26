@@ -15,7 +15,7 @@ export const CreateColaboradorPage = () => {
     foto: null,
   });
   const navigate = useNavigate();
-  
+
   const onChange = (e: FormEvent<HTMLInputElement>) => {
     if (e.currentTarget.files) {
       setData({ ...data, [e.currentTarget.name]: e.currentTarget.files[0] });
@@ -44,9 +44,12 @@ export const CreateColaboradorPage = () => {
       .catch((err) => console.log(err));
   };
   return (
-    
     <>
       <Navbar />
+      <img
+        src="https://www.zonafrancasantander.com/imagenes//vco_secciones/secc_37d4bbfbf2565771790085cdc4767c80413274bd.jpg"
+        className="img-fluid banner"
+      />
 
       <div className="row justify-content-md-center">
         <div className="col col-lg-2"></div>
@@ -95,13 +98,15 @@ export const CreateColaboradorPage = () => {
               />{" "}
               <br />
               <label htmlFor="genero">Genero</label>
-              <select id="genero" name ="genero" aria-label="Seleccione el genero">
+              <select
+                id="genero"
+                name="genero"
+                aria-label="Seleccione el genero"
+              >
                 <option selected>Seleccione el genero</option>
                 <option value="Masculino">Masculino</option>
                 <option value="Femenino">Femenino</option>
               </select>{" "}
-              
-              
               <br />
               <label htmlFor="correo_personal">Correo personal</label>
               <input
@@ -130,7 +135,15 @@ export const CreateColaboradorPage = () => {
                 onChange={onChange}
               />{" "}
               <br />
-              <button className="btn btn-primary mt-3">
+              <button
+                className="btn btn-primary mt-3"
+                style={{
+                  border: "solid",
+                  borderColor: "black",
+                  borderWidth: "1px",
+                  color: "black",
+                }}
+              >
                 Crear colaborador
               </button>
             </form>
