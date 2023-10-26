@@ -1,8 +1,8 @@
 import { Navbar } from "../components";
 import { CalendarComp } from "../components/CalendarComp";
 import Footer from "../components/Footer";
+import { Link, useNavigate } from "react-router-dom";
 import { useAppSelector } from "../hooks/store";
-
 
 export const ProfilePage = () => {
   const user = useAppSelector((state) => state.user);
@@ -46,6 +46,14 @@ export const ProfilePage = () => {
                       })}
                     </div>
                   </p>
+
+                  <Link
+                    to="/intereses"
+                    className="btn btn-primary green-btn"
+                    // style={{width: '30%'}}
+                  >
+                    <p>Administrar intereses</p>
+                  </Link>
                 </div>
               </div>
               <div className="container text-center">
