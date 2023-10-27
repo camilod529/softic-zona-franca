@@ -1,7 +1,6 @@
 export * from "./AdmColaboradoresPage.tsx";
 export * from "./AdmEmpPage";
 export * from "./AdmEventPage";
-export * from "./BoardPage";
 export * from "./CreateCompanyPage.tsx";
 export * from "./EventDetail";
 export * from "./EventListPage";
@@ -11,7 +10,6 @@ export * from "./PrizeCornerPage";
 export * from "./ProfileEmpPage";
 export * from "./ProfilePage";
 export * from "./RankListPage";
-export * from "./RegisterPage";
 export * from "./TagsPage";
 export * from "./ProfilePage";
 export * from "./AdmColaboradoresPage.tsx";

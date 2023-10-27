@@ -15,15 +15,12 @@ export const AdmColaboradoresPage = () => {
   }, []);
   return (
     <>
-      <img
-        src="https://www.zonafrancasantander.com/imagenes/vdo_cabezotes/cabe_93d666c2e538322a27e6562c19bc5597a2066bd6.jpg"
-        className="contenido img-fluid"
-      />
-      <img
-        src="https://i.imgur.com/9PDGhjx.jpg"
-        className="contenido-alternativa img-fluid contenido "
-      />
       <Navbar />
+      <img
+        src="https://www.zonafrancasantander.com/imagenes//vco_secciones/secc_37d4bbfbf2565771790085cdc4767c80413274bd.jpg"
+        className="img-fluid banner"
+      />
+
       <div className="container-adminEmp">
         <div className="content-container titulo">
           <div className="container text-center">
@@ -55,7 +52,10 @@ export const AdmColaboradoresPage = () => {
                     <div className="card-body"></div>
                     <ul className="list-group list-group-flush">
                       <li className="list-group-item"></li>
-                      <Link to={"/createColaborator"} className="list-group-item">
+                      <Link
+                        to={"/createColaborator"}
+                        className="list-group-item"
+                      >
                         <h5 className="card-title">Agregar colaborador</h5>
                       </Link>
                       <li className="list-group-item"></li>

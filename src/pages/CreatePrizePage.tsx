@@ -62,15 +62,7 @@ export const CreatePrizePage = () => {
         <div className="col-md-auto">
           <main>
             <form className="colaborator-form mr-4" /*onSubmit={handleSubmit}*/>
-              <label htmlFor="documento_colaborador">ID Premio</label>
-              <input
-                type="text"
-                name="ID_premio"
-                id="ID_premio"
-                placeholder="Escriba el ID del premio"
-                // onChange={onChange}
-              />{" "}
-              <br />
+             
               <label htmlFor="nombre_premio">Nombre del Premio</label>
               <input
                 type="text"
@@ -108,7 +100,18 @@ export const CreatePrizePage = () => {
                 // onChange={onChange}
               />{" "}
               <br />
-              <button className="btn btn-primary green-btn mt-3" style={{width: '30%'}}>Crear premio</button>
+              <button
+                className="btn btn-primary green-btn mt-3"
+                style={{
+                  width: '30%',
+                  border: "solid",
+                  borderColor: "black",
+                  borderWidth: "1px",
+                  color: "black",
+                }}
+              >
+                Crear premio
+              </button>
             </form>
           </main>
         </div>

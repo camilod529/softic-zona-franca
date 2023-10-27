@@ -8,7 +8,6 @@ import {
   HomePage,
   Login,
   ProfilePage,
-  Register,
   AdmColaboradoresPage,
   EventList,
   ProfileEmp,
@@ -43,14 +42,15 @@ export const AppRouter = () => {
             </ProtectedRoute>
           }
         />
-        <Route
-          path="/register"
+                <Route
+          path="/intereses"
           element={
             <ProtectedRoute>
-              <Register />
+              <TagsPage />
             </ProtectedRoute>
           }
         />
+
         <Route
           path="/mainPage"
           element={
@@ -130,14 +130,6 @@ export const AppRouter = () => {
           element={
             <ProtectedRoute>
               <CreateCompanyPage />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/interest"
-          element={
-            <ProtectedRoute>
-              <TagsPage />
             </ProtectedRoute>
           }
         />

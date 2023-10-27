@@ -1,8 +1,8 @@
 import { Navbar } from "../components";
 import { CalendarComp } from "../components/CalendarComp";
 import Footer from "../components/Footer";
+import { Link, useNavigate } from "react-router-dom";
 import { useAppSelector } from "../hooks/store";
-
 
 export const ProfilePage = () => {
   const user = useAppSelector((state) => state.user);
@@ -13,10 +13,6 @@ export const ProfilePage = () => {
       <img
         src="https://www.zonafrancasantander.com/imagenes//vco_secciones/secc_76f4e9a348c87c16b40928e70145006630d90631.gif"
         className="img-fluid banner"
-      />
-      <img
-        src="https://i.imgur.com/9PDGhjx.jpg"
-        className="contenido-alternativa img-fluid contenido "
       />
       <div className="container perfil-contenido">
         <div className="row color-perfil">
@@ -50,6 +46,14 @@ export const ProfilePage = () => {
                       })}
                     </div>
                   </p>
+
+                  <Link
+                    to="/intereses"
+                    className="btn btn-primary green-btn"
+                    // style={{width: '30%'}}
+                  >
+                    <p>Administrar intereses</p>
+                  </Link>
                 </div>
               </div>
               <div className="container text-center">
