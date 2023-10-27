@@ -11,7 +11,7 @@ export const MainPage = () => {
         className="img-fluid banner"
       />
 
-      <div className="  m-b-30 row row-cols-1 row-cols-md-2 ">
+<div className="  m-b-30 row row-cols-1 row-cols-md-2 ">
         <div className="col arrow servicesbanner">
           SERVICIOS EN LÍNEA 
         </div>
@@ -93,7 +93,6 @@ export const MainPage = () => {
           </div>
         </div>
       </div>
-
       {/* <img
         src="https://i.imgur.com/9PDGhjx.jpg"
         className="contenido-alternativa img-fluid contenido "
