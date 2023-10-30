@@ -17,3 +17,4 @@ export * from "./CreateCompanyPage.tsx";
 export * from "./EventDetail.tsx";
 export * from "./MainPage";
 export* from "./CreateEventPage.tsx";
+export * from "./ReedPrizes.tsx"
