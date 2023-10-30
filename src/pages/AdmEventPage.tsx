@@ -49,6 +49,7 @@ export const AdmEventPage = () => {
                           title={event.nombre_evento}
                           desc={event.descripcion_evento}
                           img={event.foto_evento}
+                          getEvents={getEventsAsync}
                         />
                       );
                     })

@@ -1,7 +1,24 @@
 import { Link } from "react-router-dom";
 import { Navbar, AdmPrizeCard } from "../components";
+import { useEffect, useState } from "react";
+import { getAwards } from "../api/session";
+import { Award } from "../types/types";
 
 export const AdmPrizePage = () => {
+  const [awards, setAwards] = useState<Award[]>([]);
+
+  useEffect(() => {
+    getAwards().then((res) => {
+      setAwards(res);
+    });
+  }, []);
+
+  const refresh = () => {
+    getAwards().then((res) => {
+      setAwards(res);
+    });
+  };
+
   return (
     <>
       <Navbar />
@@ -12,30 +29,11 @@ export const AdmPrizePage = () => {
 
       <br />
       <div className="container text-center">
-        <div className="row">
-          <AdmPrizeCard />
-          <AdmPrizeCard />
-          <AdmPrizeCard />
-          <AdmPrizeCard />
-        </div>
-        <div className="row">
-          <AdmPrizeCard />
-          <AdmPrizeCard />
-          <AdmPrizeCard />
-          <AdmPrizeCard />
-        </div>
-        <div className="row">
-          <AdmPrizeCard />
-          <AdmPrizeCard />
-          <AdmPrizeCard />
-          <AdmPrizeCard />
-        </div>
-        <div className="row">
-          <AdmPrizeCard />
-          <AdmPrizeCard />
-          <AdmPrizeCard />
-          <AdmPrizeCard />
-        </div>
+        {awards?.map((award) => (
+          <AdmPrizeCard key={award.id_premio} award={award} refresh={refresh} />
+        ))}
+
+        {awards.length === 0 && <h1>No hay premios</h1>}
       </div>
 
       <div className="card" style={{ width: "18rem" }}>

@@ -29,6 +29,7 @@ export type Company = {
   nit?: string;
   nombre_empresa: string;
   puntos: number;
+  logo: string;
 };
 
 export type Colaborator = {
@@ -65,3 +66,12 @@ export type Event = {
   estado_boolean: boolean;
   foto_evento: string;
 };
+
+export type Award = {
+  id_premio: number;
+  nombre_premio: string;
+  detalles_premio: string;
+  coste_premio: number;
+  estado_premio: boolean;
+  foto: string;
+}

@@ -1,23 +1,34 @@
-export const AdmPrizeCard = () => {
-    return (
-      <>
-        <div className="col">
-          <div className="card prizeCard">
-            <img
-              src="https://img.freepik.com/vector-premium/trofeo-oro-placa-ganador-concurso_68708-545.jpg"
-              className="card-img-top"
-              alt="..."
-            />
-            <div className="card-body">
-              <h5 className="card-title">Nombre del premio</h5>
-              <p className="card-text">Mini descripción junto con precio</p>
-              <p className="card-text">Precio</p>
-              <a href="#" className="btn green-btn">
-                Eliminar
-              </a>
-            </div>
+import { updateAwardState } from "../api/session";
+import { Award } from "../types/types";
+
+export const AdmPrizeCard = ({
+  award,
+  refresh,
+}: {
+  award: Award;
+  refresh: () => void;
+}) => {
+  const onClick = async () => {
+    await updateAwardState({ id_premio: award.id_premio }).then(() => {
+      refresh();
+    });
+  };
+
+  return (
+    <>
+      <div className="">
+        <div className="card prizeCard">
+          <img src={award.foto} className="card-img-top" alt="..." />
+          <div className="card-body">
+            <h5 className="card-title">{award.nombre_premio}</h5>
+            <p className="card-text">{award.detalles_premio}</p>
+            <p className="card-text">{award.coste_premio} puntos</p>
+            <button onClick={onClick} className="btn green-btn">
+              Eliminar
+            </button>
           </div>
         </div>
-      </>
-    );
-  };
+      </div>
+    </>
+  );
+};

@@ -32,7 +32,7 @@ export const RankList = () => {
         className="img-fluid banner"
       />
 
-      <div className="container text-center titulo">
+      <div className="container text-center titulo mb-5">
         <div className="row mb-5">
           <div className="col-1"></div>
           <div className="col-10">

@@ -49,16 +49,20 @@ export const AdmEmp = () => {
                     ? companies.map((company: Company) => {
                         return (
                           <CompCard
+                            key={company.nit}
                             title={company.nombre_empresa}
                             nit={company.nit}
+                            logo={company.logo}
                           />
                         );
                       })
                     : "Cargando..."}
                   <div className="card" style={{ width: "18rem" }}>
-                    <div className="card-body" style={{paddingTop: '6rem', paddingBottom: '6rem'}}>
+                    <div
+                      className="card-body"
+                      style={{ paddingTop: "6rem", paddingBottom: "6rem" }}
+                    >
                       <Link to={"/createCompany"} className="green-btn">
-                        
                         <h5 className="card-title btn">Agregar empresa</h5>
                       </Link>
                     </div>

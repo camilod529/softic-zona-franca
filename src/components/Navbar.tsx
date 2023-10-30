@@ -38,7 +38,9 @@ export const Navbar = () => {
       .get("http://localhost:3000/api/points", {
         params: {
           nick: user.nick,
-          rol: user.rol,
+        },
+        headers: {
+          "x-access-token": localStorage.getItem("token"),
         },
       })
       .then((res) => {
@@ -95,7 +97,11 @@ export const Navbar = () => {
               {user.rol === 1 ? (
                 <>
                   <li className="nav-item">
-                    <Link className="nav-link active" aria-current="page" to={"/adminEmpresa"}>
+                    <Link
+                      className="nav-link active"
+                      aria-current="page"
+                      to={"/adminEmpresa"}
+                    >
                       Administrar empresas
                     </Link>
                   </li>
@@ -121,7 +127,11 @@ export const Navbar = () => {
               {user.rol === 2 ? (
                 <>
                   <li className="nav-item">
-                    <Link className="nav-link active" aria-current="page" to={"/admColaboradores"}>
+                    <Link
+                      className="nav-link active"
+                      aria-current="page"
+                      to={"/admColaboradores"}
+                    >
                       Administrar colaboradores
                     </Link>
                   </li>
@@ -142,7 +152,11 @@ export const Navbar = () => {
               {user.rol === 3 ? (
                 <>
                   <li className="nav-item">
-                    <Link className="nav-link active" aria-current="page" to={"/events"}>
+                    <Link
+                      className="nav-link active"
+                      aria-current="page"
+                      to={"/events"}
+                    >
                       Eventos
                     </Link>
                   </li>

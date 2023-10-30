@@ -1,13 +1,21 @@
-export const AdmEventCard = ({ id_evento = 0, title = "", desc = "", img = "" }) => {
+import { deactivateEvent } from "../api/session";
+
+export const AdmEventCard = ({
+  id_evento = 0,
+  title = "",
+  desc = "",
+  img = "",
+  getEvents,
+}: {
+  id_evento: number;
+  title: string;
+  desc: string;
+  img: string;
+  getEvents: () => void;
+}) => {
   // delete event
   const deleteEvent = async (id: number) => {
-    try {
-      await fetch(`http://localhost:3000/eventos/${id}`, {
-        method: "DELETE",
-      });
-    } catch (error) {
-      console.log(error);
-    }
+    await deactivateEvent({ id_evento: id }).then(() => getEvents());
   };
   return (
     <>
