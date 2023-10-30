@@ -167,7 +167,7 @@ export const AppRouter = () => {
           }
         />
         <Route
-          path="/reedPrize"
+          path="/reedPrizes"
           element={
             <ProtectedRoute>
               <ReedPrizes/>
