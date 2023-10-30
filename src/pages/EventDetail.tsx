@@ -4,6 +4,9 @@ import axios from "axios";
 import Footer from "../components/Footer";
 import { Event } from "../types/types.d";
 import { Navbar } from "../components";
+import { useAppSelector } from "../hooks/store";
+
+
 
 export function EventDetail() {
   const [event, setEvent] = useState<Event>({
@@ -21,7 +24,7 @@ export function EventDetail() {
     foto_evento: "",
   });
   const { id } = useParams();
-
+  const user = useAppSelector((state) => state.user);
   useEffect(() => {
     axios
       .get(`http://localhost:3000/api/event/${id}`)
@@ -65,8 +68,10 @@ export function EventDetail() {
                 <div className="row justify-content-md-center m-5">
                   <div className="col col-lg-2"></div>
                   <div className="col-md-auto">
+                    {user.rol ===1 ?(
                     <form>
                       <fieldset className="text-center">
+                        
                         <h1> Pre-registrate aqui</h1>
                         <div className="mb-3 formSpace">
                           <label className="form-label"></label>
@@ -75,6 +80,7 @@ export function EventDetail() {
                             className="form-control "
                             placeholder="Cedula"
                           />
+                          
                         </div>
 
                         <button type="submit" className="btn btn-primary">
@@ -82,6 +88,28 @@ export function EventDetail() {
                         </button>
                       </fieldset>
                     </form>
+                    ):("")}
+                    {user.rol !==1 ?(
+                    <form>
+                      <fieldset className="text-center">
+                        
+                        <h1> Validar asistencia </h1>
+                        <div className="mb-3 formSpace">
+                          <label className="form-label"></label>
+                          <input
+                            type="text"
+                            className="form-control "
+                            placeholder="Cedula"
+                          />
+                          
+                        </div>
+
+                        <button type="submit" className="btn btn-primary">
+                          Submit
+                        </button>
+                      </fieldset>
+                    </form>
+                    ):("")}
                   </div>
                   <div className="col col-lg-2"></div>
                 </div>
