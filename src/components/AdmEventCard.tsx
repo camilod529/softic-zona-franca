@@ -1,4 +1,14 @@
-export const AdmEventCard = ({ title = "", desc = "", img = "" }) => {
+export const AdmEventCard = ({ id_evento = 0, title = "", desc = "", img = "" }) => {
+  // delete event
+  const deleteEvent = async (id: number) => {
+    try {
+      await fetch(`http://localhost:3000/eventos/${id}`, {
+        method: "DELETE",
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <>
       <div className="card" style={{ width: "18rem" }}>
@@ -7,7 +17,9 @@ export const AdmEventCard = ({ title = "", desc = "", img = "" }) => {
           <h5 className="card-title">{title}</h5>
           <p className="card-text">{desc}</p>
         </div>
-        <p className="green-btn">Eliminar</p>
+        <p className="green-btn" onClick={() => deleteEvent(id_evento)}>
+          Eliminar
+        </p>
       </div>
     </>
   );
