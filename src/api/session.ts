@@ -100,6 +100,15 @@ export const getCompanyByName = (name: string | null) => {
     .catch((err) => console.log(err));
 };
 
+export const getEventById = (id: number) => {
+  return axios
+    .get(`${API_URL}/event/${id}`, {
+      headers: { "x-access-token": localStorage.getItem("token") },
+    })
+    .then((res) => res.data)
+    .catch((err) => console.log(err));
+};
+
 export const getEvents = () => {
   return axios
     .get(`${API_URL}/events`, {

@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { deactivateEvent } from "../api/session";
 
 export const AdmEventCard = ({
@@ -13,13 +14,14 @@ export const AdmEventCard = ({
   img: string;
   getEvents: () => void;
 }) => {
-  // delete event
+  const navigate = useNavigate();
+
   const deleteEvent = async (id: number) => {
     await deactivateEvent({ id_evento: id }).then(() => getEvents());
   };
   return (
     <>
-      <div className="card" style={{ width: "18rem" }}>
+      <div className="card" style={{ width: "18rem" }} onClick={() => navigate(`/events/${id_evento}`)}>
         <img src={img} className="card-img-top" alt="..." />
         <div className="card-body">
           <h5 className="card-title">{title}</h5>
