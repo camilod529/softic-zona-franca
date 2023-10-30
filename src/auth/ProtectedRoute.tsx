@@ -84,7 +84,7 @@ export function ProtectedRoute({ children }: { children: JSX.Element }) {
       }
       break;
       case "/reedPrizes":
-      if (user.rol === 3) {
+      if (user.rol ===0 ) {
 
         return <Navigate to="/" />;
       }

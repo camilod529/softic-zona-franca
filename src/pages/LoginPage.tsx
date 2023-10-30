@@ -65,7 +65,7 @@ export function Login() {
           </form>
         </div>
       </div>
-      <Footer />
+     
     </main>
   );
 }
