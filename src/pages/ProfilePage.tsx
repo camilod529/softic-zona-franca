@@ -6,6 +6,7 @@ import { useAppSelector } from "../hooks/store";
 
 export const ProfilePage = () => {
   const user = useAppSelector((state) => state.user);
+  console.log(user);
   return (
     <>
       {user.rol === 1 ? <>No deberia estar aca</> : ""}
@@ -17,9 +18,7 @@ export const ProfilePage = () => {
       <div className="container perfil-contenido">
         <div className="row color-perfil">
           <div className="col-9 ">
-            <h1 className="text-center mt-5 mb-5 display-2">
-              Informacion De Perfil
-            </h1>
+            <h1 className="text-center mt-5 mb-5 display-2">Informacion De Perfil</h1>
           </div>
           {user.rol === 3 ? (
             <>
@@ -75,7 +74,7 @@ export const ProfilePage = () => {
                   <h1 className="m-3 ">Puntos obtenidos:</h1>
                   <p className="m-3 infoPerfiles">{user.puntos}</p>
                   <h1 className="m-3">NIT empresarial:</h1>
-                  <p className="m-3 infoPerfiles"></p>
+                  <p className="m-3 infoPerfiles">{user.nit}</p>
                 </div>
               </div>
               <div className="container text-center">
