@@ -12,6 +12,7 @@ const initialState: User = {
   correo_empresarial: "",
   empresa_colaborador: "",
   genero: "",
+  nit: "",
   gustos: [],
   foto: "",
   contrasena: "",

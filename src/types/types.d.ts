@@ -9,6 +9,7 @@ export type User = {
   correo_empresarial: string?;
   empresa_colaborador: string?;
   genero: string?;
+  nit: string?;
   gustos: Array<string>?;
   foto: string;
   contrasena: string?;
