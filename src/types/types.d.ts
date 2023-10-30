@@ -10,12 +10,14 @@ export type User = {
   empresa_colaborador: string?;
   genero: string?;
   nit: string?;
-  gustos: Array<string>?;
   foto: string;
   contrasena: string?;
   estado_colaborador: boolean?;
   puntos: number?;
   puntos_acumulados: number?;
+  logo?: string;
+  documento_colaborador: string?;
+  primera_vez?: boolean;
 };
 
 export type customEvent = {
@@ -74,4 +76,11 @@ export type Award = {
   coste_premio: number;
   estado_premio: boolean;
   foto: string;
-}
+};
+
+export type Tag = {
+  id_etiqueta: number;
+  nombre_etiqueta: string;
+  descripcion_etiqueta: string;
+  estado_etiqueta: boolean;
+};

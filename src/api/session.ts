@@ -118,6 +118,15 @@ export const getColaborators = () => {
     .catch((err) => console.log(err));
 };
 
+export const getColaboratorsByCompany = () => {
+  return axios
+    .get(`${API_URL}/colaborators/byCompany/`, {
+      headers: { "x-access-token": localStorage.getItem("token") },
+    })
+    .then((res) => res.data)
+    .catch((err) => console.log(err));
+};
+
 export const createAward = async ({
   nombre_premio,
   detalles_premio,
@@ -233,6 +242,71 @@ export const createEvent = async ({
         },
       }
     )
+    .then((res) => res.data)
+    .catch((err) => console.log(err));
+};
+
+export const deactivateColaborator = async ({
+  documento_colaborador,
+}: {
+  documento_colaborador: string;
+}) => {
+  return axios
+    .put(
+      `${API_URL}/colaborator/deactivate/${documento_colaborador}`,
+      {},
+      {
+        headers: { "x-access-token": localStorage.getItem("token") },
+      }
+    )
+    .then((res) => res.data)
+    .catch((err) => console.log(err));
+};
+
+export const reclaimAward = async ({ id_premio }: { id_premio: number }) => {
+  return axios
+    .put(
+      `${API_URL}/awards/reclaim/${id_premio}`,
+      {},
+      {
+        headers: { "x-access-token": localStorage.getItem("token") },
+      }
+    )
+    .then((res) => res.data)
+    .catch((err) => console.log(err));
+};
+
+export const getTags = async () => {
+  return axios
+    .get(`${API_URL}/tags`, {
+      headers: { "x-access-token": localStorage.getItem("token") },
+    })
+    .then((res) => res.data)
+    .catch((err) => console.log(err));
+};
+
+export const saveTags = async ({
+  tagsSelected,
+}: {
+  tagsSelected: number[];
+}) => {
+  return axios
+    .post(
+      `${API_URL}/tags/setTagsToColaborator`,
+      { tags: tagsSelected },
+      {
+        headers: { "x-access-token": localStorage.getItem("token") },
+      }
+    )
+    .then((res) => res.data)
+    .catch((err) => console.log(err));
+};
+
+export const getTagsByColaborator = async () => {
+  return axios
+    .get(`${API_URL}/tagsByColaborator`, {
+      headers: { "x-access-token": localStorage.getItem("token") },
+    })
     .then((res) => res.data)
     .catch((err) => console.log(err));
 };

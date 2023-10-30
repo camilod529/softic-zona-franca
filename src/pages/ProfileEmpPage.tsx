@@ -7,7 +7,12 @@ import Footer from "../components/Footer";
 export const ProfileEmp = () => {
   const user = useAppSelector((state) => state.user);
   const [isLoading, setIsLoading] = useState(false);
-  const [data, setData] = useState({ nombre_empresa: "", puntos: 0, nit: "" });
+  const [data, setData] = useState({
+    nombre_empresa: "",
+    puntos: 0,
+    nit: "",
+    logo: "",
+  });
   // TODO: editar info solo para mostrar
   const getCompany = async () => {
     setIsLoading(true);
@@ -33,9 +38,11 @@ export const ProfileEmp = () => {
         <div className="">
           <div className="container titulo">
             <div className="row">
-              <h1 className="text-center mt-5 mb-5 display-2">Informacion De Mi Empresa</h1>
+              <h1 className="text-center mt-5 mb-5 display-2">
+                Informacion De Mi Empresa
+              </h1>
               <div className="col m-3">
-                <img src="" className="img-fluid" alt="" />
+                <img src={data.logo} className="img-fluid" alt="" />
               </div>
               <div className="col">
                 <h1 className="m-3">Nombre:</h1>

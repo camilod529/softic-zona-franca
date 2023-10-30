@@ -2,17 +2,24 @@ import { Link } from "react-router-dom";
 import { AdmColCard, Navbar } from "../components";
 import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
-import { getColaborators } from "../api/session";
+import { getColaboratorsByCompany } from "../api/session";
 import { Colaborator } from "../types/types";
 
 export const AdmColaboradoresPage = () => {
   const [colaborators, setColaborator] = useState<Colaborator[]>([]);
 
   useEffect(() => {
-    getColaborators()
+    getColaboratorsByCompany()
       .then((res) => setColaborator(res))
       .catch((err) => console.log(err));
   }, []);
+
+  const refetch = async () => {
+    getColaboratorsByCompany()
+      .then((res) => setColaborator(res))
+      .catch((err) => console.log(err));
+  };
+
   return (
     <>
       <Navbar />
@@ -38,13 +45,15 @@ export const AdmColaboradoresPage = () => {
               <div className="col col-lg-2"></div>
               <div className="col-md-auto">
                 <div className="row row-cols-1 row-cols-md-3 g-4">
-                  {colaborators.map((colaborator) => (
+                  {colaborators && colaborators.map((colaborator) => (
                     <AdmColCard
                       key={colaborator.documento_colaborador}
+                      documento_colaborador={colaborator.documento_colaborador}
                       img={colaborator.foto}
                       title={
                         colaborator.nombre_1 + " " + colaborator.apellido_1
-                      }
+                      } 
+                      refetch={refetch}
                     />
                   ))}
 

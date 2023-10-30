@@ -13,12 +13,14 @@ const initialState: User = {
   empresa_colaborador: "",
   genero: "",
   nit: "",
-  gustos: [],
   foto: "",
   contrasena: "",
   estado_colaborador: true,
   puntos: 0,
   puntos_acumulados: 0,
+  logo: "",
+  documento_colaborador: "",
+  primera_vez: true,
 };
 
 export const userSlice = createSlice({

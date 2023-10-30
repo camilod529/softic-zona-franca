@@ -21,10 +21,13 @@ export function Login() {
     await login({ email: data.nick, password: data.contrasena })
       .then((res) => {
         localStorage.setItem("token", res.token);
-
-        navigate("/mainPage");
         setUser(res.data);
-        console.log(res.data);
+
+        if (res.data.primera_vez) {
+          navigate("/intereses");
+        } else {
+          navigate("/mainPage");
+        }
       })
       .catch((err) => console.log(err));
   };

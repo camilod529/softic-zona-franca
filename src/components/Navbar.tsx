@@ -28,16 +28,20 @@ export const Navbar = () => {
       estado_colaborador: true,
       puntos: 0,
       puntos_acumulados: 0,
+      logo: "",
+      documento_colaborador: "",
     });
     navigate("/");
   };
+
+  console.log(user);
 
   useEffect(() => {
     // Send a query to the server to get the points
     axios
       .get("http://localhost:3000/api/points", {
         params: {
-          nick: user.nick,
+          nick: user.nit || user.documento_colaborador,
         },
         headers: {
           "x-access-token": localStorage.getItem("token"),
