@@ -274,7 +274,7 @@ export const deactivateColaborator = async ({
 
 export const reclaimAward = async ({ id_premio }: { id_premio: number }) => {
   return axios
-    .put(
+    .post(
       `${API_URL}/awards/reclaim/${id_premio}`,
       {},
       {
@@ -314,6 +314,15 @@ export const saveTags = async ({
 export const getTagsByColaborator = async () => {
   return axios
     .get(`${API_URL}/tagsByColaborator`, {
+      headers: { "x-access-token": localStorage.getItem("token") },
+    })
+    .then((res) => res.data)
+    .catch((err) => console.log(err));
+};
+
+export const getReclaimedAwards = async () => {
+  return axios
+    .get(`${API_URL}/awards/reclaimed`, {
       headers: { "x-access-token": localStorage.getItem("token") },
     })
     .then((res) => res.data)
