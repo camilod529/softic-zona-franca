@@ -70,6 +70,13 @@ export const ProfilePage = () => {
                   >
                     <p>Administrar intereses</p>
                   </Link>
+                  <Link
+                    to="/reedPrizes"
+                    className="btn btn-primary green-btn"
+                    // style={{width: '30%'}}
+                  >
+                    <p>Premios canjeados</p>
+                  </Link>
                 </div>
               </div>
               <div className="container text-center">

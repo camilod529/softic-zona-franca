@@ -61,7 +61,7 @@ export const Navbar = () => {
   return (
     <>
       <nav className="navbar navbar-expand-lg topside align-items-start p-0">
-        <div className="container-fluid p-0 mside">
+        <div className="container-fluid p-0 mside navitems">
           {user.rol === 0 ? null : (
             <Link
               className="navbar-brand"
@@ -102,26 +102,26 @@ export const Navbar = () => {
                 <>
                   <li className="nav-item">
                     <Link
-                      className="nav-link active"
+                      className="nav-link  navcolor"
                       aria-current="page"
                       to={"/adminEmpresa"}
                     >
-                      Administrar empresas
+                      <strong>Administrar empresas</strong>
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to={"/admEventos"}>
-                      Administrar eventos
+                    <Link className="nav-link navcolor" to={"/admEventos"}>
+                      <strong>Administrar eventos</strong>
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to={"/admPrizes"}>
-                      Administrar premios
+                    <Link className="nav-link navcolor" to={"/admPrizes"}>
+                      <strong>Administrar premios</strong>
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link " to={"/rank"}>
-                      Tabla de puntos
+                    <Link className="nav-link navcolor " to={"/rank"}>
+                      <strong>Tabla de puntos</strong>
                     </Link>
                   </li>
                 </>
@@ -132,7 +132,7 @@ export const Navbar = () => {
                 <>
                   <li className="nav-item">
                     <Link
-                      className="nav-link active"
+                      className="nav-link navcolor active"
                       aria-current="page"
                       to={"/admColaboradores"}
                     >
@@ -140,12 +140,12 @@ export const Navbar = () => {
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to={"/events"}>
+                    <Link className="nav-link navcolor" to={"/events"}>
                       Eventos
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link " to={"/rank"}>
+                    <Link className="nav-link navcolor " to={"/rank"}>
                       Tabla de puntos
                     </Link>
                   </li>
@@ -157,7 +157,7 @@ export const Navbar = () => {
                 <>
                   <li className="nav-item">
                     <Link
-                      className="nav-link active"
+                      className="nav-link navcolor active"
                       aria-current="page"
                       to={"/events"}
                     >
@@ -165,17 +165,17 @@ export const Navbar = () => {
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to={"/miEmpresa"}>
+                    <Link className="nav-link navcolor" to={"/miEmpresa"}>
                       Mi empresa
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to={"/shop"}>
+                    <Link className="nav-link navcolor" to={"/shop"}>
                       Premios
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link " to={"/rank"}>
+                    <Link className="nav-link navcolor " to={"/rank"}>
                       Tabla de puntos
                     </Link>
                   </li>
@@ -194,11 +194,11 @@ export const Navbar = () => {
               )}
               {user.rol !== 0 ? (
                 <span
-                  className="nav-item nav-link logout-button d-flex mside"
+                  className="nav-item nav-link navcolor logout-button d-flex mside"
                   onClick={() => onLogut()}
                 >
-                  <i className="fa-solid fa-arrow-right-from-bracket"></i>
-                  &nbsp;Cerrar sesion
+                  <i className="fa-solid fa-arrow-right-from-bracket cs"></i>
+                  <strong>Cerrar sesion</strong>
                 </span>
               ) : (
                 ""

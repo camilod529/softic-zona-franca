@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import Footer from "../components/Footer";
 import { Event } from "../types/types.d";
 import { Navbar } from "../components";
+import { getEventById } from "../api/session";
+import { useAppSelector } from "../hooks/store";
 
 export function EventDetail() {
   const [event, setEvent] = useState<Event>({
@@ -21,13 +23,16 @@ export function EventDetail() {
     foto_evento: "",
   });
   const { id } = useParams();
-
+  const user = useAppSelector((state) => state.user);
   useEffect(() => {
-    axios
-      .get(`http://localhost:3000/api/event/${id}`)
-      .then((res) => setEvent(res.data))
-      .catch((err) => console.log(err));
+    if (!id) return;
+
+    getEventById(Number(id)).then((res) => setEvent(res));
   }, []);
+
+  const handleSubmit = async (e: ChangeEvent<HTMLFormElement>) => {
+    e.preventDefault();
+  };
 
   return (
     <>
@@ -58,30 +63,54 @@ export function EventDetail() {
                   </h5>
                   <h3 className="m-3">Descripcion:</h3>
                   <h5 className="m-3">{event.descripcion_evento}</h5>
-                  <h3 className="m-3">Etiquetas:</h3>
                 </div>
               </div>
               <div className="container text-center">
                 <div className="row justify-content-md-center m-5">
                   <div className="col col-lg-2"></div>
                   <div className="col-md-auto">
-                    <form>
-                      <fieldset className="text-center">
-                        <h1> Pre-registrate aqui</h1>
-                        <div className="mb-3 formSpace">
-                          <label className="form-label"></label>
-                          <input
-                            type="text"
-                            className="form-control "
-                            placeholder="Cedula"
-                          />
-                        </div>
+                    {user.rol === 2 ? (
+                      <form onSubmit={handleSubmit}>
+                        <fieldset className="text-center">
+                          <h1> Pre-registrate aqui</h1>
+                          <div className="mb-3 formSpace">
+                            <label className="form-label"></label>
+                            <input
+                              type="text"
+                              className="form-control "
+                              placeholder="Cedula"
+                            />
+                          </div>
 
-                        <button type="submit" className="btn btn-primary">
-                          Submit
-                        </button>
-                      </fieldset>
-                    </form>
+                          <button type="submit" className="btn btn-primary">
+                            Submit
+                          </button>
+                        </fieldset>
+                      </form>
+                    ) : (
+                      ""
+                    )}
+                    {user.rol !== 2 ? (
+                      <form onSubmit={handleSubmit}>
+                        <fieldset className="text-center">
+                          <h1> Validar asistencia </h1>
+                          <div className="mb-3 formSpace">
+                            <label className="form-label"></label>
+                            <input
+                              type="text"
+                              className="form-control "
+                              placeholder="Cedula"
+                            />
+                          </div>
+
+                          <button type="submit" className="btn btn-primary">
+                            Submit
+                          </button>
+                        </fieldset>
+                      </form>
+                    ) : (
+                      ""
+                    )}
                   </div>
                   <div className="col col-lg-2"></div>
                 </div>

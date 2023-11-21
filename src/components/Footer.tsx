@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <div className="footer mobile-adjust-padding botpage">
+    <div className="footer mobile-adjust-padding">
       <div className="container text-center">
-        <div className="row row-cols-4">
-          <div className="col-xs-12 col-sm-12 col-md-5 col-lg-5 data block">
+        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+          <div className="col">
             <div>Kilómetro 4 Anillo Vial Río Frío, Edificio Suza Vita</div>
             <div>Floridablanca, Colombia</div>
             <div className="phone">
@@ -13,7 +13,7 @@ export default function Footer() {
             </div>
             <div>comunicaciones@zonafrancasantander.com</div>
           </div>
-          <div className="col-xs-12 col-sm-12 col-md-2 col-lg-2 social p-0 block">
+          <div className="col">
             <div className="left">SÍGUENOS EN:</div>
             <div className="icon">
               <Link
@@ -38,9 +38,10 @@ export default function Footer() {
               </Link>
             </div>
             <div className="icon">
-
-              <Link target="_blank" to="https://www.linkedin.com/company/zonafrancasantander">
-
+              <Link
+                target="_blank"
+                to="https://www.linkedin.com/company/zonafrancasantander"
+              >
                 <img
                   src="https://www.zonafrancasantander.com/template/images/icon-linkedin.png"
                   className="img-responsive center-block"
@@ -49,18 +50,20 @@ export default function Footer() {
               </Link>
             </div>
             <div className="icon">
-                  
-              <Link target="_blank" to="https://www.instagram.com/zonafranca.santander/">
-
+              <Link
+                target="_blank"
+                to="https://www.instagram.com/zonafranca.santander/"
+              >
                 <img
                   src="https://www.zonafrancasantander.com/template/images/icon-instagram.png"
                   className="img-responsive center-block"
                   alt=""
                 />
               </Link>
-            </div>{" "}
+            </div>
           </div>
-          <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 links block p-l-30">
+          <div className="col links block ">
+            {" "}
             <div className="item animate">
               <Link to="https://www.zonafrancasantander.com//secciones-135-s/%BFqui%E9nes-somos.htm">
                 <div className="animate">Conocer ZFSantander</div>
@@ -92,7 +95,8 @@ export default function Footer() {
               </Link>
             </div>{" "}
           </div>
-          <div className="col-xs-12 col-sm-12 col-md-2 col-lg-2 block">
+          <div className="col">
+            {" "}
             <br className="visible-xs" />
             <Link to="https://www.zonafrancasantander.com/">
               <img
@@ -101,8 +105,6 @@ export default function Footer() {
                 alt=""
               />
             </Link>
-            <br className="visible-xs" />
-            <br className="visible-xs" />
           </div>
         </div>
       </div>
