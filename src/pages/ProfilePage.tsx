@@ -3,9 +3,19 @@ import { CalendarComp } from "../components/CalendarComp";
 import Footer from "../components/Footer";
 import { Link, useNavigate } from "react-router-dom";
 import { useAppSelector } from "../hooks/store";
+import { useEffect, useState } from "react";
+import { getTagsByColaborator } from "../api/session";
+import { Tag } from "../types/types";
 
 export const ProfilePage = () => {
   const user = useAppSelector((state) => state.user);
+  const [tags, setTags] = useState<Tag[]>([]);
+  console.log(user);
+
+  useEffect(() => {
+    getTagsByColaborator().then((res) => setTags(res));
+  }, []);
+
   return (
     <>
       {user.rol === 1 ? <>No deberia estar aca</> : ""}
@@ -40,11 +50,17 @@ export const ProfilePage = () => {
                   <p className="m-3 infoPerfiles">{user.genero}</p>
                   <h1 className="m-3">Gustos:</h1>
                   <p className="m-3 infoPerfiles">
-                    <div className="col-4 col-sm-6">
-                      {user.gustos?.map((gusto) => {
-                        return gusto + " ";
-                      })}
-                    </div>
+                    {tags.map((tag, index) => {
+                      if (tags.length <= 1) {
+                        return tag.nombre_etiqueta;
+                      } else {
+                        if (tags.length === index + 1) {
+                          return tag.nombre_etiqueta;
+                        } else {
+                          return tag.nombre_etiqueta + ", ";
+                        }
+                      }
+                    })}
                   </p>
 
                   <Link
@@ -53,6 +69,13 @@ export const ProfilePage = () => {
                     // style={{width: '30%'}}
                   >
                     <p>Administrar intereses</p>
+                  </Link>
+                  <Link
+                    to="/reedPrizes"
+                    className="btn btn-primary green-btn"
+                    // style={{width: '30%'}}
+                  >
+                    <p>Premios canjeados</p>
                   </Link>
                 </div>
               </div>
@@ -67,7 +90,12 @@ export const ProfilePage = () => {
             <>
               <div className="row">
                 <div className="col m-3">
-                  <img src="" className="img-fluid" alt="" />
+                  <img
+                    style={{ height: "100%", width: "100%" }}
+                    src={user.logo}
+                    className="img-fluid"
+                    alt=""
+                  />
                 </div>
                 <div className="col">
                   <h1 className="m-3">Nombre:</h1>
@@ -75,7 +103,7 @@ export const ProfilePage = () => {
                   <h1 className="m-3 ">Puntos obtenidos:</h1>
                   <p className="m-3 infoPerfiles">{user.puntos}</p>
                   <h1 className="m-3">NIT empresarial:</h1>
-                  <p className="m-3 infoPerfiles"></p>
+                  <p className="m-3 infoPerfiles">{user.nit}</p>
                 </div>
               </div>
               <div className="container text-center">

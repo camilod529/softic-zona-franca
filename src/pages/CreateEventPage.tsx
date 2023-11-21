@@ -1,17 +1,14 @@
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
-{
-  /*import { createEvent } from "../api/session";*/
-}
+
+import { createEvent } from "../api/session";
 import { Navbar } from "../components";
 import Footer from "../components/Footer";
 
 export const CreateEventPage = () => {
   const [data, setData] = useState({
-    id_evento: 0,
-    ID_evento: "",
+    nombre_evento: "",
     descripcion_evento: "",
-    foto_evento: null,
     fecha_evento: new Date(),
     fecha_evento_fin: new Date(),
     aforo_maximo: 0,
@@ -19,36 +16,23 @@ export const CreateEventPage = () => {
     puntos_colaborador: 0,
     puntos_empresa: 0,
     puntos_castigo: 0,
+    foto_evento: null as null | File,
   });
   const navigate = useNavigate();
 
   const onChange = (e: FormEvent<HTMLInputElement>) => {
+    if (e.currentTarget.name === "foto_evento") {
+      return setData({ ...data, foto_evento: e.currentTarget.files![0] });
+    }
+
     setData({ ...data, [e.currentTarget.name]: e.currentTarget.value });
   };
 
-  {
-    /*const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(data);
-    await createEvent({
-      id_evento: data.id_evento,
-      ID_evento: data.ID_evento,
-      descripcion_evento: data.descripcion_evento,
-      foto_evento: data.foto_evento,
-      fecha_evento: data.fecha_evento,
-      fecha_evento_fin: data.fecha_evento_fin,
-      aforo_maximo: data.aforo_maximo,
-      aforo_registrado: data.aforo_registrado,
-      puntos_colaborador: data.puntos_colaborador,
-      puntos_empresa: data.puntos_empresa,
-      puntos_castigo: data.puntos_castigo,
-    })
-      .then(() => {
-        navigate("/adminEventos");
-      })
-      .catch((err) => console.log(err));
-  };*/
-  }
+
+    await createEvent(data).then(() => navigate("/admEventos"));
+  };
   return (
     <main>
       <Navbar />
@@ -61,15 +45,7 @@ export const CreateEventPage = () => {
         <div className="col col-lg-2"></div>
         <div className="col-md-auto">
           <main>
-            <form className="colaborator-form mr-4" /*onSubmit={handleSubmit}*/>
-              {/* <label htmlFor="documento_colaborador">ID Evento</label>
-              <input
-                type="text"
-                name="ID_evento"
-                id="ID_evento"
-                placeholder="Escriba el ID del evento"
-                onChange={onChange}
-              />{" "} */}
+            <form className="colaborator-form mr-4" onSubmit={handleSubmit}>
               <br />
               <label htmlFor="nombre_evento">Nombre del Evento</label>
               <input
@@ -155,6 +131,15 @@ export const CreateEventPage = () => {
                 type="number"
                 name="puntos_empresa"
                 id="puntos_empresa"
+                placeholder="Ingrese los puntos a asignar a la empresa"
+                onChange={onChange}
+              />{" "}
+              <label htmlFor="foto">Puntos Castigo</label>
+              <input
+                min={0}
+                type="number"
+                name="puntos_castigo"
+                id="puntos_castigo"
                 placeholder="Ingrese los puntos a asignar a la empresa"
                 onChange={onChange}
               />{" "}

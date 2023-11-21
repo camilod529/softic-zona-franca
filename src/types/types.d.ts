@@ -9,12 +9,15 @@ export type User = {
   correo_empresarial: string?;
   empresa_colaborador: string?;
   genero: string?;
-  gustos: Array<string>?;
+  nit: string?;
   foto: string;
   contrasena: string?;
   estado_colaborador: boolean?;
   puntos: number?;
   puntos_acumulados: number?;
+  logo?: string;
+  documento_colaborador: string?;
+  primera_vez?: boolean;
 };
 
 export type customEvent = {
@@ -28,6 +31,7 @@ export type Company = {
   nit?: string;
   nombre_empresa: string;
   puntos: number;
+  logo: string;
 };
 
 export type Colaborator = {
@@ -63,4 +67,20 @@ export type Event = {
   puntos_castigo: number;
   estado_boolean: boolean;
   foto_evento: string;
+};
+
+export type Award = {
+  id_premio: number;
+  nombre_premio: string;
+  detalles_premio: string;
+  coste_premio: number;
+  estado_premio: boolean;
+  foto: string;
+};
+
+export type Tag = {
+  id_etiqueta: number;
+  nombre_etiqueta: string;
+  descripcion_etiqueta: string;
+  estado_etiqueta: boolean;
 };

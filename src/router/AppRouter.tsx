@@ -21,6 +21,7 @@ import {
 } from "../pages";
 import { CreatePrizePage } from "../pages/CreatePrizePage";
 import { AdmPrizePage } from "../pages/AdmPrizePage";
+import { ReedPrizes } from "../pages/ReedPrizes";
 
 export const AppRouter = () => {
   return (
@@ -162,6 +163,14 @@ export const AppRouter = () => {
           element={
             <ProtectedRoute>
               <CreatePrizePage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/reedPrizes"
+          element={
+            <ProtectedRoute>
+              <ReedPrizes/>
             </ProtectedRoute>
           }
         />

@@ -12,4 +12,5 @@ export * from "./NavBarHome.tsx";
 export * from "./PrizeCard.tsx";
 export * from "./RankListItem.tsx";
 export * from "./RankTable.tsx";
-export * from "./Tag.tsx";
+export * from "./TagCard.tsx";
+export * from "./ReedPrizeCard.tsx"

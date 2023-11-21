@@ -20,47 +20,52 @@ export function Login() {
 
     await login({ email: data.nick, password: data.contrasena })
       .then((res) => {
-        navigate("/mainPage");
+        localStorage.setItem("token", res.token);
         setUser(res.data);
-        console.log(res.data);
+
+        if (res.data.primera_vez) {
+          navigate("/intereses");
+        } else {
+          navigate("/mainPage");
+        }
       })
       .catch((err) => console.log(err));
   };
 
   return (
     <main>
-      <NavBarHome/>
+      <NavBarHome />
       <img
         src="https://www.zonafrancasantander.com/imagenes/vdo_cabezotes/cabe_93d666c2e538322a27e6562c19bc5597a2066bd6.jpg"
         className="contenido img-fluid banner"
       />
       <div className="login">
-      <div className="card login-card ">
-        <form className="login-form mr-4" onSubmit={handleSubmit}>
-          <label htmlFor="email">Usuario</label>
-          <input
-            type="text"
-            name="nick"
-            id="email"
-            placeholder="Escriba su correo"
-            onChange={onChange}
-          />{" "}
-          <br />
-          <br />
-          <label htmlFor="password">Contraseña</label>
-          <input
-            type="password"
-            name="contrasena"
-            id="password"
-            placeholder="Escriba su contraseña"
-            onChange={onChange}
-          />{" "}
-          <br />
-          <button className="mt-3">Ingresar</button>
-        </form>
+        <div className="card login-card ">
+          <form className="login-form mr-4" onSubmit={handleSubmit}>
+            <label htmlFor="email">Usuario</label>
+            <input
+              type="text"
+              name="nick"
+              id="email"
+              placeholder="Escriba su correo"
+              onChange={onChange}
+            />{" "}
+            <br />
+            <br />
+            <label htmlFor="password">Contraseña</label>
+            <input
+              type="password"
+              name="contrasena"
+              id="password"
+              placeholder="Escriba su contraseña"
+              onChange={onChange}
+            />{" "}
+            <br />
+            <button className="mt-3">Ingresar</button>
+          </form>
+        </div>
       </div>
-      </div>
-      <Footer/>
+     
     </main>
   );
 }

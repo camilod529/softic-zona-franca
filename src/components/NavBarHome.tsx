@@ -6,7 +6,7 @@ export const NavBarHome = () => {
       <div className="row">
         <div className="col-2 d-flex align-items-start imglogo">
           <div className="text-center">
-            <Link to={"/main"} className="login-text  logout-button">
+            <Link to={"/main"} className="login-text  logout-button ">
               <img
                 src="https://www.zonafrancasantander.com/template//images/logo.png"
                 className="rounded imgnav"
@@ -17,8 +17,8 @@ export const NavBarHome = () => {
         </div>
         <div className="col-8"></div>
         <div className="col-2 d-flex align-items-end justify-content-end">
-          <Link to={"/login"} className="login-text  logout-button">
-            <i className="fa-solid fa-right-to-bracket">&nbsp;Login</i>
+          <Link to={"/login"} className="login-text  logout-button navcolor navitems">
+            <i className="fa-solid fa-right-to-bracket navcolor navitems">&nbsp;Login</i>
           </Link>
         </div>
       </div>

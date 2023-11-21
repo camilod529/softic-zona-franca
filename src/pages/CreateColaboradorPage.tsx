@@ -12,21 +12,20 @@ export const CreateColaboradorPage = () => {
     genero: "",
     correo_personal: "",
     fecha_nacimiento: new Date(),
-    foto: null,
+    foto: null as null | File,
   });
   const navigate = useNavigate();
 
-  const onChange = (e: FormEvent<HTMLInputElement>) => {
-    if (e.currentTarget.files) {
-      setData({ ...data, [e.currentTarget.name]: e.currentTarget.files[0] });
-    } else {
-      setData({ ...data, [e.currentTarget.name]: e.currentTarget.value });
+  const onChange = (e: FormEvent<HTMLInputElement | HTMLSelectElement>) => {
+    if (e.currentTarget.name === "foto") {
+      return setData({ ...data, foto: (e.currentTarget as HTMLInputElement).files![0] });
     }
+
+    setData({ ...data, [e.currentTarget.name]: e.currentTarget.value });
   };
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement | HTMLSelectElement>) => {
     e.preventDefault();
-    // console.log(data);
     await createColaborator({
       documento_colaborador: data.documento_colaborador,
       empresa_colaborador: data.empresa_colaborador,
@@ -102,8 +101,9 @@ export const CreateColaboradorPage = () => {
                 id="genero"
                 name="genero"
                 aria-label="Seleccione el genero"
+                onChange={onChange}
               >
-                <option selected>Seleccione el genero</option>
+                <option defaultChecked value="">Seleccione el genero</option>
                 <option value="Masculino">Masculino</option>
                 <option value="Femenino">Femenino</option>
               </select>{" "}

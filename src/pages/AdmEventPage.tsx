@@ -45,18 +45,17 @@ export const AdmEventPage = () => {
                   ? events?.map((event) => {
                       return (
                         <AdmEventCard
+                          id_evento={event.id_evento}
                           title={event.nombre_evento}
                           desc={event.descripcion_evento}
                           img={event.foto_evento}
+                          getEvents={getEventsAsync}
                         />
                       );
                     })
                   : ""}
                 <div className="card" style={{ width: "18rem" }}>
-                  <div
-                    className="card-body"
-                    style={{ paddingTop: "6rem", paddingBottom: "6rem" }}
-                  >
+                  <div className="card-body" style={{ paddingTop: "6rem", paddingBottom: "6rem" }}>
                     <Link to={"/createEvent"} className="green-btn">
                       <h5 className="card-title btn">Agregar evento</h5>
                     </Link>
