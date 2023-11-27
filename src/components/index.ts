@@ -14,3 +14,4 @@ export * from "./RankListItem.tsx";
 export * from "./RankTable.tsx";
 export * from "./TagCard.tsx";
 export * from "./ReedPrizeCard.tsx"
+export * from "./RedeemedCard.tsx"
