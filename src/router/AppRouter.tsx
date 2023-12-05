@@ -18,6 +18,7 @@ import {
   EventDetail,
   MainPage,
   CreateEventPage,
+  Redeemed
 } from "../pages";
 import { CreatePrizePage } from "../pages/CreatePrizePage";
 import { AdmPrizePage } from "../pages/AdmPrizePage";
@@ -171,6 +172,14 @@ export const AppRouter = () => {
           element={
             <ProtectedRoute>
               <ReedPrizes/>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/redeemed"
+          element={
+            <ProtectedRoute>
+            <Redeemed/>
             </ProtectedRoute>
           }
         />

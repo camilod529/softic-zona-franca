@@ -4,7 +4,7 @@ export const NavBarHome = () => {
   return (
     <div className="container-fluid text-center p-0 topside">
       <div className="row">
-        <div className="col-2 d-flex align-items-start">
+        <div className="col-2 d-flex align-items-start imglogo">
           <div className="text-center">
             <Link to={"/main"} className="login-text  logout-button ">
               <img

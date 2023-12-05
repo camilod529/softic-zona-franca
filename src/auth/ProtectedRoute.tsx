@@ -91,6 +91,11 @@ export function ProtectedRoute({ children }: { children: JSX.Element }) {
       break;
     default:
       break;
+      case "/Redeemed":
+      if (user.rol !== 1) {
+
+        return <Navigate to="/" />;
+      }
   }
 
   return children;

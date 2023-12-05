@@ -64,7 +64,7 @@ export const Navbar = () => {
         <div className="container-fluid p-0 mside navitems">
           {user.rol === 0 ? null : (
             <Link
-              className="navbar-brand"
+              className="navbar-brand nav-color nav-link"
               to={user.rol === 2 || user.rol === 3 ? "/profile" : "/mainPage"}
             >
               {user.rol === 1 ? "Inicio" : "Perfil"}
@@ -122,6 +122,11 @@ export const Navbar = () => {
                   <li className="nav-item">
                     <Link className="nav-link navcolor " to={"/rank"}>
                       <strong>Tabla de puntos</strong>
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link navcolor " to={"/redeemed"}>
+                      <strong>Premios Redimidos</strong>
                     </Link>
                   </li>
                 </>

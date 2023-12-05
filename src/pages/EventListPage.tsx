@@ -32,11 +32,9 @@ export const EventList = () => {
 
       <div className="container text-center top titulo">
         <div className="row mb-5">
-          ,<div className="col-1"></div>
-          <div className="col-10">
+          
             <h1>Lista de eventos</h1>
-          </div>
-          <div className="col-1"></div>
+          
         </div>
 
         <div className="container text-center list">

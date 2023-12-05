@@ -20,7 +20,7 @@ export default function EventCard({
   return (
     <div className="card " onClick={() => navigate(`/events/${event.id_evento}`)}>
       <img src={imageUrl} className="card-img-top" alt="..." />
-      <div className="card-body">
+      <div className="card-body cardview">
         <h5 className="card-title">{title}</h5>
         {width > 768 && <p className="card-text">{description}</p>}
         <p className="card-text">

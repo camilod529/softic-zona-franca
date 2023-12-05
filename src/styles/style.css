@@ -5,6 +5,70 @@ body {
 * {
   box-sizing: border-box;
 }
+@media(max-width:645){
+  .cardview{
+ 
+    visibility: hidden;
+  }
+}
+ 
+@media (max-width:425){
+  .imgnav img{
+   display: none;
+  }
+}
+@media (min-width: 768px){
+  .cool-title{
+    font-family: "Montserrat", sans-serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: #aaaa10; /* Light Yellow Color */
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  animation: glow-animation 1.5s infinite alternate;
+  }
+
+}
+@media (min-width: 2560px){
+  .cool-title{
+    font-family: "Montserrat", sans-serif;
+  font-size: 90px;
+  font-weight: bold;
+  color: #aaaa10; /* Light Yellow Color */
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  animation: glow-animation 1.5s infinite alternate;
+  }
+  p{
+    font-size: x-large;
+    margin-right: 2rem;
+  }
+
+}
+@media (max-width: 768px){
+  .cool-title{
+    font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #aaaa10; /* Light Yellow Color */
+  text-transform: uppercase;
+  text-align: justify;
+  letter-spacing: 3px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  animation: glow-animation 1.5s infinite alternate;
+  }
+
+}
 
 /* Add a media query for smaller screens */
 @media (max-width: 768px) {
@@ -482,7 +546,9 @@ body {
   align-items: center;
   text-align: center;
 }
-
+.carousel{
+  min-width: 40vw;
+}
 .carousel-item img {
   max-width: 100%; /* Las imágenes se ajustarán al ancho del contenedor */
   height: auto; /* Las imágenes mantendrán su relación de aspecto */
@@ -493,19 +559,7 @@ body {
 .carousel-inner {
   height: 350px; /* Altura máxima del carrusel, ajusta según tus necesidades */
 }
-.cool-title {
-  font-family: "Montserrat", sans-serif;
-  font-size: 60px;
-  font-weight: bold;
-  color: #aaaa10; /* Light Yellow Color */
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 3px;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
-  animation: glow-animation 1.5s infinite alternate;
-}
+
 
 @keyframes glow-animation {
   0% {
@@ -532,7 +586,24 @@ body {
   font-size: 35px;
   font-weight: lighter;
 }
+@media (max-width : 768px) {
+  .services .item{
+    display: inline-block;
+  width: 24%;
+  text-align: center;
+  padding: 10px 0px;
+  vertical-align: top;
+  font-size: 12px;
+  color: #fff;
+  line-height: 12px;
+  height: 97px;
+  overflow: hidden;
+  position: relative;
+  }
+  
+}
 
+@media (min-width : 768px) {  
 .services .item {
   display: inline-block;
   width: 24%;
@@ -546,6 +617,7 @@ body {
   height: 97px;
   overflow: hidden;
   position: relative;
+}
 }
 .m-b-30 {
   margin-bottom: 30px !important;
